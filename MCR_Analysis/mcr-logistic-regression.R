@@ -1,7 +1,6 @@
 library(jsonlite)
 library(stringr)
 library(glmnet)
-library(MASS)
 
 # Run these *nix commands
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren

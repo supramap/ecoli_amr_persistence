@@ -1,7 +1,6 @@
 library(jsonlite)
 library(stringr)
 library(glmnet)
-library(qualV)
 
 # Run these *nix commands
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
@@ -86,24 +85,7 @@ exp(cbind(Odds.Ratio=coef.mcr.nz))
 # ------------------
 # Genotype Supersets
 # ------------------
-coef.mcr.nz.cat <- paste(rownames(coef.mcr.nz), collapse = ";")
-genotypeset.mcr[genotypes.mcr.idx[
-  lapply(genotypeset.mcr[genotypes.mcr.idx],
-    function(x) {
-      sapply(seq_along(x),
-        function(i) {
-          paste(
-            LCS(
-              substring(x[i], seq(1, nchar(x[i])), seq(1, nchar(a[i]))),
-              substring(coef.mcr.nz.cat[i], seq(1, nchar(coef.mcr.nz.cat[i])), seq(1, nchar(coef.mcr.nz.cat[i])))
-            )$LCS,
-            collapse = ""
-          )
-        }
-      ) %in% rownames(coef.mcr.nz)
-    }
-  )
-]]
+lapply(rownames(coef.mcr.nz)[-1], function(y){id[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
 # coef.mcr.nz.sets <- strsplit(rownames(coef.mcr.nz), ":")
 # names(coef.mcr.nz.sets) <- rownames(coef.mcr.nz)
 # lapply(genotypes.mcr[genotypes.mcr.idx],

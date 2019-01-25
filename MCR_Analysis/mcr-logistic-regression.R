@@ -1,6 +1,7 @@
 library(jsonlite)
 library(stringr)
 library(glmnet)
+library(qualV)
 
 # Run these *nix commands
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
@@ -32,35 +33,29 @@ genotypes <- fgenotypes
 # ---------
 # Genotypes
 # ---------
-genotypesall <- unique(unlist(genotypes))
+genotypesall <- unique(sort(unlist(genotypes)))
 genobinv <- lapply(genotypes, function(x){(genotypesall %in% x) * 1})
 gdf <- as.data.frame(matrix(unlist(genobinv), ncol = length(genotypesall), byrow = T))
 names(gdf) <- genotypesall
 gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
 gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
-#model.null <- glm(mcr ~ 1, data = gdf.mcr, family = binomial)
-#model.full <- glm(mcr ~ ., data = gdf.mcr, family = binomial)
-#mixed <- step(model.null,
-#              scope = list(lower = formula(model.null), upper = formula(model.full)),
-#              direction = "forward")
-#x <- Matrix(as.matrix(gdf.mcr[,-which(names(gdf.mcr) == "mcr")]), sparse = T)
-f <- as.formula("mcr ~ .+1")
+f <- as.formula("mcr ~ 1+.")
 x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
 y <- Matrix(gdf.mcr$mcr, sparse = T)
-#model.full <- glmnet(x = x, y = y, family = "binomial", lambda = 0)
 model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
 #plot(model.cv)
-#model.full <- glmnet(x = x, y = y, family = "binomial", lambda = model.cv$lambda.1se)
-#model.full <- model.cv$glmnet.fit
-#exp(cbind(Odds.Ratio=coef(model.full), Confidence.Interval=confint(model.full)))
 coef.mcr <- coef(model.cv, s = "lambda.1se")
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
-#logistic.display(model.full)
 
-coef.all <- unlist(lapply(genotypesall, function(x){coef(glm(get(x) ~ 1, family = "binomial", data = gdf))}))
-names(coef.all) <- genotypesall
+# Singleton Odds Ratios
+rgenotypesall <- unique(sort(unlist(rgenotypes)))
+rgdf <- gdf[fdf$id %in% pdt,]
+coef.all <- unlist(lapply(rgenotypesall, function(x){coef(glm(get(x) ~ 1, family = "binomial", data = rgdf))}))
+names(coef.all) <- rgenotypesall
+write.csv(as.data.frame(cbind(Odds.Ratio=coef.all)), "logOddsRatio.csv")
+write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.all))), "oddsRatio.csv")
 
 # -------------
 # Genotype Sets
@@ -68,10 +63,16 @@ names(coef.all) <- genotypesall
 genotypes.mcr <- genotypes
 genotypes.mcr.idx <- grep("mcr", genotypes.mcr)
 genotypes.mcr[genotypes.mcr.idx] <- lapply(genotypes[genotypes.mcr.idx], function(x){x[-grep("mcr", x)]})
-genotypeset.mcr <- lapply(genotypes.mcr, paste, collapse = "`:`")
-genotypesets.mcr <- paste0("`", unique(unlist(genotypeset.mcr)), "`")
-genotypesets.mcr <- genotypesets.mcr[-grep("``", genotypesets.mcr)]
-f <- as.formula(paste("mcr ~ .+1", paste(genotypesets.mcr, collapse = "+"), sep = "+"))
+genotypeset.mcr <- lapply(genotypes.mcr,
+  function(x){
+    # add ticks (`) only as needed
+    y <- format(as.formula(paste0(ifelse(length(x) > 0, paste0("`", paste(x, collapse = "`:`"), "`"), ""), "~1")))[1]
+    return(substr(y, 1, regexpr("~", y)[1] - 2))
+  }
+)
+genotypesets.mcr <- unique(genotypeset.mcr)
+genotypesets.mcr.gt1 <- genotypesets.mcr[grep(":", genotypesets.mcr)]
+f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), sep = "+"))
 x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
 y <- Matrix(gdf.mcr$mcr, sparse = T)
 model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
@@ -81,3 +82,38 @@ coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 exp(cbind(Odds.Ratio=coef.mcr.nz))
 #write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.mcr.nz))), "oddsRatioInt.csv")
+
+# ------------------
+# Genotype Supersets
+# ------------------
+coef.mcr.nz.cat <- paste(rownames(coef.mcr.nz), collapse = ";")
+genotypeset.mcr[genotypes.mcr.idx[
+  lapply(genotypeset.mcr[genotypes.mcr.idx],
+    function(x) {
+      sapply(seq_along(x),
+        function(i) {
+          paste(
+            LCS(
+              substring(x[i], seq(1, nchar(x[i])), seq(1, nchar(a[i]))),
+              substring(coef.mcr.nz.cat[i], seq(1, nchar(coef.mcr.nz.cat[i])), seq(1, nchar(coef.mcr.nz.cat[i])))
+            )$LCS,
+            collapse = ""
+          )
+        }
+      ) %in% rownames(coef.mcr.nz)
+    }
+  )
+]]
+# coef.mcr.nz.sets <- strsplit(rownames(coef.mcr.nz), ":")
+# names(coef.mcr.nz.sets) <- rownames(coef.mcr.nz)
+# lapply(genotypes.mcr[genotypes.mcr.idx],
+#   function(x){
+#     lapply(coef.mcr.nz.sets,
+#       function(y){
+#         
+#       }
+#     )
+#   }
+# )
+# genotypeset.mcr[genotypes.mcr.idx[which(genotypeset.mcr[genotypes.mcr.idx] %in% rownames(coef.mcr.nz))]]
+

@@ -49,7 +49,7 @@ mcr_rules<- apriori(mcr.transactions,
                                      support = 0.1,
                                      confidence =  0.8),
                     appearance = list(default = "none",
-                                      lhs = genotypes,
+                                      lhs = genotypes[which(genotypes != "mcr")],
                                       rhs = "mcr"),
                     control = list(memopt = FALSE)
 )

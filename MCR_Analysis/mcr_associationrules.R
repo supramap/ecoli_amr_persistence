@@ -45,7 +45,7 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 
 mcr_rules<- apriori(mcr.transactions,
                     parameter = list(minlen = 2,
-                                     maxlen = 2,
+                                     maxlen = 14,
                                      support = 0.1,
                                      confidence =  0.8),
                     appearance = list(default = "none",

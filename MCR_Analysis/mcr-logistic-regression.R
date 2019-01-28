@@ -85,7 +85,9 @@ exp(cbind(Odds.Ratio=coef.mcr.nz))
 # ------------------
 # Genotype Supersets
 # ------------------
-lapply(rownames(coef.mcr.nz)[-1], function(y){id[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
+pdt.mcr.nz <- lapply(rownames(coef.mcr.nz)[-1], function(y){id[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
+names(pdt.mcr.nz) <- rownames(coef.mcr.nz)[-1]
+print(rev(pdt.mcr.nz))
 # coef.mcr.nz.sets <- strsplit(rownames(coef.mcr.nz), ":")
 # names(coef.mcr.nz.sets) <- rownames(coef.mcr.nz)
 # lapply(genotypes.mcr[genotypes.mcr.idx],

@@ -62,13 +62,13 @@ mcr_rules_df <- data.frame(
 
 # Remove brackets and convert all sets to lists
 mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
-  str_replace_all(c("\\{|\\}"),"") %>%
-  strsplit(split = ",")
+  str_replace_all(c("\\{|\\}"),"")# %>%
+  #strsplit(split = ",")
 
 mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
   str_replace_all(c("\\{|\\}"),"")
 
-# # Flag which rules are supersets
+## Flag which rules are supersets
 # mcr_rules_df$is_superset <- FALSE
 # 
 # for (i in 1:length(mcr_rules_df$lhs)){

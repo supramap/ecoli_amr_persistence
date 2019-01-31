@@ -1,6 +1,7 @@
 library(jsonlite)
 library(stringr)
 library(glmnet)
+library(arules)
 
 # Run these *nix commands
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
@@ -60,7 +61,7 @@ write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.all))), "oddsRatio.csv")
 # Genotype Sets
 # -------------
 genotypes.mcr <- genotypes
-genotypes.mcr.idx <- grep("mcr", genotypes.mcr)
+genotypes.mcr.idx <- grep("mcr", genotypes)
 genotypes.mcr[genotypes.mcr.idx] <- lapply(genotypes[genotypes.mcr.idx], function(x){x[-grep("mcr", x)]})
 genotypeset.mcr <- lapply(genotypes.mcr,
   function(x){
@@ -79,7 +80,6 @@ coef.mcr <- coef(model.cv, s = "lambda.1se")
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
-exp(cbind(Odds.Ratio=coef.mcr.nz))
 #write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.mcr.nz))), "oddsRatioInt.csv")
 
 # ------------------
@@ -87,17 +87,29 @@ exp(cbind(Odds.Ratio=coef.mcr.nz))
 # ------------------
 pdt.mcr.nz <- lapply(rownames(coef.mcr.nz)[-1], function(y){id[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
 names(pdt.mcr.nz) <- rownames(coef.mcr.nz)[-1]
-print(rev(pdt.mcr.nz))
-# coef.mcr.nz.sets <- strsplit(rownames(coef.mcr.nz), ":")
-# names(coef.mcr.nz.sets) <- rownames(coef.mcr.nz)
-# lapply(genotypes.mcr[genotypes.mcr.idx],
-#   function(x){
-#     lapply(coef.mcr.nz.sets,
-#       function(y){
-#         
-#       }
-#     )
-#   }
-# )
-# genotypeset.mcr[genotypes.mcr.idx[which(genotypeset.mcr[genotypes.mcr.idx] %in% rownames(coef.mcr.nz))]]
+coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=lengths(pdt.mcr.nz), Accession.Numbers=sapply(pdt.mcr.nz, paste, collapse = ","))
+
+# -------------------------------
+# Genotype Sets Association Rules
+# -------------------------------
+genotypes.mcr.list <- genotypes.mcr
+genotypes.mcr.uniq <- unique(sort(unlist(genotypes.mcr)))
+genotypes.mcr.list[genotypes.mcr.idx] <- lapply(genotypes.mcr[genotypes.mcr.idx], c, "mcr")
+genotypes.mcr.txn <- as(genotypes.mcr.list, 'transactions')
+genotypes.mcr.rules <- apriori(genotypes.mcr.txn,
+                               parameter = list(minlen = 2,
+                                                maxlen = 14,
+                                                support = 200.0 / length(genotypes),
+                                                confidence = 0.5),
+                               appearance = list(default = "none",
+                                                 lhs = genotypes.mcr.uniq,
+                                                 rhs = "mcr"),
+                               control = list(memopt = FALSE)
+)
+genotypes.mcr.rules.df <- data.frame(
+  lhs = labels(lhs(genotypes.mcr.rules)),
+  rhs = labels(rhs(genotypes.mcr.rules)),
+  genotypes.mcr.rules@quality
+)
+View(genotypes.mcr.rules.df)
 

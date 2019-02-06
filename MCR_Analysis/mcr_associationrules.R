@@ -1,5 +1,5 @@
 #######################
-## Script for generating Association Rules for E. coli genotype sets containing MCR
+## Script for generating Association Rules for E. coli genotype sets containing `mcr`
 ## Colby T. Ford, Ph.D.
 #######################
 
@@ -22,7 +22,7 @@ names(amr.list.raw) <- json.stream[["ngout"]][["data"]][["content"]][["id"]]
 amr.list.raw[amr.list.raw == "NULL"] <- NULL
 amr.all <- sort(unique(unlist(amr.list.raw)))
 
-## Find all MCR variants
+## Find all mcr variants
 mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>% 
   sort(decreasing = TRUE) %>% 
   paste0(collapse = "|")
@@ -32,7 +32,7 @@ mcr.subset <- amr.list.raw %>%
   lapply(., str_replace_all, pattern = mcr.variants, replacement = "mcr") %>% 
   lapply(., unique)
 
-## Filter strains containing "mcr"
+## Filter to strains containing "mcr"
 mcr.subset <- mcr.subset[unlist(lapply(mcr.subset, function(x){"mcr" %in% x}))]
 
 genotypes <- sort(unique(unlist(mcr.subset)))
@@ -46,7 +46,7 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 mcr_rules<- apriori(mcr.transactions,
                     parameter = list(minlen = 2,
                                      maxlen = 14,
-                                     support = 200.0/length(genotypes),
+                                     support = (200/length(genotypes))-1,
                                      confidence =  0.5),
                     appearance = list(default = "none",
                                       lhs = genotypes[which(genotypes != "mcr")],

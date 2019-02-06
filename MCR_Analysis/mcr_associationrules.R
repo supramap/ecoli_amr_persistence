@@ -23,7 +23,7 @@ amr.list.raw[amr.list.raw == "NULL"] <- NULL
 amr.all <- sort(unique(unlist(amr.list.raw)))
 
 ## Find all MCR variants
-mcr.variants <- amr.all[str_detect(amr.all, "mcr")] %>% 
+mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>% 
   sort(decreasing = TRUE) %>% 
   paste0(collapse = "|")
 
@@ -46,8 +46,8 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 mcr_rules<- apriori(mcr.transactions,
                     parameter = list(minlen = 2,
                                      maxlen = 14,
-                                     support = 0.1,
-                                     confidence =  0.8),
+                                     support = 200.0/length(genotypes),
+                                     confidence =  0.5),
                     appearance = list(default = "none",
                                       lhs = genotypes[which(genotypes != "mcr")],
                                       rhs = "mcr"),

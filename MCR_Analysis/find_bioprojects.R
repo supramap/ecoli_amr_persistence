@@ -8,7 +8,7 @@ library(jsonlite)
 library(tidyr)
 library(dplyr)
 
-## Generate New Extract from the NcBI Database
+## Generate New Extract from the NCBI Database
 #json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=100000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(status%3D%3D%5B%22current%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc)")
 #saveRDS(json.stream, file = "json.stream.RDS")
 
@@ -42,7 +42,7 @@ library(rvest)
 library(stringr)
 library(reshape)
 
-bioprojects_unique <- unique(output$bioproject)
+bioprojects_unique <- unique(bioprojects$bioproject)
 publications <- data.frame(bioproject = character(0),
                            publications = character(0))
 

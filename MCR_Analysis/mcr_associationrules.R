@@ -40,6 +40,7 @@ genotypes <- sort(unique(unlist(mcr.subset)))
 ## Convert to transactions for the a priori algorithm
 mcr.transactions <- as(mcr.subset, 'transactions')
 
+
 ######################################
 ## Generate Rules with the pattern {*|-mcr} => {mcr}
 
@@ -91,4 +92,73 @@ write.csv(mcr_rules_df,
           file = "mcr_rules.csv",
           append = FALSE)
 
+###########################################
+## Generate Rules Iteratively
 
+## Define rule sizes and isolate counts to explore
+rulesizes <- c(2,4,5,8,10,14)
+isolatesizes <- c(1944, 436, 265, 183, 11, 11)
+rulespace <- data.frame(rulesize = rulesizes,
+                        isolatesize = isolatesizes)
+
+## Create empty dataframe
+mcr_rules_df <- data.frame(
+  lhs = character(0),
+  rhs = character(0),
+  support = numeric(0),
+  confidence = numeric(0),
+  lift = numeric(0),
+  count = numeric(0)
+)
+
+for (i in 1:nrow(rulespace)){
+  ## Get rule size and support metric for this iteration
+  size <- rulespace$rulesize[i]
+  numerator <- rulespace$isolatesize[i]
+  
+  cat("Testing rules of size:", size, "\n")
+  
+  ## Generate MCR Rules
+  mcr_rules<- apriori(mcr.transactions,
+                      parameter = list(minlen = size,
+                                       maxlen = size,
+                                       support = numerator/length(amr.list.raw),
+                                       confidence =  0.8,
+                                       maxtime= 60),
+                      appearance = list(default = "none",
+                                        lhs = genotypes[which(genotypes != "mcr")],
+                                        rhs = "mcr"),
+                      control = list(memopt = FALSE)
+  )
+  
+  if (length(mcr_rules) > 0){
+    ## Convert to dataframe
+    mcr_rules_df_iter <- data.frame(
+      lhs = labels(lhs(mcr_rules)),
+      rhs = labels(rhs(mcr_rules)),
+      mcr_rules@quality
+    )
+    
+    ## Append this iterations's results to main dataframe
+    mcr_rules_df <- rbind(mcr_rules_df,
+                          mcr_rules_df_iter)
+  }
+}
+
+
+
+## Remove brackets and convert all sets to lists
+mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
+  str_replace_all(c("\\{|\\}"),"")# %>%
+#strsplit(split = ",")
+
+mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
+  str_replace_all(c("\\{|\\}"),"")
+
+## Write out the rules results
+saveRDS(mcr_rules_df,
+        file = "mcr_rules.RDS")
+
+write.csv(mcr_rules_df,
+          file = "mcr_rules.csv",
+          append = FALSE)

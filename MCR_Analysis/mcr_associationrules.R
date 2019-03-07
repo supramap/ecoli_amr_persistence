@@ -122,7 +122,7 @@ for (i in 1:nrow(rulespace)){
   mcr_rules<- apriori(mcr.transactions,
                       parameter = list(minlen = size,
                                        maxlen = size,
-                                       support = numerator/length(amr.list.raw),
+                                       support = 2*(numerator/length(amr.list.raw)),
                                        confidence =  0.8,
                                        maxtime= 60),
                       appearance = list(default = "none",

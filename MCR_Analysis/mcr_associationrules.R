@@ -30,10 +30,10 @@ mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>%
 ## Convert all mcr genotype variants to "mcr"
 mcr.subset <- amr.list.raw %>% 
   lapply(., str_replace_all, pattern = mcr.variants, replacement = "mcr") %>% 
-  lapply(., unique)
+  lapply(., unique) # Removes duplicate "mcr" genotypes from previous step
 
 ## Filter to strains containing "mcr"
-mcr.subset <- mcr.subset[unlist(lapply(mcr.subset, function(x){"mcr" %in% x}))]
+#mcr.subset <- mcr.subset[unlist(lapply(mcr.subset, function(x){"mcr" %in% x}))]
 
 genotypes <- sort(unique(unlist(mcr.subset)))
 
@@ -105,6 +105,7 @@ rulespace <- data.frame(rulesize = rulesizes,
 mcr_rules_df <- data.frame(
   lhs = character(0),
   rhs = character(0),
+  size = numeric(0),
   support = numeric(0),
   confidence = numeric(0),
   lift = numeric(0),
@@ -122,9 +123,10 @@ for (i in 1:nrow(rulespace)){
   mcr_rules<- apriori(mcr.transactions,
                       parameter = list(minlen = size,
                                        maxlen = size,
-                                       support = 2*(numerator/length(amr.list.raw)),
-                                       confidence =  0.8,
-                                       maxtime= 60),
+                                       support = 0.001,
+                                       #support = 5*(numerator/length(amr.list.raw)),
+                                       confidence =  0.50,
+                                       maxtime = 60),
                       appearance = list(default = "none",
                                         lhs = genotypes[which(genotypes != "mcr")],
                                         rhs = "mcr"),
@@ -136,6 +138,7 @@ for (i in 1:nrow(rulespace)){
     mcr_rules_df_iter <- data.frame(
       lhs = labels(lhs(mcr_rules)),
       rhs = labels(rhs(mcr_rules)),
+      size = size,
       mcr_rules@quality
     )
     
@@ -149,8 +152,8 @@ for (i in 1:nrow(rulespace)){
 
 ## Remove brackets and convert all sets to lists
 mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
-  str_replace_all(c("\\{|\\}"),"")# %>%
-#strsplit(split = ",")
+  str_replace_all(c("\\{|\\}"),"") %>%
+  strsplit(split=",")
 
 mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
   str_replace_all(c("\\{|\\}"),"")

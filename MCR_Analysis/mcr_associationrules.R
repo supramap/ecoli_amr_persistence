@@ -23,7 +23,8 @@ amr.list.raw[amr.list.raw == "NULL"] <- NULL
 amr.all <- sort(unique(unlist(amr.list.raw)))
 
 ## Find all mcr variants
-mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>% 
+# mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>% 
+mcr.variants <- amr.all[str_detect(amr.all, "mcr-")] %>% 
   sort(decreasing = TRUE) %>% 
   paste0(collapse = "|")
 
@@ -96,10 +97,30 @@ write.csv(mcr_rules_df,
 ## Generate Rules Iteratively
 
 ## Define rule sizes and isolate counts to explore
-rulesizes <- c(2,4,5,8,10,14)
-isolatesizes <- c(1944, 436, 265, 183, 11, 11)
+rulesizes <- seq(2, 14, by = 1)
+isolatesizes <- lapply(amr.list.raw, length) %>% 
+  matrix() %>% 
+  data.frame()
+
+colnames(isolatesizes) <- c("size")
+isolatesizes$size <- as.factor(as.character(isolatesizes$size))
+
+isolatesizes <- isolatesizes %>%
+  group_by(size) %>% 
+  tally()
+
+isolatesizes$size <- as.numeric(isolatesizes$size)
+
+isolatesizes <- isolatesizes %>%
+  arrange() %>% 
+  filter(size <= max(rulesizes) & size >= min(rulesizes))
+
 rulespace <- data.frame(rulesize = rulesizes,
-                        isolatesize = isolatesizes)
+                        isolatesize = isolatesizes$n)
+# rulesizes <- c(2,4,5,8,10,14)
+# isolatesizes <- c(1944, 436, 265, 183, 11, 11)
+# rulespace <- data.frame(rulesize = rulesizes,
+#                         isolatesize = isolatesizes)
 
 ## Create empty dataframe
 mcr_rules_df <- data.frame(
@@ -123,8 +144,9 @@ for (i in 1:nrow(rulespace)){
   mcr_rules<- apriori(mcr.transactions,
                       parameter = list(minlen = size,
                                        maxlen = size,
-                                       support = 0.001,
+                                       #support = 0.002,
                                        #support = 5*(numerator/length(amr.list.raw)),
+                                       support = 0.5*(numerator/length(amr.list.raw)),
                                        confidence =  0.50,
                                        maxtime = 60),
                       appearance = list(default = "none",

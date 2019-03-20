@@ -28,7 +28,8 @@ rgenotypes <- fgenotypes
 rgenotypes[!(names(fgenotypes) %in% pdt)] <- NULL
 #fgenotypes[fgenotypes == "NULL"] <- NULL
 #rgenotypes[rgenotypes == "NULL"] <- NULL
-genotypes <- fgenotypes
+genotypes <- fgenotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+genoid <- id[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
 
 # ---------
 # Genotypes
@@ -39,23 +40,15 @@ gdf <- as.data.frame(matrix(unlist(genobinv), ncol = length(genotypesall), byrow
 names(gdf) <- genotypesall
 gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
 gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
-f <- as.formula("mcr ~ 1+.")
-x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
-y <- Matrix(gdf.mcr$mcr, sparse = T)
-model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
-#plot(model.cv)
-coef.mcr <- coef(model.cv, s = "lambda.1se")
-coef.mcr.names <- rownames(coef.mcr)
-coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
-rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
-
-# Singleton Odds Ratios
-rgenotypesall <- unique(sort(unlist(rgenotypes)))
-rgdf <- gdf[fdf$id %in% pdt,]
-coef.all <- unlist(lapply(rgenotypesall, function(x){coef(glm(get(x) ~ 1, family = "binomial", data = rgdf))}))
-names(coef.all) <- rgenotypesall
-write.csv(as.data.frame(cbind(Odds.Ratio=coef.all)), "logOddsRatio.csv")
-write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.all))), "oddsRatio.csv")
+# f <- as.formula("mcr ~ 1+.")
+# x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
+# y <- Matrix(gdf.mcr$mcr, sparse = T)
+# model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
+# #plot(model.cv)
+# coef.mcr <- coef(model.cv, s = "lambda.1se")
+# coef.mcr.names <- rownames(coef.mcr)
+# coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
+# rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 
 # -------------
 # Genotype Sets
@@ -75,7 +68,7 @@ genotypesets.mcr.gt1 <- genotypesets.mcr[grep(":", genotypesets.mcr)]
 f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), sep = "+"))
 x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
 y <- Matrix(gdf.mcr$mcr, sparse = T)
-model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
+model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class", alpha = 0)
 coef.mcr <- coef(model.cv, s = "lambda.1se")
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
@@ -85,9 +78,10 @@ rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 # ------------------
 # Genotype Supersets
 # ------------------
-pdt.mcr.nz <- lapply(rownames(coef.mcr.nz)[-1], function(y){id[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
+pdt.mcr.nz <- lapply(rownames(coef.mcr.nz)[-1], function(y){genoid[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
 names(pdt.mcr.nz) <- rownames(coef.mcr.nz)[-1]
-coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=lengths(pdt.mcr.nz), Accession.Numbers=sapply(pdt.mcr.nz, paste, collapse = ","))
+coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=lengths(pdt.mcr.nz), URL=paste0("https://www.ncbi.nlm.nih.gov/pathogens/isolates/#/search/target_acc:", sapply(pdt.mcr.nz, paste, collapse = "%20OR%20target_acc:")))
+write.csv(coef.mcr.nz.df, "oddsRatio-MCR-vs-Sets.csv")
 
 # -------------------------------
 # Genotype Sets Association Rules

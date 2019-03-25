@@ -87,6 +87,6 @@ publication_output <- inner_join(publications, bioprojects)
 publications_by_mcr_group <- publication_output %>%
   select(-c("pdt", "pdg", "publications", "bioproject")) %>% 
   unique() %>% 
-  cast(publications_url~mcr_group)
+  cast(publication_url~mcr_group)
 
 write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")

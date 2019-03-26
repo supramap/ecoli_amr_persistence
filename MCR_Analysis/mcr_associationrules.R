@@ -174,11 +174,14 @@ for (i in 1:nrow(rulespace)){
 
 ## Remove brackets and convert all sets to lists
 mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
-  str_replace_all(c("\\{|\\}"),"") %>%
-  strsplit(split=",")
+  str_replace_all(c("\\{|\\}"),"") #%>%
+  #strsplit(split=",")
 
 mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
   str_replace_all(c("\\{|\\}"),"")
+
+mcr_rules_df$rule <- paste0(mcr_rules_df$lhs, ",", mcr_rules_df$rhs) %>%
+  strsplit(split=",")
 
 ## Write out the rules results
 saveRDS(mcr_rules_df,
@@ -191,12 +194,62 @@ write.csv(mcr_rules_df,
 
 #############################
 ## Get PDTs that match rules
-matches <- lapply(mcr.subset, function(x){mcr_rules_df$lhs[1] %in% x}) %>% 
-  t() %>% 
+
+## Create strings of each genotype
+mcrgenotypes <- sapply(mcr.subset, function(x){unlist(x) %>% paste0(collapse = ",")}) %>%
   as.data.frame()
+colnames(mcrgenotypes) <- "genotype"
+
+## Create Empty Dataframe of All PDTs with MCR
+matches <- data.frame(pdt = names(mcr.subset),
+                      genotype = mcrgenotypes$genotype)
+
+## Create a function to compare the rule vs. the genotype sets
+comparefxn <- function(a, b){
+  if(setequal(a, unlist(b))){
+    response <- "Match"
+  } else if(all(a %in% b)){
+    response <- "Subset"
+  } else if(all(b %in% a)){
+    response <- "Superset"
+  } else{
+    response <- NA
+  }
+  return(response)
+}
+
+## Loop through each rule and see if any exist in the MCR Subset
+for (i in 1:nrow(mcr_rules_df)){
+  rulename <- paste0(mcr_rules_df$lhs[i], "=>", mcr_rules_df$rhs[i])
+  rulelhs <- mcr_rules_df$lhs[i] %>% 
+    strsplit(split=",") %>% 
+    unlist()
+
+  cat(i, ". ", rulename, "\n", sep = "")
+
+  # itermatches <- sapply(mcr.subset, function(x){setequal(rulelhs, unlist(x))}) %>% 
+  #   as.data.frame()
+  
+  itermatches <- sapply(mcr.subset, function(x){comparefxn(rulelhs, x)}) %>% 
+    as.data.frame()
+  
+  colnames(itermatches) <- rulename
+  rownames(itermatches) <- names(mcr.subset)
+  matches <- cbind(matches, itermatches) ## Append to dataframe
+}
+
+## Check to see if there are any matches
+for (i in 2:ncol(matches)){
+  cat(i,
+      ". ",
+      colnames(matches[,i]),
+      ": ",
+      print(levels(as.factor(matches[,i]))),
+      "\n",
+      sep = "")
+} 
 
 ## Create URL for PDT sets
-
 
 ## Get publications for rules' PDTs
 

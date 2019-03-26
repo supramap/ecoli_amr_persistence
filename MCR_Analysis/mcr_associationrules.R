@@ -147,7 +147,7 @@ for (i in 1:nrow(rulespace)){
                                        #support = 0.002,
                                        #support = 5*(numerator/length(amr.list.raw)),
                                        support = 0.5*(numerator/length(amr.list.raw)),
-                                       confidence =  0.50,
+                                       confidence =  0.75,
                                        maxtime = 60),
                       appearance = list(default = "none",
                                         lhs = genotypes[which(genotypes != "mcr")],
@@ -187,3 +187,17 @@ saveRDS(mcr_rules_df,
 write.csv(mcr_rules_df,
           file = "mcr_rules.csv",
           append = FALSE)
+
+
+#############################
+## Get PDTs that match rules
+matches <- lapply(mcr.subset, function(x){mcr_rules_df$lhs[1] %in% x}) %>% 
+  t() %>% 
+  as.data.frame()
+
+## Create URL for PDT sets
+
+
+## Get publications for rules' PDTs
+
+## Get publications for OR PDTs

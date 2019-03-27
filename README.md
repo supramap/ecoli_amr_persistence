@@ -2,9 +2,9 @@
 
 ## 1. Persistence of Antimicrobial Resistance Genes Demonstrates Genetic Capitalism in _Escherichia coli_
 
-|                                              Authors                                              |    Paper    |   Citation  |
-|-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|
-| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>John Williams<br>Daniel Janies, Ph.D. | Coming Soon | Coming Soon |
+|                                              Authors                                              |    Paper    |   Citation  | Figures |
+|-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|:--------:|
+| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>John Williams<br>Daniel Janies, Ph.D. | [Coming Soon](#) | ```Coming Soon``` | [Tableau Viz](https://public.tableau.com/profile/cford38#!/vizhome/E_coliGenotypeSetsViz/GeneticCapitalism) |
 
 -------------------------------------
 
@@ -12,4 +12,4 @@
 
 |                                              Authors                                              |    Paper    |   Citation  |
 |-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|
-| Gabriel Lopez Zenarosa, Ph.D.<br>Colby T. Ford, Ph.D.<br>David Brown<br>Kevin Smith<br>Daniel Janies, Ph.D. | Coming Soon | Coming Soon |
+| Gabriel Lopez Zenarosa, Ph.D.<br>Colby T. Ford, Ph.D.<br>David Brown<br>Kevin Smith<br>Daniel Janies, Ph.D. | [Coming Soon]() | ```Coming Soon``` |

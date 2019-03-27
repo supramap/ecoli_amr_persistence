@@ -44,54 +44,54 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 
 ######################################
 ## Generate Rules with the pattern {*|-mcr} => {mcr}
-
-mcr_rules<- apriori(mcr.transactions,
-                    parameter = list(minlen = 2,
-                                     maxlen = 14,
-                                     support = (200/length(genotypes))-1,
-                                     confidence =  0.5),
-                    appearance = list(default = "none",
-                                      lhs = genotypes[which(genotypes != "mcr")],
-                                      rhs = "mcr"),
-                    control = list(memopt = FALSE)
-)
-
-mcr_rules_df <- data.frame(
-  lhs = labels(lhs(mcr_rules)),
-  rhs = labels(rhs(mcr_rules)),
-  mcr_rules@quality
-)
-
-# Remove brackets and convert all sets to lists
-mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
-  str_replace_all(c("\\{|\\}"),"")# %>%
-  #strsplit(split = ",")
-
-mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
-  str_replace_all(c("\\{|\\}"),"")
-
-## Flag which rules are supersets
-# mcr_rules_df$is_superset <- FALSE
 # 
-# for (i in 1:length(mcr_rules_df$lhs)){
-#   for (j in 1:length(mcr_rules_df$lhs)){
-#     cat("Checking row",i,"against row",j,"\n")
-#     #if (all(mcr_rules_df$lhs[j] %in% mcr_rules_df$lhs[i])){
-#     if (setequal(intersect(mcr_rules_df$lhs[j],
-#                            mcr_rules_df$lhs[i]),
-#                  mcr_rules_df$lhs[i])){
-#       mcr_rules_df$is_superset[i] <- TRUE
-#     }
-#   }
-# }
-
-## Write out the rules results
-saveRDS(mcr_rules_df,
-        file = "mcr_rules.RDS")
-
-write.csv(mcr_rules_df,
-          file = "mcr_rules.csv",
-          append = FALSE)
+# mcr_rules<- apriori(mcr.transactions,
+#                     parameter = list(minlen = 2,
+#                                      maxlen = 14,
+#                                      support = (200/length(genotypes))-1,
+#                                      confidence =  0.5),
+#                     appearance = list(default = "none",
+#                                       lhs = genotypes[which(genotypes != "mcr")],
+#                                       rhs = "mcr"),
+#                     control = list(memopt = FALSE)
+# )
+# 
+# mcr_rules_df <- data.frame(
+#   lhs = labels(lhs(mcr_rules)),
+#   rhs = labels(rhs(mcr_rules)),
+#   mcr_rules@quality
+# )
+# 
+# # Remove brackets and convert all sets to lists
+# mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
+#   str_replace_all(c("\\{|\\}"),"")# %>%
+#   #strsplit(split = ",")
+# 
+# mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
+#   str_replace_all(c("\\{|\\}"),"")
+# 
+# ## Flag which rules are supersets
+# # mcr_rules_df$is_superset <- FALSE
+# # 
+# # for (i in 1:length(mcr_rules_df$lhs)){
+# #   for (j in 1:length(mcr_rules_df$lhs)){
+# #     cat("Checking row",i,"against row",j,"\n")
+# #     #if (all(mcr_rules_df$lhs[j] %in% mcr_rules_df$lhs[i])){
+# #     if (setequal(intersect(mcr_rules_df$lhs[j],
+# #                            mcr_rules_df$lhs[i]),
+# #                  mcr_rules_df$lhs[i])){
+# #       mcr_rules_df$is_superset[i] <- TRUE
+# #     }
+# #   }
+# # }
+# 
+# ## Write out the rules results
+# saveRDS(mcr_rules_df,
+#         file = "mcr_rules.RDS")
+# 
+# write.csv(mcr_rules_df,
+#           file = "mcr_rules.csv",
+#           append = FALSE)
 
 ###########################################
 ## Generate Rules Iteratively
@@ -147,7 +147,7 @@ for (i in 1:nrow(rulespace)){
                                        #support = 0.002,
                                        #support = 5*(numerator/length(amr.list.raw)),
                                        support = 0.5*(numerator/length(amr.list.raw)),
-                                       confidence =  0.75,
+                                       confidence =  0.5,
                                        maxtime = 60),
                       appearance = list(default = "none",
                                         lhs = genotypes[which(genotypes != "mcr")],
@@ -264,9 +264,3 @@ outputpdts <- outputpdts %>%
   select(-c("pdg","genotype"))
 
 readr::write_csv(outputpdts, "MCR_Groups_ARM_PDTs.csv")
-
-## Create URL for PDT sets
-
-## Get publications for rules' PDTs
-
-## Get publications for OR PDTs

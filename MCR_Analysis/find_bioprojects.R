@@ -30,7 +30,8 @@ bioprojects <- data.frame(ids, bioprojects)
 bioprojects$bioproject_url <- paste0("https://www.ncbi.nlm.nih.gov/bioproject/",bioprojects$bioproject)
 
 ## Join to MCR Groups (from Odds Ratio Analysis)
-mcr_groups <- read.csv("MCR_Groups_PDTs.csv")
+# mcr_groups <- read.csv("MCR_Groups_PDTs.csv")
+mcr_groups <- read.csv("MCR_Groups_ARM_PDTs.csv")
 
 bioprojects <- inner_join(mcr_groups, bioprojects)
 
@@ -74,7 +75,7 @@ for (i in 1:length(bioprojects_unique)){
     publications <- rbind(publications, iteroutput)
   }
 
-  cat(paste0(i, ".BioProject: ", as.character(bioprojects_unique[i]), "\n"))
+  cat(paste0(i, ". BioProject: ", as.character(bioprojects_unique[i]), "\n"))
 }
 
 #publications_orig <- publications
@@ -87,6 +88,7 @@ publication_output <- inner_join(publications, bioprojects)
 publications_by_mcr_group <- publication_output %>%
   select(-c("pdt", "pdg", "publications", "bioproject")) %>% 
   unique() %>% 
-  cast(publications_url~mcr_group)
+  cast(publication_url~mcr_group)
 
-write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
+# write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
+write.csv(publications_by_mcr_group, "publications_by_ARM_mcr_group.csv")

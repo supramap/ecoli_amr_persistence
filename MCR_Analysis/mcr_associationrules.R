@@ -249,6 +249,22 @@ for (i in 2:ncol(matches)){
       sep = "")
 } 
 
+## Reshape to Get only Subsets/Supersets/Matches
+library(reshape2)
+
+outputpdts <- melt(matches, id = c("pdt", "genotype")) %>% 
+  filter(value == "Subset") %>% 
+  select(-one_of("value"))
+
+colnames(outputpdts) <- c("id", "genotype", "mcr_group")
+
+## Separate IDs into PDG and PDT numbers
+outputpdts <- outputpdts %>%
+  separate(id, c("pdg", "pdt"), sep = "_") %>%
+  select(-c("pdg","genotype"))
+
+readr::write_csv(outputpdts, "MCR_Groups_ARM_PDTs.csv")
+
 ## Create URL for PDT sets
 
 ## Get publications for rules' PDTs

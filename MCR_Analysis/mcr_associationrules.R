@@ -19,6 +19,10 @@ json.stream <- readRDS("e.coli.RDS")
 
 amr.list.raw <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
 names(amr.list.raw) <- json.stream[["ngout"]][["data"]][["content"]][["id"]]
+creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
+
+amr.list.raw <- amr.list.raw[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+
 amr.list.raw[amr.list.raw == "NULL"] <- NULL
 amr.all <- sort(unique(unlist(amr.list.raw)))
 
@@ -31,7 +35,7 @@ mcr.variants <- amr.all[str_detect(amr.all, "mcr-")] %>%
 ## Convert all mcr genotype variants to "mcr"
 mcr.subset <- amr.list.raw %>% 
   lapply(., str_replace_all, pattern = mcr.variants, replacement = "mcr") %>% 
-  lapply(., unique) # Removes duplicate "mcr" genotypes from previous step
+  lapply(., unique) #Removes duplicate "mcr" genotypes from previous step
 
 ## Filter to strains containing "mcr"
 #mcr.subset <- mcr.subset[unlist(lapply(mcr.subset, function(x){"mcr" %in% x}))]
@@ -147,7 +151,7 @@ for (i in 1:nrow(rulespace)){
                                        #support = 0.002,
                                        #support = 5*(numerator/length(amr.list.raw)),
                                        support = 0.5*(numerator/length(amr.list.raw)),
-                                       confidence =  0.5,
+                                       confidence =  2/3,
                                        maxtime = 60),
                       appearance = list(default = "none",
                                         lhs = genotypes[which(genotypes != "mcr")],

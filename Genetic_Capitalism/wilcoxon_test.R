@@ -1,12 +1,14 @@
 ##############################
 ##    Script to Generate    ##
-##    Wilcoxon Test by      ##
+##  Distribution Tests by   ##
 ##        AMR Group         ##
 ## By: Colby T. Ford, Ph.D. ##
 ##############################
 
 library(dplyr)
 data <- read.csv("AMR_FunctionalMechanisms.csv")
+newgcss <- read.csv("clusters.csv")
+data$GC.SS <- newgcss$GC.SS
 
 ######################
 ## GC/SS by Type
@@ -18,15 +20,18 @@ gc$pct <- gc$n/sum(gc$n)
 ss <- GCSSbyType %>% filter(GC.SS == "SS")
 ss$pct <- ss$n/sum(ss$n)
 
-GCSSbyType_wt <- wilcox.test(gc$n,
-                             ss$n,
-                             alternative = "two.sided",
-                             paired = TRUE)
+# GCSSbyType_wt <- wilcox.test(gc$n,
+#                              ss$n,
+#                              alternative = "two.sided",
+#                              paired = TRUE)
 
 GCSSbyType_ks <- ks.test(gc$n,
                          ss$n,
                          alternative = "two.sided",
                          exact = TRUE)
+
+plot(data[data$GC.SS == "GC",]$Type)
+plot(data[data$GC.SS == "SS",]$Type)
 
 ######################
 ## GC/SS by Resistance Mechanism
@@ -36,10 +41,10 @@ gc$pct <- gc$n/sum(gc$n)
 ss <- GCSSbyRM %>% filter(GC.SS == "SS")
 ss$pct <- ss$n/sum(ss$n)
 
-GCSSbyRM_wt <- wilcox.test(gc$n,
-                           ss$n,
-                           alternative = "two.sided",
-                           paired = TRUE)
+# GCSSbyRM_wt <- wilcox.test(gc$n,
+#                            ss$n,
+#                            alternative = "two.sided",
+#                            paired = TRUE)
 
 GCSSbyRM_ks <- ks.test(gc$pct,
                        ss$pct,
@@ -50,14 +55,19 @@ GCSSbyRM_ks <- ks.test(gc$pct,
 ######################
 ## GC/SS by Gene
 GCSSbyGene <- data %>% group_by(GC.SS, AMR.Gene, .drop = FALSE) %>% tally()
+
 gc <- GCSSbyGene %>% filter(GC.SS == "GC")
+gc$pct <- gc$n/sum(gc$n)
+
 ss <- GCSSbyGene %>% filter(GC.SS == "SS")
+ss$pct <- ss$n/sum(ss$n)
 
-GCSSbyGene_wt <- wilcox.test(gc$n,
-                             ss$n,
-                             alternative = "two.sided",
-                             paired = TRUE)
+# GCSSbyGene_wt <- wilcox.test(gc$n,
+#                              ss$n,
+#                              alternative = "two.sided",
+#                              paired = TRUE)
 
-GCSSbyGene_wt$p.adjust <- p.adjust(GCSSbyGene_wt$p.value,
-                                 method = "bonferroni",
-                                 n = nrow(gc))
+GCSSbyGene_ks <- ks.test(gc$n,
+                         ss$n,
+                         alternative = "two.sided",
+                         paired = TRUE)

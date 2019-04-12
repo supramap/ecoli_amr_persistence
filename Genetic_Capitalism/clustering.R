@@ -4,7 +4,7 @@
 ##      Gains and Losses    ##
 ## By: Colby T. Ford, Ph.D. ##
 ##############################
-
+library(dplyr)
 ## Read in Data
 data <- read.csv("gainloss_counts.csv")
 data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
@@ -20,6 +20,7 @@ data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
 # centers <- as.data.frame(meanclust$centers)
 
 library(mclust)
+## Combined Clusters
 meanclust <- Mclust(data[,1:2])
 #meanclust <- Mclust(data[,3])
 
@@ -30,10 +31,26 @@ counts <- data %>% group_by(cluster) %>% tally()
 ## Separate Clusters
 gainclust <- Mclust(data[,1])
 data$gaincluster <- factor(gainclust$classification)
+
 lossclust <- Mclust(data[,2])
 data$losscluster <- factor(lossclust$classification)
 
-data$cluster <- paste0(data$gaincluster, "|", data$losscluster)
+data <- data %>% 
+  mutate(gaincluster,
+         gaincluster = ifelse(gaincluster == 1,
+                              "Infrequently",
+                              "Frequently")) %>% 
+  mutate(losscluster,
+         losscluster = ifelse(losscluster == 1,
+                              "Never",
+                              ifelse(losscluster == 7,
+                                     "Infrequently",
+                                     "Frequently")))
+
+data$cluster <- paste0("G: ",
+                       data$gaincluster,
+                       " | L: "
+                       , data$losscluster)
 
 ############
 ## k-Median Analysis
@@ -51,23 +68,33 @@ data$cluster <- paste0(data$gaincluster, "|", data$losscluster)
 library(ggplot2)
 library(plotly)
 
-p <- ggplot(data = data, aes(x=Gain, y=Loss, color=cluster, label=Genotype)) + 
+p <- ggplot(data = data, aes(x=Gain,
+                             y=Loss,
+                             color=cluster,
+                             label=Genotype)) + 
   geom_point() + 
   geom_label() +
-  geom_vline(xintercept = 20) +
-  geom_hline(yintercept = 17) +
+  #geom_vline(xintercept = 20) +
+  #geom_hline(yintercept = 17) +
   ylim(0,2500)
 
-p <- ggplot(data = data, aes(x=log(Gain), y=log(Loss), color=cluster, label=Genotype)) + 
+ggplotly(p)
+
+lp <- ggplot(data = data,
+            aes(x=log(Gain),
+                y=log(Loss),
+                color=cluster,
+                label=Genotype)) + 
   geom_point() + 
   geom_label()
 
-ggplotly(p)
+ggplotly(lp)
 
 
 ## Define GC, SS, and TBD Groups
 data$GC.SS <- "SS"
-data$GC.SS[data$cluster == "2|1"] <- "GC"
-data$GC.SS[data$cluster == "1|1"] <- "TBD"
+data$GC.SS[data$cluster == "G: Frequently | L: Infrequently"] <- "GC"
+data$GC.SS[data$cluster == "G: Frequently | L: Never"] <- "GC"
+data$GC.SS[data$cluster == "G: Infrequently | L: Never"] <- "TBD"
 
 write.csv(data, "clusters.csv")

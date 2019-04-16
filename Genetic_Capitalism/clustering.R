@@ -29,6 +29,7 @@ data$cluster <- factor(meanclust$classification)
 counts <- data %>% group_by(cluster) %>% tally()
 
 ## Separate Clusters
+set.seed(1337)
 gainclust <- Mclust(data[,1])
 data$gaincluster <- factor(gainclust$classification)
 
@@ -42,15 +43,22 @@ data <- data %>%
                               "Frequently")) %>% 
   mutate(losscluster,
          losscluster = ifelse(losscluster == 1,
-                              "Never",
-                              ifelse(losscluster == 7,
-                                     "Infrequently",
-                                     "Frequently")))
+                              "Infrequently",
+                              "Frequently"))
 
 data$cluster <- paste0("G: ",
                        data$gaincluster,
                        " | L: "
                        , data$losscluster)
+
+## Define GC, SS, and TBD Groups
+data$GC.SS <- "SS"
+data$GC.SS[data$cluster == "G: Frequently | L: Infrequently"] <- "GC"
+data$GC.SS[data$cluster == "G: Infrequently | L: Infrequently"] <- "TBD"
+
+counts <- data %>% group_by(GC.SS) %>% tally()
+
+write.csv(data, "clusters.csv")
 
 ############
 ## k-Median Analysis
@@ -70,7 +78,7 @@ library(plotly)
 
 p <- ggplot(data = data, aes(x=Gain,
                              y=Loss,
-                             color=cluster,
+                             color=GC.SS,
                              label=Genotype)) + 
   geom_point() + 
   geom_label() +
@@ -83,7 +91,7 @@ ggplotly(p)
 lp <- ggplot(data = data,
             aes(x=log(Gain),
                 y=log(Loss),
-                color=cluster,
+                color=GC.SS,
                 label=Genotype)) + 
   geom_point() + 
   geom_label()
@@ -91,10 +99,4 @@ lp <- ggplot(data = data,
 ggplotly(lp)
 
 
-## Define GC, SS, and TBD Groups
-data$GC.SS <- "SS"
-data$GC.SS[data$cluster == "G: Frequently | L: Infrequently"] <- "GC"
-data$GC.SS[data$cluster == "G: Frequently | L: Never"] <- "GC"
-data$GC.SS[data$cluster == "G: Infrequently | L: Never"] <- "TBD"
 
-write.csv(data, "clusters.csv")

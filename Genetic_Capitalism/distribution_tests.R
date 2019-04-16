@@ -34,7 +34,45 @@ GCSSbyType_ks <- ks.test(gc$n,
                          alternative = "two.sided",
                          exact = TRUE)
 
-p <- ggplot(data, aes(Type, fill = GC.SS)) +
+## Fisher Test
+GCSSbyType_ft <- fisher.test(gc$n,
+                             ss$n,
+                             alternative = "two.sided")
+
+GCSSbyType_ft <- fisher.test(matrix(c(3,11,20,104,12,14,
+                                      0,0,3,10,0,3,
+                                      1,25,26,160,6,11),
+                                    3,
+                                    6,
+                                    byrow=TRUE,
+                                    dimnames = list(classification=c("GC",
+                                                                     "SS",
+                                                                     "TBD"),
+                                                    mechanism=c("unknown",
+                                                                "alteration",
+                                                                "efflux",
+                                                                "inactiviation",
+                                                                "protection",
+                                                                "replacement"))),
+                             simulate.p.value = TRUE)
+
+
+GCSSbyType_ft <- fisher.test(matrix(c(3,11,20,104,12,14,
+                                      0,0,3,10,0,3),
+                                    2,
+                                    6,
+                                    byrow=TRUE,
+                                    dimnames = list(classification=c("GC",
+                                                                     "SS"),
+                                                    mechanism=c("unknown",
+                                                                "alteration",
+                                                                "efflux",
+                                                                "inactiviation",
+                                                                "protection",
+                                                                "replacement"))),
+                             simulate.p.value = TRUE)
+
+p <- ggplot(data, aes(Type,  fill = GC.SS)) +
   geom_bar(position="dodge") +
   scale_fill_npg()
 

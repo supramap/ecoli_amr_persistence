@@ -7,7 +7,11 @@
 library(dplyr)
 ## Read in Data
 data <- read.csv("gainloss_counts.csv")
+counts <- read.csv("IsolateCounts.csv")
+data <- merge(data, counts, by = "Genotype")
 data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
+data$gain_rate <- data$Gain/data$Isolate_Count
+data$loss_rate <- data$Loss/data$Isolate_Count
 
 ############
 ## k-Means Analysis
@@ -21,7 +25,8 @@ data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
 
 library(mclust)
 ## Combined Clusters
-meanclust <- Mclust(data[,1:2])
+set.seed(1337)
+meanclust <- Mclust(data[,6:7])
 #meanclust <- Mclust(data[,3])
 
 data$cluster <- factor(meanclust$classification)
@@ -98,5 +103,14 @@ lp <- ggplot(data = data,
 
 ggplotly(lp)
 
+
+lp <- ggplot(data = data,
+             aes(x=gain_rate,
+                 y=loss_rate,
+                 color=cluster,
+                 label=Genotype)) + 
+  geom_point() + 
+  geom_label()
+ggplotly(lp)
 
 

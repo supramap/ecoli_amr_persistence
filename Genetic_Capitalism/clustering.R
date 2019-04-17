@@ -35,10 +35,10 @@ counts <- data %>% group_by(cluster) %>% tally()
 
 ## Separate Clusters
 set.seed(1337)
-gainclust <- Mclust(data[,1])
+gainclust <- Mclust(data[,6])
 data$gaincluster <- factor(gainclust$classification)
 
-lossclust <- Mclust(data[,2])
+lossclust <- Mclust(data[,7])
 data$losscluster <- factor(lossclust$classification)
 
 data <- data %>% 
@@ -110,7 +110,9 @@ lp <- ggplot(data = data,
                  color=cluster,
                  label=Genotype)) + 
   geom_point() + 
-  geom_label()
+  geom_label() #+
+  # ylim(0,1) +
+  # xlim(0,1)
 ggplotly(lp)
 
 

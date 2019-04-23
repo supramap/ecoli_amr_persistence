@@ -1,6 +1,6 @@
 #######################
 ## Script for finding all BioProject numbers for publication scraping
-## Colby T. Ford, Ph.D.
+## By: Colby T. Ford, Ph.D., Gabriel Zenarosa, Ph.D., David Brown, Kevin Smith, and Daniel Janies, Ph.D.
 #######################
 
 ## Load in Packages

@@ -1,3 +1,8 @@
+#######################
+## Script for generating Logisitc Regression for E. coli genotype sets containing `mcr`
+## By:  Gabriel Zenarosa, Ph.D., Colby T. Ford, Ph.D., David Brown, Kevin Smith, and Daniel Janies, Ph.D.
+#######################
+
 library(jsonlite)
 library(stringr)
 library(glmnet)
@@ -81,29 +86,32 @@ rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 pdt.mcr.nz <- lapply(rownames(coef.mcr.nz)[-1], function(y){genoid[rowMeans(sapply(c("mcr", gsub('`', '', strsplit(y, ":")[[1]])), function(x){gdf.mcr[[x]]})) == 1]})
 names(pdt.mcr.nz) <- rownames(coef.mcr.nz)[-1]
 coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=lengths(pdt.mcr.nz), URL=paste0("https://www.ncbi.nlm.nih.gov/pathogens/isolates/#/search/target_acc:", sapply(pdt.mcr.nz, paste, collapse = "%20OR%20target_acc:")))
-write.csv(coef.mcr.nz.df, "oddsRatio-MCR-vs-Sets.csv")
+# write.csv(coef.mcr.nz.df, "oddsRatio-MCR-vs-Sets.csv")
 
-# -------------------------------
-# Genotype Sets Association Rules
-# -------------------------------
-genotypes.mcr.list <- genotypes.mcr
-genotypes.mcr.uniq <- unique(sort(unlist(genotypes.mcr)))
-genotypes.mcr.list[genotypes.mcr.idx] <- lapply(genotypes.mcr[genotypes.mcr.idx], c, "mcr")
-genotypes.mcr.txn <- as(genotypes.mcr.list, 'transactions')
-genotypes.mcr.rules <- apriori(genotypes.mcr.txn,
-                               parameter = list(minlen = 2,
-                                                maxlen = 14,
-                                                support = 200.0 / length(genotypes),
-                                                confidence = 0.5),
-                               appearance = list(default = "none",
-                                                 lhs = genotypes.mcr.uniq,
-                                                 rhs = "mcr"),
-                               control = list(memopt = FALSE)
-)
-genotypes.mcr.rules.df <- data.frame(
-  lhs = labels(lhs(genotypes.mcr.rules)),
-  rhs = labels(rhs(genotypes.mcr.rules)),
-  genotypes.mcr.rules@quality
-)
-View(genotypes.mcr.rules.df)
+# ------------------
+# Model Validation
+# ------------------
+# New data From Jan 9 to today
+json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(status%3D%3D%5B%22current%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Casc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=asc)")
 
+id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
+creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
+collection_year <- as.numeric(substr(json.stream[["ngout"]][["data"]][["content"]][["collection_date"]], 1, 4))
+collection_year[is.na(collection_year)] <- as.numeric(format(creation_date_time[is.na(collection_year)], "%Y"))
+location <- json.stream[["ngout"]][["data"]][["content"]][["geo_loc_name"]]
+isolation_type <- json.stream[["ngout"]][["data"]][["content"]][["epi_type"]]
+isolation_source <- json.stream[["ngout"]][["data"]][["content"]][["isolation_source"]]
+fdf <- data.frame(id, creation_date_time, collection_year, location, isolation_type, isolation_source)
+rdf <- fdf[fdf$id %in% pdt,]
+fgenotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
+names(fgenotypes) <- id
+rgenotypes <- fgenotypes
+rgenotypes[!(names(fgenotypes) %in% pdt)] <- NULL
+#fgenotypes[fgenotypes == "NULL"] <- NULL
+#rgenotypes[rgenotypes == "NULL"] <- NULL
+genotypes <- fgenotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+genoid <- id[creation_date_time >= as.POSIXct("2019-09-01 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+
+
+#Run validation
+predict(model.cv, newx = [??] , s = "lambda.1se")

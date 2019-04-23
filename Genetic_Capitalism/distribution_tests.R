@@ -11,8 +11,12 @@ library(plotly)
 library(ggsci)
 
 data <- read.csv("AMR_FunctionalMechanisms.csv")
+## Remove blaEC & blaEC-5
+data <- data %>% filter(!AMR.Gene %in% c("blaEC", "blaEC-5"))
+
+## Read in new clusters
 newgcss <- read.csv("clusters.csv")
-data$GC.SS <- newgcss$GC.SS
+data$GC.SS <- newgcss$cluster
 
 ######################
 ## GC/SS by Type
@@ -23,6 +27,9 @@ gc$pct <- gc$n/sum(gc$n)
 
 ss <- GCSSbyType %>% filter(GC.SS == "SS")
 ss$pct <- ss$n/sum(ss$n)
+
+tbd <- GCSSbyType %>% filter(GC.SS == "TBD")
+tbd$pct <- tbd$n/sum(tbd$n)
 
 # GCSSbyType_wt <- wilcox.test(gc$n,
 #                              ss$n,
@@ -35,13 +42,13 @@ GCSSbyType_ks <- ks.test(gc$n,
                          exact = TRUE)
 
 ## Fisher Test
-GCSSbyType_ft <- fisher.test(gc$n,
-                             ss$n,
-                             alternative = "two.sided")
+# GCSSbyType_ft <- fisher.test(gc$n,
+#                              ss$n,
+#                              alternative = "two.sided")
 
-GCSSbyType_ft <- fisher.test(matrix(c(3,11,20,104,12,14,
-                                      0,0,3,10,0,3,
-                                      1,25,26,160,6,11),
+GCSSbyType_ft <- fisher.test(matrix(c(gc$n,
+                                      ss$n,
+                                      tbd$n),
                                     3,
                                     6,
                                     byrow=TRUE,
@@ -57,8 +64,8 @@ GCSSbyType_ft <- fisher.test(matrix(c(3,11,20,104,12,14,
                              simulate.p.value = TRUE)
 
 
-GCSSbyType_ft <- fisher.test(matrix(c(3,11,20,104,12,14,
-                                      0,0,3,10,0,3),
+GCSSbyType_ft <- fisher.test(matrix(c(gc$n,
+                                      ss$n),
                                     2,
                                     6,
                                     byrow=TRUE,
@@ -77,6 +84,7 @@ p <- ggplot(data, aes(Type,  fill = GC.SS)) +
   scale_fill_npg()
 
 ggplotly(p)
+
 
 ######################
 ## GC/SS by Resistance Mechanism

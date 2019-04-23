@@ -1,7 +1,9 @@
-#######################
-## Script for generating Association Rules for E. coli genotype sets containing `mcr`
-## By: Colby T. Ford, Ph.D., Gabriel Zenarosa, Ph.D., David Brown, Kevin Smith, and Daniel Janies, Ph.D.
-#######################
+############################################################
+## Script for generating Association Rules for            ##
+## E. coli genotype sets containing `mcr`                 ##
+## By: Colby T. Ford, Ph.D., Gabriel Zenarosa, Ph.D.,     ##
+##     David Brown, Kevin Smith, and Daniel Janies, Ph.D. ##
+############################################################
 
 ## Load in Packages
 library(jsonlite)

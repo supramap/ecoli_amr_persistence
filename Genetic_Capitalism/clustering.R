@@ -1,13 +1,13 @@
-##############################
-##    Cluster Analysis by   ##
-##        AMR Genotype      ##
-##      Gains and Losses    ##
-## By: Colby T. Ford, Ph.D. ##
-##############################
+###############################################################
+##    Cluster Analysis of AMR Genotype  Gains and Losses     ##
+## By: Colby T. Ford, Ph.D., Gabriel Zenarosa, Ph.D.,        ##
+##     Kevin Smith, John Williams, and Daniel Janies, Ph.D.  ##
+###############################################################
+
 library(dplyr)
 
 ## Get Genotype Counts
-pdt <- unique(names(read.csv("../MCR_Analysis/e.coli.ids")))
+pdt <- unique(names(read.csv("e.coli.ids")))
 json.stream <- readRDS("TNTFileGenerator/e.coli.RDS")
 id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
 fgenotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
@@ -24,37 +24,27 @@ counts <- as.data.frame(colSums(gdf))
 colnames(counts) <- "Isolate_Count"
 counts$Genotype <- rownames(counts) 
 
-
-## Read in Data
+## Read in Gain and Loss Data
 data <- read.csv("gainloss_counts.csv")
-#counts <- read.csv("IsolateCounts.csv")
 data <- merge(data, counts, by = "Genotype")
 
-## Remove blaEC & blaEC-5
+## Remove blaEC & blaEC-5 (outliers)
 data <- data %>% filter(!Genotype %in% c("blaEC", "blaEC-5"))
 
+## Calculate rate columns, net_gain, and net_loss
 # data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
 # data$gain_rate <- data$Gain/data$Isolate_Count
 # data$loss_rate <- data$Loss/data$Isolate_Count
 data$rate <- data$Isolate_Count/(data$Gain-data$Loss)
-data$net_gain <- scale(data$Gain * data$rate)
-data$net_loss <- scale(data$Loss * data$rate)
+data$net_gain <- scale(data$Gain * data$rate)[,1]
+data$net_loss <- scale(data$Loss * data$rate)[,1]
 
 ############
 ## k-Means Analysis
-# set.seed(1337)
-# meanclust <- kmeans(scale(data[,1:2]),
-#                     centers = 5,
-#                     iter.max = 10000)
-# 
-# data$cluster <- factor(meanclust$cluster)
-# centers <- as.data.frame(meanclust$centers)
-
 library(mclust)
-## Combined Clusters
+
 set.seed(1337)
 meanclust <- Mclust(data[,6:7])
-#meanclust <- Mclust(data[,3])
 
 data$cluster <- factor(meanclust$classification)
 
@@ -63,93 +53,28 @@ cluster_counts <- data %>%
   tally()
 
 data <- data %>% mutate(cluster = case_when(cluster == 1 ~ "TBD",
-                                            cluster == 2 ~ "GC",
-                                            cluster == 3 ~ "GC",
-                                            cluster == 4 ~ "SS",
-                                            cluster == 5 ~ "GC",
-                                            cluster == 6 ~ "SS"))
-         
-         
-## Separate Clusters
-# set.seed(1337)
-# gainclust <- Mclust(data[,6])
-# data$gaincluster <- factor(gainclust$classification)
-# 
-# lossclust <- Mclust(data[,7])
-# data$losscluster <- factor(lossclust$classification)
-
-# data <- data %>% 
-#   mutate(gaincluster,
-#          gaincluster = ifelse(gaincluster == 1,
-#                               "Infrequently",
-#                               "Frequently")) %>% 
-#   mutate(losscluster,
-#          losscluster = ifelse(losscluster == 1,
-#                               "Infrequently",
-#                               "Frequently"))
-# 
-# data$cluster <- paste0("G: ",
-#                        data$gaincluster,
-#                        " | L: "
-#                        , data$losscluster)
-# 
-# ## Define GC, SS, and TBD Groups
-# data$GC.SS <- "SS"
-# data$GC.SS[data$cluster == "G: Frequently | L: Infrequently"] <- "GC"
-# data$GC.SS[data$cluster == "G: Infrequently | L: Infrequently"] <- "TBD"
-# 
-# cluster_counts <- data %>% group_by(GC.SS) %>% tally()
+                                            cluster %in% c(2,3,5) ~ "GC",
+                                            cluster %in% c(4,6) ~ "SS"))
 
 write.csv(data, "clusters.csv")
-
-############
-## k-Median Analysis
-# library(Gmedian)
-# set.seed(1337)
-# medclust <- kGmedian(data[,1:2],
-#                      ncenters = 5)
-# data$cluster <- factor(medclust$cluster)
-# centers <- as.data.frame(medclust$centers)
-# 
-# cluster_counts <- data %>% group_by(cluster) %>% tally()
 
 ###############
 ## Plot Genotype Clusters
 library(ggplot2)
 library(plotly)
 
-p <- ggplot(data = data, aes(x=Gain,
-                             y=Loss,
-                             color=GC.SS,
-                             label=Genotype)) + 
-  geom_point() + 
+
+p <- ggplot(data = data,
+             aes(x = Gain,
+                 y = Loss,
+                 color = cluster,
+                 label = Genotype,
+                 text = paste("Rate: ", rate,
+                              "\nNet Gain: ", net_gain,
+                              "\nNet Loss: ", net_loss))) + 
+  geom_point(alpha = (2/3)) + 
   geom_label() +
-  #geom_vline(xintercept = 20) +
-  #geom_hline(yintercept = 17) +
-  ylim(0,2500)
+  xlim(0,2500) +
+  ylim(0,800)
 
 ggplotly(p)
-
-lp <- ggplot(data = data,
-            aes(x=log(Gain),
-                y=log(Loss),
-                color=GC.SS,
-                label=Genotype)) + 
-  geom_point() + 
-  geom_label()
-
-ggplotly(lp)
-
-
-lp <- ggplot(data = data,
-             aes(x=Gain,
-                 y=Loss,
-                 color=cluster,
-                 label=Genotype)) + 
-  geom_point() + 
-  geom_label() #+
-  # ylim(0,1) +
-  # xlim(0,1)
-ggplotly(lp)
-
-

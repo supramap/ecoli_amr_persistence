@@ -1,7 +1,9 @@
-#######################
-## Script for generating Logisitc Regression for E. coli genotype sets containing `mcr`
-## By:  Gabriel Zenarosa, Ph.D., Colby T. Ford, Ph.D., David Brown, Kevin Smith, and Daniel Janies, Ph.D.
-#######################
+############################################################
+## Script for generating Logisitc Regression              ##
+## for E. coli genotype sets containing `mcr`             ##
+## By: Gabriel Zenarosa, Ph.D., Colby T. Ford, Ph.D.,     ##
+##     David Brown, Kevin Smith, and Daniel Janies, Ph.D. ##
+############################################################
 
 library(jsonlite)
 library(stringr)
@@ -92,7 +94,7 @@ coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=length
 # Model Validation
 # ------------------
 # New data From Jan 9 to today
-json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(status%3D%3D%5B%22current%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Casc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=asc)")
+json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=20&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Cepi_type%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(kmer_group%3D%3D%5B%22PDG000000004.1186%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc")
 
 id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
 creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
@@ -101,17 +103,41 @@ collection_year[is.na(collection_year)] <- as.numeric(format(creation_date_time[
 location <- json.stream[["ngout"]][["data"]][["content"]][["geo_loc_name"]]
 isolation_type <- json.stream[["ngout"]][["data"]][["content"]][["epi_type"]]
 isolation_source <- json.stream[["ngout"]][["data"]][["content"]][["isolation_source"]]
-fdf <- data.frame(id, creation_date_time, collection_year, location, isolation_type, isolation_source)
-rdf <- fdf[fdf$id %in% pdt,]
-fgenotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
-names(fgenotypes) <- id
-rgenotypes <- fgenotypes
-rgenotypes[!(names(fgenotypes) %in% pdt)] <- NULL
-#fgenotypes[fgenotypes == "NULL"] <- NULL
-#rgenotypes[rgenotypes == "NULL"] <- NULL
-genotypes <- fgenotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
-genoid <- id[creation_date_time >= as.POSIXct("2019-09-01 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+df <- data.frame(id, creation_date_time, collection_year, location, isolation_type, isolation_source)
+genotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
+names(genotypes) <- id
 
+#genotypes <- genotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+#genoid <- id[creation_date_time >= as.POSIXct("2019-09-01 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+
+
+# ---------
+# Genotypes
+# ---------
+genotypesall <- unique(sort(unlist(genotypes)))
+genobinv <- lapply(genotypes, function(x){(genotypesall %in% x) * 1})
+gdf <- as.data.frame(matrix(unlist(genobinv), ncol = length(genotypesall), byrow = T))
+names(gdf) <- genotypesall
+gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
+gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
+
+# -------------
+# Genotype Sets
+# -------------
+genotypes.mcr <- genotypes
+genotypes.mcr.idx <- grep("mcr", genotypes)
+genotypes.mcr[genotypes.mcr.idx] <- lapply(genotypes[genotypes.mcr.idx], function(x){x[-grep("mcr", x)]})
+genotypeset.mcr <- lapply(genotypes.mcr,
+                          function(x){
+                            # add ticks (`) only as needed
+                            y <- format(as.formula(paste0(ifelse(length(x) > 0, paste0("`", paste(x, collapse = "`:`"), "`"), ""), "~1")))[1]
+                            return(substr(y, 1, regexpr("~", y)[1] - 2))
+                          }
+)
+genotypesets.mcr <- unique(genotypeset.mcr)
+genotypesets.mcr.gt1 <- genotypesets.mcr[grep(":", genotypesets.mcr)]
+f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), sep = "+"))
+x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
 
 #Run validation
-predict(model.cv, newx = [??] , s = "lambda.1se")
+validation <- predict(model.cv, newx = x , s = "lambda.1se")

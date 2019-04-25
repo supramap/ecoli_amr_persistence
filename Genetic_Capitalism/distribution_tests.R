@@ -4,13 +4,14 @@
 ##     Kevin Smith, John Williams, and Daniel Janies, Ph.D.  ##
 ###############################################################
 
-
 library(dplyr)
 library(ggplot2)
 library(plotly)
 library(ggsci)
 
+## Load in resistance mechanism data
 data <- read.csv("AMR_FunctionalMechanisms.csv")
+
 ## Remove blaEC & blaEC-5
 data <- data %>% filter(!AMR.Gene %in% c("blaEC", "blaEC-5"))
 
@@ -35,38 +36,38 @@ tbd$pct <- tbd$n/sum(tbd$n)
 ## Fisher Test
 
 ## For all 3 categories: GC, SS, TBD
-GCSSbyType_ft <- fisher.test(matrix(c(gc$n,
-                                      ss$n,
-                                      tbd$n),
-                                    3,
-                                    6,
-                                    byrow=TRUE,
-                                    dimnames = list(classification=c("GC",
-                                                                     "SS",
-                                                                     "TBD"),
-                                                    mechanism=c("unknown",
-                                                                "alteration",
-                                                                "efflux",
-                                                                "inactiviation",
-                                                                "protection",
-                                                                "replacement"))),
-                             simulate.p.value = TRUE)
+GCSSbyType_ft_3 <- fisher.test(matrix(c(gc$n,
+                                        ss$n,
+                                        tbd$n),
+                                      3,
+                                      6,
+                                      byrow=TRUE,
+                                      dimnames = list(classification=c("GC",
+                                                                       "SS",
+                                                                       "TBD"),
+                                                      mechanism=c("unknown",
+                                                                  "alteration",
+                                                                  "efflux",
+                                                                  "inactiviation",
+                                                                  "protection",
+                                                                  "replacement"))),
+                               simulate.p.value = TRUE)
 
-## For all 2 categories: GC, SS
-GCSSbyType_ft <- fisher.test(matrix(c(gc$n,
-                                      ss$n),
-                                    2,
-                                    6,
-                                    byrow=TRUE,
-                                    dimnames = list(classification=c("GC",
-                                                                     "SS"),
-                                                    mechanism=c("unknown",
-                                                                "alteration",
-                                                                "efflux",
-                                                                "inactiviation",
-                                                                "protection",
-                                                                "replacement"))),
-                             simulate.p.value = TRUE)
+## For 2 categories: GC, SS
+GCSSbyType_ft_2 <- fisher.test(matrix(c(gc$n,
+                                        ss$n),
+                                      2,
+                                      6,
+                                      byrow=TRUE,
+                                      dimnames = list(classification=c("GC",
+                                                                       "SS"),
+                                                      mechanism=c("unknown",
+                                                                  "alteration",
+                                                                  "efflux",
+                                                                  "inactiviation",
+                                                                  "protection",
+                                                                  "replacement"))),
+                               simulate.p.value = TRUE)
 
 
 ## Plotting

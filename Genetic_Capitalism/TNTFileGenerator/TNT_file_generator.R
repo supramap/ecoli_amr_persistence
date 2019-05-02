@@ -5,7 +5,7 @@ library(stringr)
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
 #sed 's/'\)'*'\('*'\ '*PDT/,PDT/g' e.coli.paren | sed 's/^,//g' | sed 's/'\)'*;$//g' > e.coli.ids
 #---------
-pdt <- unique(names(read.csv("e.coli.ids")))
+pdt <- unique(names(read.csv("../e.coli.ids")))
 
 #json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(status%3D%3D%5B%22current%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Casc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=asc)")
 #saveRDS(json.stream, file = "e.coli.RDS")
@@ -50,52 +50,52 @@ cat(";", "proc /;", file = "e.coli.genotypes.tnt.tail", sep = "\n", append = T)
 system("cat e.coli.genotypes.tnt.head e.coli.paren e.coli.genotypes.tnt.tail > e.coli.genotypes.tnt")
 write.csv(dfbins, "e.coli.genotypes.meta.csv")
 
-# ----------------------------
-# Genotype Odds and Odds Ratio
-# ----------------------------
-dfbinv <- data.frame(matrix(unlist(genobinv), nrow=length(genobinv), byrow=T))
-colnames(dfbinv) <- genotypesall
-dfbinv <- data.frame(amr=rep(1, nrow(dfbinv)), dfbinv)
-library(glmnet)
-model <- cv.glmnet(x = as.matrix(dfbinv), y = dfbinv$amr, family = "binomial", type.measure = "class")
-
-colSums(dfbinv)['blaEC']
-genotypeodds <- rep(0.0, length(genotypesall))
-names(genotypeodds) <- genotypesall
-for (g in genotypesall) {
-  genotypeodds[g] <- coef(glm(get(g) ~ blaEC, family = binomial, data = dfbinv))['blaEC']
-}
-genotypeodds['blaEC'] <- coef(glm(blaEC ~ 1, family = binomial, data = dfbinv))
-write.csv(as.data.frame(exp(cbind(Odds.Ratio=genotypeodds))), "oddsRatioSingles.csv")
-# dfbinv0 <- dfbinv[dfbinv$blaEC == 0,]
-# genotypeodds0 <- rep(0.0, length(genotypesall))
-# names(genotypeodds0) <- genotypesall
+# # ----------------------------
+# # Genotype Odds and Odds Ratio
+# # ----------------------------
+# dfbinv <- data.frame(matrix(unlist(genobinv), nrow=length(genobinv), byrow=T))
+# colnames(dfbinv) <- genotypesall
+# dfbinv <- data.frame(amr=rep(1, nrow(dfbinv)), dfbinv)
+# library(glmnet)
+# model <- cv.glmnet(x = as.matrix(dfbinv), y = dfbinv$amr, family = "binomial", type.measure = "class")
+# 
+# colSums(dfbinv)['blaEC']
+# genotypeodds <- rep(0.0, length(genotypesall))
+# names(genotypeodds) <- genotypesall
 # for (g in genotypesall) {
-#   genotypeodds0[g] <- coef(glm(get(g) ~ 1, family = binomial, data = dfbinv0))
+#   genotypeodds[g] <- coef(glm(get(g) ~ blaEC, family = binomial, data = dfbinv))['blaEC']
 # }
-
-# -------------
-# Genotype Sets
-# -------------
-genotypeset <- lapply(genotypes, paste, collapse="_")
-genotypesets <- unique(unlist(genotypeset))
-genobinsetv <- lapply(genotypeset, function(x){(genotypesets == x) * 1})
-genotypeset_count <- unlist(lapply(genobinsetv, sum))
-genobinset <- lapply(genobinsetv, paste, collapse = "")
-dfbinset <- data.frame(df, genotypeset_count, genobinset=unlist(genobinset))
-dfbinset <- dfbinset[order(dfbinset$genotypeset_count, dfbinset$collection_year, dfbinset$creation_date_time),]
-genobinset <- dfbinset$genobinset
-names(genobinset) <- dfbinset$id
-
-cat("mxram 800000", "xread", paste(c(length(genotypesets), length(genobinset)), collapse = " "), file = "e.coli.tnt.head", sep = "\n")
-cat(as.vector(paste(names(genobinset), unlist(genobinset), sep = " ")), file = "e.coli.tnt.head", sep = "\n", append = T)
-cat(";", "tread", file = "e.coli.tnt.head", sep = "\n", append = T)
-
-cat(";", "", "cnames", file = "e.coli.tnt.tail", sep = "\n")
-for (i in 1:length(genotypesets)) {
-  cat(paste0("{", (i - 1), " 'genotype_set_", genotypesets[i], "' absent present;"), file = "e.coli.tnt.tail", sep = "\n", append = T)
-}
-cat(";", "proc /;", file = "e.coli.tnt.tail", sep = "\n", append = T)
-
-system("cat e.coli.tnt.head e.coli.paren e.coli.tnt.tail > e.coli.tnt")
-write.csv(dfbinset, "e.coli.meta.csv")
+# genotypeodds['blaEC'] <- coef(glm(blaEC ~ 1, family = binomial, data = dfbinv))
+# write.csv(as.data.frame(exp(cbind(Odds.Ratio=genotypeodds))), "oddsRatioSingles.csv")
+# # dfbinv0 <- dfbinv[dfbinv$blaEC == 0,]
+# # genotypeodds0 <- rep(0.0, length(genotypesall))
+# # names(genotypeodds0) <- genotypesall
+# # for (g in genotypesall) {
+# #   genotypeodds0[g] <- coef(glm(get(g) ~ 1, family = binomial, data = dfbinv0))
+# # }
+# 
+# # -------------
+# # Genotype Sets
+# # -------------
+# genotypeset <- lapply(genotypes, paste, collapse="_")
+# genotypesets <- unique(unlist(genotypeset))
+# genobinsetv <- lapply(genotypeset, function(x){(genotypesets == x) * 1})
+# genotypeset_count <- unlist(lapply(genobinsetv, sum))
+# genobinset <- lapply(genobinsetv, paste, collapse = "")
+# dfbinset <- data.frame(df, genotypeset_count, genobinset=unlist(genobinset))
+# dfbinset <- dfbinset[order(dfbinset$genotypeset_count, dfbinset$collection_year, dfbinset$creation_date_time),]
+# genobinset <- dfbinset$genobinset
+# names(genobinset) <- dfbinset$id
+# 
+# cat("mxram 800000", "xread", paste(c(length(genotypesets), length(genobinset)), collapse = " "), file = "e.coli.tnt.head", sep = "\n")
+# cat(as.vector(paste(names(genobinset), unlist(genobinset), sep = " ")), file = "e.coli.tnt.head", sep = "\n", append = T)
+# cat(";", "tread", file = "e.coli.tnt.head", sep = "\n", append = T)
+# 
+# cat(";", "", "cnames", file = "e.coli.tnt.tail", sep = "\n")
+# for (i in 1:length(genotypesets)) {
+#   cat(paste0("{", (i - 1), " 'genotype_set_", genotypesets[i], "' absent present;"), file = "e.coli.tnt.tail", sep = "\n", append = T)
+# }
+# cat(";", "proc /;", file = "e.coli.tnt.tail", sep = "\n", append = T)
+# 
+# system("cat e.coli.tnt.head e.coli.paren e.coli.tnt.tail > e.coli.tnt")
+# write.csv(dfbinset, "e.coli.meta.csv")

@@ -5,6 +5,7 @@
 ###############################################################
 
 library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(plotly)
 library(ggsci)
@@ -12,16 +13,16 @@ library(ggsci)
 ## Load in resistance mechanism data
 data <- read.csv("AMR_FunctionalMechanisms.csv")
 
-## Remove blaEC & blaEC-5
-data <- data %>% filter(!AMR.Gene %in% c("blaEC", "blaEC-5"))
+# ## Remove blaEC & blaEC-5
+# data <- data %>% filter(!AMR.Gene %in% c("blaEC", "blaEC-5"))
 
 ## Read in new clusters
 newgcss <- read.csv("clusters.csv")
-data$GC.SS <- newgcss$cluster
+data$GC.SS <- newgcss$category
 
 ######################
 ## GC/SS by Type
-GCSSbyType <- data %>% group_by(GC.SS, Type, .drop=FALSE) %>% tally()
+GCSSbyType <- data %>% group_by(GC.SS, Type) %>% tally() %>% ungroup() %>% complete(GC.SS, Type, fill = list (n = 0))
 
 gc <- GCSSbyType %>% filter(GC.SS == "GC")
 gc$pct <- gc$n/sum(gc$n)
@@ -34,7 +35,7 @@ tbd$pct <- tbd$n/sum(tbd$n)
 
 
 ## Fisher Test
-
+set.seed(1337)
 ## For all 3 categories: GC, SS, TBD
 GCSSbyType_ft_3 <- fisher.test(matrix(c(gc$n,
                                         ss$n,

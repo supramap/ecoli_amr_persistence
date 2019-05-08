@@ -1,6 +1,6 @@
 # Supplemental Materials for Antimicrobial Resistance Research
 
-## 1. Persistence of Antimicrobial Resistance Genes Demonstrates Genetic Capitalism in _Escherichia coli_
+## 1. Genetic Capitalism and Stabilizing Selection of Antimicrobial Resistance Genes in _Escherichia coli_
 
 |                                              Authors                                              |    Paper    |   Citation  | Figures |
 |-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|:--------:|

@@ -116,9 +116,11 @@ model.cv <- train(x, y,
                                                       by = 0.01)))
 stopCluster(cl)
 
+saveRDS(model.cv, "mcr_lr_model.RDS")
+
 caret.model.cv$bestTune
-coef.mcr <- coef(caret.model.cv$finalModel,
-                 caret.model.cv$bestTune$lambda)
+coef.mcr <- coef(model.cv$finalModel,
+                 model.cv$bestTune$lambda)
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
@@ -137,8 +139,9 @@ coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=length
 # Model Validation
 # ------------------
 # New data From Jan 9 to today
-#json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Cepi_type%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(kmer_group%3D%3D%5B%22PDG000000004.1186%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc")
-json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Cepi_type%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(kmer_group%3D%3D%5B%22PDG000000004.1238%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc")
+# json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Cepi_type%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(kmer_group%3D%3D%5B%22PDG000000004.1238%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc")
+# saveRDS(json.stream, file = "e.coli_validation.RDS")
+json.stream <- readRDS("e.coli_validation.RDS")
 
 id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
 creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")

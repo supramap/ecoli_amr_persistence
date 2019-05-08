@@ -28,25 +28,25 @@ counts$Genotype <- rownames(counts)
 data <- read.csv("gainloss_counts.csv")
 data <- merge(data, counts, by = "Genotype")
 
-## Prepare PWTs
-pwt <- data %>% filter(Genotype %in% c("blaEC", "blaEC-5"))
-pwt$rate <- pwt$Isolate_Count/(pwt$Gain-pwt$Loss)
-pwt$net_gain <- scale(pwt$Gain * pwt$rate)[,1]
-pwt$net_loss <- scale(pwt$Loss * pwt$rate)[,1]
-pwt$cluster <- NA
-pwt$category <- "PWT"
+# ## Prepare PWTs
+# pwt <- data %>% filter(Genotype %in% c("blaEC", "blaEC-5"))
+# pwt$rate <- pwt$Isolate_Count/(pwt$Gain-pwt$Loss)
+# pwt$net_gain <- scale(pwt$Gain * pwt$rate)[,1]
+# pwt$net_loss <- scale(pwt$Loss * pwt$rate)[,1]
+# pwt$cluster <- NA
+# pwt$category <- "PWT"
 
 
-## Remove PWTs: blaEC & blaEC-5 (outliers)
-data <- data %>% filter(!Genotype %in% c("blaEC", "blaEC-5"))
+# ## Remove PWTs: blaEC & blaEC-5 (outliers)
+# data <- data %>% filter(!Genotype %in% c("blaEC", "blaEC-5"))
 
 ## Calculate rate columns, net_gain, and net_loss
 # data$pctdiff <- abs(data$Gain-data$Loss)/((data$Gain+data$Loss)/2)
 # data$gain_rate <- data$Gain/data$Isolate_Count
 # data$loss_rate <- data$Loss/data$Isolate_Count
 data$rate <- data$Isolate_Count/(data$Gain-data$Loss)
-data$net_gain <- scale(data$Gain * data$rate)[,1]
-data$net_loss <- scale(data$Loss * data$rate)[,1]
+data$net_gain <- (data$Gain * data$rate)
+data$net_loss <- (data$Loss * data$rate)
 
 ############
 ## k-Means Analysis
@@ -63,9 +63,12 @@ cluster_counts <- data %>%
 
 data <- data %>%
   mutate(category = case_when(cluster == 1 ~ "TBD",
-                              cluster %in% c(2,3,5) ~ "GC",
-                              cluster %in% c(4,6) ~ "SS")) %>% 
-  rbind(pwt)
+                              cluster %in% c(2,4) ~ "GC",
+                              cluster %in% c(3) ~ "SS"))
+  # mutate(category = case_when(cluster == 1 ~ "TBD",
+  #                             cluster %in% c(2,3,5) ~ "GC",
+  #                             cluster %in% c(4,6) ~ "SS")) %>% 
+  # rbind(pwt)
 
 write.csv(data, "clusters.csv")
 

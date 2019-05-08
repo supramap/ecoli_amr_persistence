@@ -18,19 +18,21 @@ data <- read.csv("AMR_FunctionalMechanisms.csv")
 
 ## Read in new clusters
 newgcss <- read.csv("clusters.csv")
-data$GC.SS <- newgcss$category
+data <- newgcss %>%
+  select(c("Genotype", "category")) %>%
+  inner_join(data, by = c("Genotype" = "AMR.Gene"))
 
 ######################
 ## GC/SS by Type
-GCSSbyType <- data %>% group_by(GC.SS, Type) %>% tally() %>% ungroup() %>% complete(GC.SS, Type, fill = list (n = 0))
+GCSSbyType <- data %>% group_by(category, Type) %>% tally() %>% ungroup() %>% complete(category, Type, fill = list (n = 0))
 
-gc <- GCSSbyType %>% filter(GC.SS == "GC")
+gc <- GCSSbyType %>% filter(category == "GC")
 gc$pct <- gc$n/sum(gc$n)
 
-ss <- GCSSbyType %>% filter(GC.SS == "SS")
+ss <- GCSSbyType %>% filter(category == "SS")
 ss$pct <- ss$n/sum(ss$n)
 
-tbd <- GCSSbyType %>% filter(GC.SS == "TBD")
+tbd <- GCSSbyType %>% filter(category == "TBD")
 tbd$pct <- tbd$n/sum(tbd$n)
 
 
@@ -72,7 +74,7 @@ GCSSbyType_ft_2 <- fisher.test(matrix(c(gc$n,
 
 
 ## Plotting
-p <- ggplot(data, aes(Type,  fill = GC.SS)) +
+p <- ggplot(data, aes(Type,  fill = category)) +
   geom_bar(position="dodge") +
   scale_fill_npg()
 

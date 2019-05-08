@@ -1,410 +1,410 @@
-AMR Gene,6-Class,GC/SS,Type,Resistance Mechanism,Count
-blaEC,FF,SS,inactivation,antibiotic inactivation,1
-blaEC-5,II,SS,inactivation,antibiotic inactivation,1
-fosA7,FF,SS,inactivation,antibiotic inactivation; fosfomycin,1
-blaOXA-1,FF,SS,inactivation,antibiotic inactivation; cephalosporin; penam,1
-sul2,FF,SS,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
-sat2,FF,SS,inactivation,antibiotic inactivation,1
-aadA5,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-dfrA17,FF,SS,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-aph(6)-Id,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(3'')-Ib,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaTEM-1,FF,SS,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-mph(A),FF,SS,inactivation,antibiotic inactivation,1
-tet(A),FF,SS,efflux,antibiotic efflux; glycylcycline; tetracycline antibiotic,1
-blaCTX-M-15,FF,SS,inactivation,antibiotic inactivation; cephalosporin,1
-qacEdelta1,FF,SS,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-sul1,FF,SS,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
-catA1,FF,SS,inactivation,antibiotic inactivation,1
-catA,II,SS,inactivation,antibiotic inactivation,1
-aac(6')-Ib-cr,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation; fluoroquinolone antibiotic,1
-blaNDM-5,FI,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-tet(D),FI,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-blaCTX-M-27,FI,GC,inactivation,antibiotic inactivation; cephalosporin,1
-sat1,FF,SS,inactivation,antibiotic inactivation,1
-fosA,FI,GC,inactivation,antibiotic inactivation; fosfomycin,1
-dfrA5,FI,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-tet(B),FF,SS,efflux,antibiotic efflux; tetracycline antibiotic,1
-aadA1,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY-42,FI,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-aac(6')-Ib4,II,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(3)-IIa,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA2,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaOXA-2,II,SS,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-dfrA1,FF,SS,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-aph(3')-Ia,FF,SS,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-dfrA7,FI,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-floR,FF,SS,efflux,antibiotic efflux; phenicol antibiotic,1
-qepA,FI,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-ble,FI,GC,,,1
-dfrA8,FI,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-oqxB,FI,GC,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,1
-fosA3,FI,GC,inactivation,antibiotic inactivation; fosfomycin,1
-qacL,FI,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-ampC,FI,GC,inactivation,antibiotic inactivation,1
-aac(6')-Ib,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-dfrA12,FF,SS,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-aph(4)-Ia,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-oqxA,FI,GC,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,1
-blaTEM,FI,GC,inactivation,antibiotic inactivation,1
-dfrA14,FI,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-qnrB,FI,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-aac(3)-IId,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA16,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-qacG2,FI,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-dfrA15,FI,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-catB3,FI,GC,inactivation,antibiotic inactivation; phenicol antibiotic,1
-mcr-1.1,FI,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-blaNDM-1,FI,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-aac(3)-VIa,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaOXA,FI,GC,inactivation,antibiotic inactivation,1
-cmlA1,FI,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-sul3,FI,GC,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
-aac(3)-IV,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY,FI,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-ant(3''),FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ib-cr5,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY-2,FI,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-aac(3),FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-bleO,FI,GC,,,1
-qnrS1,FI,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-rmtB1,FI,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-qnrB19,FI,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-ant(2'')-Ia,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-14,FI,GC,inactivation,antibiotic inactivation; cephalosporin,1
-arr-3,FI,GC,inactivation,antibiotic inactivation; rifamycin antibiotic,1
-tet(M),FI,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-qacE,FI,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-aac(3)-II,FI,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-55,FI,GC,inactivation,antibiotic inactivation; cephalosporin,1
-erm(B),FI,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-aac(3)-I,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ib-cr7,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aacA,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aacA34,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA10,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA17,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-ant(6),IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(3')-Ib,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(3')-VIb,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaACC,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaACC-1d,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaACT-17,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaACT-4,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaACT-45,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaACT-52,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaCAR,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaCARB,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaCMY-111,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-23,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-24,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-33,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-44,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-48,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-58,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-59,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-65,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-75,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCMY-82,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCTX-M-104,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-116,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-132,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-134,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-166,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-179,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-182,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaDHA-20,IN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaDHA-7,IN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaFOX,IN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaGES,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaGIL,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaIMI,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaIMP-14,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaIMP-26,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaIMP-6,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaKPC,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaKPC-18,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaLAP-1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaLAT,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaLEN-13,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaMIR-12,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
-blaNDM-21,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaNDM-6,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaOCH,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaOKP,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaOXA-129,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaOXA-163,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaOXA-364,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaOXY,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaPC1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,1
-blaPER-2,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,1
-blaPSE,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaR1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaROB,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSED,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSFO-1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-11,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-26,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-27,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-33,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSRT,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-105,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-148,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-154,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-156,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-166,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-20,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-207,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-208,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-26,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-3,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-54,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-8,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-9,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaVEB-1,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
-blaVEB-17,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
-blaVEB-5,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
-blaVIM-29,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaVIM-4,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaZ,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-ble-Sh,IN,GC,,,1
-catB1,IN,GC,inactivation,antibiotic inactivation,1
-catB8,IN,GC,inactivation,antibiotic inactivation; phenicol antibiotic,1
-cmlA4,IN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-cphA,IN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-cphA1,IN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-dfrA22,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrA26,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrA3b,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrA6,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrF,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-ere(C),IN,GC,inactivation,antibiotic inactivation,1
-erm(C),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-erm(F),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-mcr-1.2,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-1.4,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-1.7,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-2,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-3.2,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-oqxA10,IN,GC,efflux,antibiotic efflux,1
-oqxA3,IN,GC,efflux,antibiotic efflux,1
-oqxB19,IN,GC,efflux,antibiotic efflux,1
-oqxB25,IN,GC,efflux,antibiotic efflux,1
-oqxB29,IN,GC,efflux,antibiotic efflux,1
-oqxB5,IN,GC,efflux,antibiotic efflux,1
-qac,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-qacA,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-qnrVC1,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-rmtB,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-rmtB3,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-rmtD1,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-sat4,IN,GC,inactivation,antibiotic inactivation,1
-smr,IN,GC,efflux,antibiotic efflux,1
-tet(41),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(G),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(H-J),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(H),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(M-W-O-S),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(O),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tetA,IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-vanR,IN,GC,alteration,antibiotic target alteration,1
-vanY,IN,GC,alteration,antibiotic target alteration,1
-aac(3)-Ib,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-33,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ia,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ian,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-IIa,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadD1,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(3')-VIa,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaACC-1,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam,1
-blaCMY-140,IN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaCMY-7,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCTX-M-115,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-174,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-9,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaDHA,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaEC-15,IN,GC,inactivation,antibiotic inactivation,1
-blaI,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaLAP,IN,GC,inactivation,antibiotic inactivation,1
-blaNDM,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaOXA-4,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaSHV-5,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaTEM-181,IN,GC,inactivation,antibiotic inactivation,1
-blaTEM-210,IN,GC,inactivation,antibiotic inactivation,1
-blaTEM-32,IN,GC,inactivation,antibiotic inactivation,1
-blaTEM-34,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-84,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-catA3,IN,GC,inactivation,antibiotic inactivation,1
-catB11,IN,GC,inactivation,antibiotic inactivation,1
-cfr,IN,GC,alteration,antibiotic target alteration,1
-dfr7,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrA21,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-erm,IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-lnu,IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-mcr-1.5,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-3,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mef(C),IN,GC,efflux,antibiotic efflux; macrolide antibiotic,1
-mph(G),IN,GC,inactivation,antibiotic inactivation,1
-qacB,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-qnrB10,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-qnrS13,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-qnrS4,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-tet(E),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-tet(Y),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-aadA21,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA3,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaACT,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY-16,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-blaCTX-M-125,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaIMP-1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaIMP-27,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-blaOXA-232,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaSHV-2A,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-7,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaTEM-10,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-169,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-215,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaVIM-1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-catB,IN,GC,inactivation,antibiotic inactivation,1
-dfrA10,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-dfrA24,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-erm-23S_rRNA,IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-mcr-5.1,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-qacC,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-qacF,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-qnrB7,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-qnrVC4,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-rmtE,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-aac(6'),IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aad9,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(3')-XV,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-64,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaFOX-5,IN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaGES-5,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaNDM-4,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-catB2,IN,GC,inactivation,antibiotic inactivation; phenicol antibiotic,1
-lnu(A),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-mcr-3.1,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-mcr-3.5,IN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-rmtE1,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-tet(31),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-aac(6')-Ib11,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-IIc,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA8,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaKPC-4,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,1
-blaOXA-244,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaSHV,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaSHV-2,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-blaTEM-176,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-19,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-dfrB1,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-fosA5,IN,GC,inactivation,antibiotic inactivation; fosfomycin,1
-vat,IN,GC,inactivation,antibiotic inactivation,1
-ant(3'')-Ia,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaTEM-12,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-33,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-35,IN,GC,inactivation,antibiotic inactivation,1
-dfrB4,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-ere(B),IN,GC,inactivation,antibiotic inactivation,1
-lnu(C),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-ant,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaIMP-4,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
-qnrD1,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-aph(3')-VI,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-24,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaHER,IN,GC,inactivation,antibiotic inactivation; penam,1
-blaOXA-181,IN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-qnrB2,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-aph(3')-I,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaNDM-7,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaTEM-190,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-dfrA23,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-aac(2')-IIa,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-123,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-dfrA25,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-aadA4,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaTEM-57,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-fosA4,IN,GC,inactivation,antibiotic inactivation; fosfomycin,1
-aph(3'),IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaSHV-1,IN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-fos,IN,GC,inactivation,antibiotic inactivation; fosfomycin,1
-qnrB1,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-aadA15,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-32,IN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaTEM-40,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaTEM-52,IN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-erm(T),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-aac(6')-Il,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ib',IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-abc-f,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY-6,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-cmlA6,IN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-qnrB4,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-rmtC,IN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-aph(3')-II,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCMY-4,IN,GC,inactivation,antibiotic inactivation; cephamycin,1
-cmlA,IN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-erm(42),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
-qnrB6,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-aadA13,IN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-mph_3,IN,GC,inactivation,antibiotic inactivation,1
-qepA1,IN,GC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
-tet(X),IN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-dfrA19,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-qnrA1,IN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-dfrA16,IN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-lnu(B),IN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-aadA25,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-arr,FN,GC,inactivation,antibiotic inactivation; rifamycin antibiotic,1
-blaTEM-30,FN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-blaNDM-9,FN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
-blaCTX-M-2,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-armA,FN,GC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
-blaLAP-2,FN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaOXA-48,FN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaTEM-116,FN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-ere(A),FN,GC,inactivation,antibiotic inactivation,1
-dfrA27,FN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-mph(E),FN,GC,inactivation,antibiotic inactivation,1
-aadA6,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaOXA-9,FN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-blaTEM-135,FN,GC,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
-dfrA,FN,GC,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
-msr(E),FN,GC,protection,antibiotic target protection; macrolide antibiotic,1
-blaCTX-M-3,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaCTX-M-8,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-arr-2,FN,GC,inactivation,antibiotic inactivation; rifamycin antibiotic,1
-oqxB2,FN,GC,efflux,antibiotic efflux,1
-aadA24,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aadA7,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaOXA-10,FN,GC,inactivation,antibiotic inactivation; cephalosporin; penam,1
-qnrS,FN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-blaDHA-1,FN,GC,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
-blaKPC-3,FN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,1
-aadA12,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aac(6')-Ib3,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCARB-2,FN,GC,inactivation,antibiotic inactivation; penam,1
-lnu(G),FN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-blaKPC-2,FN,GC,inactivation,antibiotic inactivation; penam,1
-clpK,FN,GC,,,1
-cmlA5,FN,GC,efflux,antibiotic efflux; phenicol antibiotic,1
-blaCTX-M,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-tet,FN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
-qnrS2,FN,GC,protection,antibiotic target protection; fluoroquinolone antibiotic,1
-blaHER-3,FN,GC,inactivation,antibiotic inactivation,1
-oqxA2,FN,GC,efflux,antibiotic efflux,1
-blaCTX-M-65,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-blaSHV-12,FN,GC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
-catA2,FN,GC,inactivation,antibiotic inactivation,1
-aph(6)-Ic,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-mef(B),FN,GC,efflux,antibiotic efflux; macrolide antibiotic,1
-mph(B),FN,GC,inactivation,antibiotic inactivation,1
-aadA22,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-lnu(F),FN,GC,alteration,antibiotic target alteration; lincosamide antibiotic,1
-mcr-1,FN,GC,alteration,antibiotic target alteration; peptide antibiotic,1
-aph(3''),FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-aph(6)-I,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-blaCTX-M-1,FN,GC,inactivation,antibiotic inactivation; cephalosporin,1
-aph(3')-IIa,FN,GC,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
-bla,FN,GC,inactivation,antibiotic inactivation,1
-tet(C),FN,GC,efflux,antibiotic efflux; tetracycline antibiotic,1
+AMR Gene,Type,Resistance Mechanism,Count
+blaEC,inactivation,antibiotic inactivation,1
+blaEC-5,inactivation,antibiotic inactivation,1
+fosA7,inactivation,antibiotic inactivation; fosfomycin,1
+blaOXA-1,inactivation,antibiotic inactivation; cephalosporin; penam,1
+sul2,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
+sat2,inactivation,antibiotic inactivation,1
+aadA5,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+dfrA17,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+aph(6)-Id,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(3'')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaTEM-1,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+mph(A),inactivation,antibiotic inactivation,1
+tet(A),efflux,antibiotic efflux; glycylcycline; tetracycline antibiotic,1
+blaCTX-M-15,inactivation,antibiotic inactivation; cephalosporin,1
+qacEdelta1,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+sul1,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
+catA1,inactivation,antibiotic inactivation,1
+catA,inactivation,antibiotic inactivation,1
+aac(6')-Ib-cr,inactivation,aminoglycoside antibiotic; antibiotic inactivation; fluoroquinolone antibiotic,1
+blaNDM-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+tet(D),efflux,antibiotic efflux; tetracycline antibiotic,1
+blaCTX-M-27,inactivation,antibiotic inactivation; cephalosporin,1
+sat1,inactivation,antibiotic inactivation,1
+fosA,inactivation,antibiotic inactivation; fosfomycin,1
+dfrA5,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+tet(B),efflux,antibiotic efflux; tetracycline antibiotic,1
+aadA1,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY-42,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+aac(6')-Ib4,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(3)-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA2,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaOXA-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+dfrA1,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+aph(3')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+dfrA7,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+floR,efflux,antibiotic efflux; phenicol antibiotic,1
+qepA,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+ble,,,1
+dfrA8,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+oqxB,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,1
+fosA3,inactivation,antibiotic inactivation; fosfomycin,1
+qacL,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+ampC,inactivation,antibiotic inactivation,1
+aac(6')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+dfrA12,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+aph(4)-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+oqxA,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,1
+blaTEM,inactivation,antibiotic inactivation,1
+dfrA14,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+qnrB,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+aac(3)-IId,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA16,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+qacG2,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+dfrA15,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+catB3,inactivation,antibiotic inactivation; phenicol antibiotic,1
+mcr-1.1,alteration,antibiotic target alteration; peptide antibiotic,1
+blaNDM-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+aac(3)-VIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaOXA,inactivation,antibiotic inactivation,1
+cmlA1,efflux,antibiotic efflux; phenicol antibiotic,1
+sul3,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,1
+aac(3)-IV,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+ant(3''),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ib-cr5,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY-2,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+aac(3),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+bleO,,,1
+qnrS1,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+rmtB1,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+qnrB19,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+ant(2'')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-14,inactivation,antibiotic inactivation; cephalosporin,1
+arr-3,inactivation,antibiotic inactivation; rifamycin antibiotic,1
+tet(M),efflux,antibiotic efflux; tetracycline antibiotic,1
+qacE,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+aac(3)-II,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-55,inactivation,antibiotic inactivation; cephalosporin,1
+erm(B),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+aac(3)-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ib-cr7,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aacA,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aacA34,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA10,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA17,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+ant(6),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(3')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(3')-VIb,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaACC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaACC-1d,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaACT-17,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaACT-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaACT-45,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaACT-52,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaCAR,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaCARB,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaCMY-111,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-23,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-24,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-33,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-44,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-48,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-58,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-59,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-65,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-75,inactivation,antibiotic inactivation; cephamycin,1
+blaCMY-82,inactivation,antibiotic inactivation; cephamycin,1
+blaCTX-M-104,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-116,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-132,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-134,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-166,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-179,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-182,inactivation,antibiotic inactivation; cephalosporin,1
+blaDHA-20,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaDHA-7,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaFOX,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaGES,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaGIL,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaIMI,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaIMP-14,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaIMP-26,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaIMP-6,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaKPC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaKPC-18,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaLAP-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaLAT,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaLEN-13,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaMIR-12,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
+blaNDM-21,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaNDM-6,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaOCH,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaOKP,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaOXA-129,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaOXA-163,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaOXA-364,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaOXY,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaPC1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,1
+blaPER-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,1
+blaPSE,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaR1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaROB,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSED,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSFO-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-11,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-26,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-27,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-33,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSRT,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-105,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-148,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-154,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-156,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-166,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-20,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-207,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-208,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-26,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-3,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-54,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-8,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-9,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaVEB-1,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
+blaVEB-17,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
+blaVEB-5,inactivation,antibiotic inactivation; cephalosporin; monobactam,1
+blaVIM-29,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaVIM-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaZ,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+ble-Sh,,,1
+catB1,inactivation,antibiotic inactivation,1
+catB8,inactivation,antibiotic inactivation; phenicol antibiotic,1
+cmlA4,efflux,antibiotic efflux; phenicol antibiotic,1
+cphA,efflux,antibiotic efflux; phenicol antibiotic,1
+cphA1,efflux,antibiotic efflux; phenicol antibiotic,1
+dfrA22,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrA26,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrA3b,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrA6,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrF,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+ere(C),inactivation,antibiotic inactivation,1
+erm(C),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+erm(F),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+mcr-1.2,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-1.4,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-1.7,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-2,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-3.2,alteration,antibiotic target alteration; peptide antibiotic,1
+oqxA10,efflux,antibiotic efflux,1
+oqxA3,efflux,antibiotic efflux,1
+oqxB19,efflux,antibiotic efflux,1
+oqxB25,efflux,antibiotic efflux,1
+oqxB29,efflux,antibiotic efflux,1
+oqxB5,efflux,antibiotic efflux,1
+qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+qacA,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+qnrVC1,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+rmtB,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+rmtB3,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+rmtD1,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+sat4,inactivation,antibiotic inactivation,1
+smr,efflux,antibiotic efflux,1
+tet(41),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(G),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(H-J),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(H),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(M-W-O-S),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(O),efflux,antibiotic efflux; tetracycline antibiotic,1
+tetA,efflux,antibiotic efflux; tetracycline antibiotic,1
+vanR,alteration,antibiotic target alteration,1
+vanY,alteration,antibiotic target alteration,1
+aac(3)-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-33,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ian,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadD1,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(3')-VIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaACC-1,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam,1
+blaCMY-140,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaCMY-7,inactivation,antibiotic inactivation; cephamycin,1
+blaCTX-M-115,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-174,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-9,inactivation,antibiotic inactivation; cephalosporin,1
+blaDHA,inactivation,antibiotic inactivation; cephalosporin,1
+blaEC-15,inactivation,antibiotic inactivation,1
+blaI,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaLAP,inactivation,antibiotic inactivation,1
+blaNDM,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaOXA-4,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaSHV-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaTEM-181,inactivation,antibiotic inactivation,1
+blaTEM-210,inactivation,antibiotic inactivation,1
+blaTEM-32,inactivation,antibiotic inactivation,1
+blaTEM-34,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-84,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+catA3,inactivation,antibiotic inactivation,1
+catB11,inactivation,antibiotic inactivation,1
+cfr,alteration,antibiotic target alteration,1
+dfr7,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrA21,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+lnu,alteration,antibiotic target alteration; lincosamide antibiotic,1
+mcr-1.5,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-3,alteration,antibiotic target alteration; peptide antibiotic,1
+mef(C),efflux,antibiotic efflux; macrolide antibiotic,1
+mph(G),inactivation,antibiotic inactivation,1
+qacB,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+qnrB10,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+qnrS13,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+qnrS4,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+tet(E),efflux,antibiotic efflux; tetracycline antibiotic,1
+tet(Y),efflux,antibiotic efflux; tetracycline antibiotic,1
+aadA21,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA3,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaACT,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY-16,inactivation,antibiotic inactivation; cephamycin,1
+blaCTX-M-125,inactivation,antibiotic inactivation; cephalosporin,1
+blaIMP-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaIMP-27,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+blaOXA-232,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaSHV-2A,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-7,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaTEM-10,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-169,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-215,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaVIM-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+catB,inactivation,antibiotic inactivation,1
+dfrA10,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+dfrA24,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+erm-23S_rRNA,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+mcr-5.1,alteration,antibiotic target alteration; peptide antibiotic,1
+qacC,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+qacF,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+qnrB7,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+qnrVC4,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+rmtE,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+aac(6'),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aad9,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(3')-XV,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-64,inactivation,antibiotic inactivation; cephalosporin,1
+blaFOX-5,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaGES-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaNDM-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+catB2,inactivation,antibiotic inactivation; phenicol antibiotic,1
+lnu(A),alteration,antibiotic target alteration; lincosamide antibiotic,1
+mcr-3.1,alteration,antibiotic target alteration; peptide antibiotic,1
+mcr-3.5,alteration,antibiotic target alteration; peptide antibiotic,1
+rmtE1,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+tet(31),efflux,antibiotic efflux; tetracycline antibiotic,1
+aac(6')-Ib11,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-IIc,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA8,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaKPC-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,1
+blaOXA-244,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaSHV,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaSHV-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+blaTEM-176,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-19,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+dfrB1,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+fosA5,inactivation,antibiotic inactivation; fosfomycin,1
+vat,inactivation,antibiotic inactivation,1
+ant(3'')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaTEM-12,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-33,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-35,inactivation,antibiotic inactivation,1
+dfrB4,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+ere(B),inactivation,antibiotic inactivation,1
+lnu(C),alteration,antibiotic target alteration; lincosamide antibiotic,1
+ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaIMP-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,1
+qnrD1,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+aph(3')-VI,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-24,inactivation,antibiotic inactivation; cephalosporin,1
+blaHER,inactivation,antibiotic inactivation; penam,1
+blaOXA-181,inactivation,antibiotic inactivation; cephalosporin; penam,1
+qnrB2,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+aph(3')-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaNDM-7,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaTEM-190,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+dfrA23,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+aac(2')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-123,inactivation,antibiotic inactivation; cephalosporin,1
+dfrA25,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+aadA4,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaTEM-57,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+fosA4,inactivation,antibiotic inactivation; fosfomycin,1
+aph(3'),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaSHV-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+fos,inactivation,antibiotic inactivation; fosfomycin,1
+qnrB1,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+aadA15,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-32,inactivation,antibiotic inactivation; cephalosporin,1
+blaTEM-40,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaTEM-52,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+erm(T),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+aac(6')-Il,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ib',inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+abc-f,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY-6,inactivation,antibiotic inactivation; cephamycin,1
+cmlA6,efflux,antibiotic efflux; phenicol antibiotic,1
+qnrB4,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+rmtC,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+aph(3')-II,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCMY-4,inactivation,antibiotic inactivation; cephamycin,1
+cmlA,efflux,antibiotic efflux; phenicol antibiotic,1
+erm(42),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,1
+qnrB6,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+aadA13,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+mph_3,inactivation,antibiotic inactivation,1
+qepA1,efflux,antibiotic efflux; fluoroquinolone antibiotic,1
+tet(X),efflux,antibiotic efflux; tetracycline antibiotic,1
+dfrA19,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+qnrA1,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+dfrA16,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+lnu(B),alteration,antibiotic target alteration; lincosamide antibiotic,1
+aadA25,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+arr,inactivation,antibiotic inactivation; rifamycin antibiotic,1
+blaTEM-30,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+blaNDM-9,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,1
+blaCTX-M-2,inactivation,antibiotic inactivation; cephalosporin,1
+armA,alteration,aminoglycoside antibiotic; antibiotic target alteration,1
+blaLAP-2,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaOXA-48,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaTEM-116,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+ere(A),inactivation,antibiotic inactivation,1
+dfrA27,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+mph(E),inactivation,antibiotic inactivation,1
+aadA6,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaOXA-9,inactivation,antibiotic inactivation; cephalosporin; penam,1
+blaTEM-135,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,1
+dfrA,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,1
+msr(E),protection,antibiotic target protection; macrolide antibiotic,1
+blaCTX-M-3,inactivation,antibiotic inactivation; cephalosporin,1
+blaCTX-M-8,inactivation,antibiotic inactivation; cephalosporin,1
+arr-2,inactivation,antibiotic inactivation; rifamycin antibiotic,1
+oqxB2,efflux,antibiotic efflux,1
+aadA24,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aadA7,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaOXA-10,inactivation,antibiotic inactivation; cephalosporin; penam,1
+qnrS,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+blaDHA-1,inactivation,antibiotic inactivation; cephalosporin; cephamycin,1
+blaKPC-3,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,1
+aadA12,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aac(6')-Ib3,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCARB-2,inactivation,antibiotic inactivation; penam,1
+lnu(G),alteration,antibiotic target alteration; lincosamide antibiotic,1
+blaKPC-2,inactivation,antibiotic inactivation; penam,1
+clpK,,,1
+cmlA5,efflux,antibiotic efflux; phenicol antibiotic,1
+blaCTX-M,inactivation,antibiotic inactivation; cephalosporin,1
+tet,efflux,antibiotic efflux; tetracycline antibiotic,1
+qnrS2,protection,antibiotic target protection; fluoroquinolone antibiotic,1
+blaHER-3,inactivation,antibiotic inactivation,1
+oqxA2,efflux,antibiotic efflux,1
+blaCTX-M-65,inactivation,antibiotic inactivation; cephalosporin,1
+blaSHV-12,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,1
+catA2,inactivation,antibiotic inactivation,1
+aph(6)-Ic,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+mef(B),efflux,antibiotic efflux; macrolide antibiotic,1
+mph(B),inactivation,antibiotic inactivation,1
+aadA22,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+lnu(F),alteration,antibiotic target alteration; lincosamide antibiotic,1
+mcr-1,alteration,antibiotic target alteration; peptide antibiotic,1
+aph(3''),inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+aph(6)-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+blaCTX-M-1,inactivation,antibiotic inactivation; cephalosporin,1
+aph(3')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,1
+bla,inactivation,antibiotic inactivation,1
+tet(C),efflux,antibiotic efflux; tetracycline antibiotic,1

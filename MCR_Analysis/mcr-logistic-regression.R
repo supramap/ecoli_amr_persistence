@@ -99,6 +99,14 @@ colnames(x) <- make.names(xvars, unique = TRUE, allow_ = FALSE) ## Make syntacti
 y <- gdf.mcr$mcr
 levels(y) <- c("absent", "present")
 
+library(MLmetrics)
+sensitivity <- function(data, lev = NULL, model = NULL){
+  sens_val <- MLmetrics::Sensitivity(y_pred = data$pred,
+                                     y_true = data$obs,
+                                     positive = lev[1])
+  c(sensitivity = sens_val)
+}
+
 glmctrl <- trainControl(method = "cv",
                         number = 5,
                         returnResamp = "all",
@@ -108,7 +116,8 @@ set.seed(1337)
 model.cv <- train(x, y,
                   method = "glmnet", 
                   trControl = glmctrl,
-                  metric = "ROC",
+                  metric = "sensivity",
+                  # metric = "ROC",
                   tuneGrid = expand.grid(alpha = seq(0,
                                                      1,
                                                      by = 0.1),
@@ -127,6 +136,7 @@ coef.mcr <- coef(model.cv$finalModel,
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
+write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.mcr.nz))), "oddsRatioInt_cv.csv")
 ############################
 
 
@@ -193,9 +203,13 @@ newx <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
 newy <- Matrix(gdf.mcr$mcr, sparse = T)
 
 ## Run validation
-test <- predict(model.cv, newx = x, s = "lambda.1se", type = "response")
-trainingprediction <- data.frame(test, as.vector(y))
-colnames(trainingprediction) <- c("probability", "actual")
+#test <- predict(model.cv, newx = x, s = "lambda.1se", type = "response")
+test <- predict(model.cv$finalModel,
+                s = model.cv$lambdaOpt,
+                newx = newx,
+                type = "response")
+trainingprediction <- data.frame(probability = test[,7], actual = as.vector(newy))
+#colnames(trainingprediction) <- c("probability", "actual")
 
 cutoff <- seq(0.01, 0.99, by = .01)
 accuracy <- data.frame(cutoff = NA, 
@@ -209,26 +223,40 @@ for(i in 1:length(cutoff)){
   print(c)
   trainingprediction$prediction <- 0
   trainingprediction$prediction[trainingprediction$probability >= c] <- 1
+
+  tryCatch({
+    cm <- caret::confusionMatrix(table(trainingprediction$prediction,
+                                       trainingprediction$actual),
+                                 positive = "1")
+    }, warning = print("Skipping", c))
   
-  cm <- caret::confusionMatrix(table(trainingprediction$prediction, trainingprediction$actual))
-  
-  f1 <- cm[["byClass"]][["F1"]]
-  sensitivity <- cm[["byClass"]][["Sensitivity"]]
-  specificity <- cm[["byClass"]][["Specificity"]]
+  if(exists("cm")){
+    f1 <- cm[["byClass"]][["F1"]]
+    sensitivity <- cm[["byClass"]][["Sensitivity"]]
+    specificity <- cm[["byClass"]][["Specificity"]]
+  } else {
+    f1 <- NA
+    sensitivity <- NA
+    specificity <- NA
+  }
   
   dt <- data.frame(cutoff = c,
                    f1 = f1,
                    sensitivity = sensitivity,
                    specificity = specificity)
   accuracy <- rbind(accuracy, dt)
+  rm(cm)
 }
 
 
-validation <- predict(model.cv, newx = newx , s = "lambda.1se", type = "response")
-validationprediction <- data.frame(validation, as.vector(newy))
-colnames(validationprediction) <- c("probability", "actual")
+# validation <- predict(model.cv, newx = newx , s = "lambda.1se", type = "response")
+validation <- predict(model.cv$finalModel,
+                      s = model.cv$lambdaOpt,
+                      newx = newx,
+                      type = "response")
+validationprediction <- data.frame(probability = test[,7], actual = as.vector(newy))
 validationprediction$prediction <- 0
-validationprediction$prediction[validationprediction$probability >= 0.01] <- 1
+validationprediction$prediction[validationprediction$probability >= 0.04] <- 1
 
 caret::confusionMatrix(table(validationprediction$prediction, validationprediction$actual),
                        positive = "1")

@@ -104,26 +104,26 @@ sensitivity <- function(data, lev = NULL, model = NULL){
   sens_val <- MLmetrics::Sensitivity(y_pred = data$pred,
                                      y_true = data$obs,
                                      positive = lev[1])
-  c(sensitivity = sens_val)
+  c(Sensitivity = sens_val)
 }
 
 glmctrl <- trainControl(method = "cv",
                         number = 5,
                         returnResamp = "all",
                         classProbs = TRUE,
-                        summaryFunction = twoClassSummary)
+                        summaryFunction = sensitivity)
 set.seed(1337)
 model.cv <- train(x, y,
                   method = "glmnet", 
                   trControl = glmctrl,
-                  metric = "sensivity",
+                  metric = "Sensitivity",
                   # metric = "ROC",
                   tuneGrid = expand.grid(alpha = seq(0,
                                                      1,
-                                                     by = 0.1),
+                                                     by = 0.99),
                                          lambda = seq(0.001,
                                                       0.1,
-                                                      by = 0.01)))
+                                                      by = 0.099)))
 # stopCluster(cl)
 
 saveRDS(model.cv, "mcr_lr_model.RDS")

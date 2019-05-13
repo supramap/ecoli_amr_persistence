@@ -8,7 +8,8 @@
 library(jsonlite)
 library(stringr)
 library(glmnet)
-library(arules)
+library(caret)
+#library(arules)
 
 # Run these *nix commands
 #sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
@@ -86,7 +87,7 @@ f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), 
 
 ############################
 ## Using caret to perform CV
-library(caret)
+
 ## Make cluster
 library(doParallel)
 cl <- makeCluster(parallel::detectCores()-1)
@@ -114,11 +115,13 @@ model.cv <- train(x, y,
                                          lambda = seq(0.001,
                                                       0.1,
                                                       by = 0.01)))
-stopCluster(cl)
+# stopCluster(cl)
 
 saveRDS(model.cv, "mcr_lr_model.RDS")
 
-caret.model.cv$bestTune
+model.cv <- readRDS("mcr_lr_model.RDS")
+
+model.cv$bestTune
 coef.mcr <- coef(model.cv$finalModel,
                  model.cv$bestTune$lambda)
 coef.mcr.names <- rownames(coef.mcr)

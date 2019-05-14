@@ -89,9 +89,15 @@ f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), 
 ## Using caret to perform CV
 
 ## Make cluster
-library(doParallel)
-cl <- makeCluster(parallel::detectCores()-1)
-registerDoParallel(cl)
+#library(doParallel)
+#cl <- makeCluster(parallel::detectCores()-1)
+#registerDoParallel(cl)
+
+library(doMC)
+n_cores <- parallel::detectCores()-1
+cat("Number of cores:",n_cores)
+registerDoMC(n_cores)
+
 
 x <- model.matrix(f, gdf.mcr)[, -1]
 xvars <- colnames(x)
@@ -111,7 +117,8 @@ glmctrl <- trainControl(method = "cv",
                         number = 5,
                         returnResamp = "all",
                         classProbs = TRUE,
-                        summaryFunction = sensitivity)
+                        summaryFunction = sensitivity,
+			verboseIter = TRUE)
 set.seed(1337)
 model.cv <- train(x, y,
                   method = "glmnet", 
@@ -120,10 +127,11 @@ model.cv <- train(x, y,
                   # metric = "ROC",
                   tuneGrid = expand.grid(alpha = seq(0,
                                                      1,
-                                                     by = 0.99),
+                                                     by = 0.1),
                                          lambda = seq(0.001,
                                                       0.1,
-                                                      by = 0.099)))
+                                                      by = 0.01)))
+
 # stopCluster(cl)
 
 saveRDS(model.cv, "mcr_lr_model.RDS")

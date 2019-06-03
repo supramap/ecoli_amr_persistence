@@ -264,7 +264,7 @@ validation <- predict(model.cv$finalModel,
                       type = "response")
 validationprediction <- data.frame(probability = test[,7], actual = as.vector(newy))
 validationprediction$prediction <- 0
-validationprediction$prediction[validationprediction$probability >= 0.04] <- 1
+validationprediction$prediction[validationprediction$probability >= 0.02] <- 1
 
 caret::confusionMatrix(table(validationprediction$prediction, validationprediction$actual),
                        positive = "1")

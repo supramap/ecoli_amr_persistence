@@ -282,8 +282,8 @@ amr.list.raw <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
 names(amr.list.raw) <- json.stream[["ngout"]][["data"]][["content"]][["id"]]
 creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
 
-## Filter to cases after 4/4/2016
-amr.list.raw <- amr.list.raw[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+## Filter to cases after 1/9/2019
+amr.list.raw <- amr.list.raw[creation_date_time >= as.POSIXct("2019-01-09 00:00:00", format = "%Y-%m-%d %H:%M:%S")]
 
 amr.list.raw[amr.list.raw == "NULL"] <- NULL
 amr.all <- sort(unique(unlist(amr.list.raw)))

@@ -159,7 +159,7 @@ coef.mcr.nz.df <- data.frame(Odds.Ratio=exp(coef.mcr.nz)[-1, 1], Isolates=length
 # ------------------
 # Model Validation
 # ------------------
-# New data From Jan 9 to today
+# New data From Jan 9, 2019 to May 8, 2019
 # json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Cepi_type%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(kmer_group%3D%3D%5B%22PDG000000004.1238%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Cdesc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=desc")
 # saveRDS(json.stream, file = "e.coli_validation.RDS")
 json.stream <- readRDS("e.coli_validation.RDS")

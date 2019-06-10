@@ -101,7 +101,7 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 #           append = FALSE)
 
 ###########################################
-## Generate Rules Iteratively
+## Generate Rules Iteratively (with the pattern {*|-mcr} => {mcr})
 
 ## Define rule sizes and isolate counts to explore
 rulesizes <- seq(2, 14, by = 1)
@@ -271,3 +271,133 @@ outputpdts <- outputpdts %>%
   select(-c("pdg","genotype"))
 
 readr::write_csv(outputpdts, "MCR_Groups_ARM_PDTs.csv")
+
+###########################################
+## Validation Set - Create rules using new data to compare
+
+## New data From Jan 9, 2019 to May 8, 2019
+json.stream <- readRDS("e.coli_validation.RDS")
+
+amr.list.raw <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
+names(amr.list.raw) <- json.stream[["ngout"]][["data"]][["content"]][["id"]]
+creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
+
+## Filter to cases after 4/4/2016
+amr.list.raw <- amr.list.raw[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+
+amr.list.raw[amr.list.raw == "NULL"] <- NULL
+amr.all <- sort(unique(unlist(amr.list.raw)))
+
+## Find all mcr variants
+# mcr.variants <- amr.all[str_detect(amr.all, "mcr-1|mcr-2")] %>% 
+mcr.variants <- amr.all[str_detect(amr.all, "mcr-")] %>% 
+  sort(decreasing = TRUE) %>% 
+  paste0(collapse = "|")
+
+## Convert all mcr genotype variants to "mcr"
+mcr.subset <- amr.list.raw %>% 
+  lapply(., str_replace_all, pattern = mcr.variants, replacement = "mcr") %>% 
+  lapply(., unique) #Removes duplicate "mcr" genotypes from previous step
+
+## Filter to strains containing "mcr"
+#mcr.subset <- mcr.subset[unlist(lapply(mcr.subset, function(x){"mcr" %in% x}))]
+
+genotypes <- sort(unique(unlist(mcr.subset)))
+
+## Convert to transactions for the a priori algorithm
+mcr.transactions <- as(mcr.subset, 'transactions')
+
+## Generate Rules Iteratively (with the pattern {*|-mcr} => {mcr})
+## Define rule sizes and isolate counts to explore
+rulesizes <- seq(2, 14, by = 1)
+isolatesizes <- lapply(amr.list.raw, length) %>% 
+  matrix() %>% 
+  data.frame()
+
+colnames(isolatesizes) <- c("size")
+isolatesizes$size <- as.factor(as.character(isolatesizes$size))
+
+isolatesizes <- isolatesizes %>%
+  group_by(size) %>% 
+  tally()
+
+isolatesizes$size <- as.numeric(isolatesizes$size)
+
+isolatesizes <- isolatesizes %>%
+  arrange() %>% 
+  filter(size <= max(rulesizes) & size >= min(rulesizes))
+
+rulespace <- data.frame(rulesize = rulesizes,
+                        isolatesize = isolatesizes$n)
+# rulesizes <- c(2,4,5,8,10,14)
+# isolatesizes <- c(1944, 436, 265, 183, 11, 11)
+# rulespace <- data.frame(rulesize = rulesizes,
+#                         isolatesize = isolatesizes)
+
+## Create empty dataframe
+mcr_rules_df <- data.frame(
+  lhs = character(0),
+  rhs = character(0),
+  size = numeric(0),
+  support = numeric(0),
+  confidence = numeric(0),
+  lift = numeric(0),
+  count = numeric(0)
+)
+
+for (i in 1:nrow(rulespace)){
+  ## Get rule size and support metric for this iteration
+  size <- rulespace$rulesize[i]
+  numerator <- rulespace$isolatesize[i]
+  
+  cat("Testing rules of size:", size, "\n")
+  
+  ## Generate MCR Rules
+  mcr_rules<- apriori(mcr.transactions,
+                      parameter = list(minlen = size,
+                                       maxlen = size,
+                                       #support = 0.002,
+                                       #support = 5*(numerator/length(amr.list.raw)),
+                                       support = 0.5*(numerator/length(amr.list.raw)),
+                                       confidence =  2/3,
+                                       maxtime = 60),
+                      appearance = list(default = "none",
+                                        lhs = genotypes[which(genotypes != "mcr")],
+                                        rhs = "mcr"),
+                      control = list(memopt = FALSE)
+  )
+  
+  if (length(mcr_rules) > 0){
+    ## Convert to dataframe
+    mcr_rules_df_iter <- data.frame(
+      lhs = labels(lhs(mcr_rules)),
+      rhs = labels(rhs(mcr_rules)),
+      size = size,
+      mcr_rules@quality
+    )
+    
+    ## Append this iterations's results to main dataframe
+    mcr_rules_df <- rbind(mcr_rules_df,
+                          mcr_rules_df_iter)
+  }
+}
+
+
+## Remove brackets and convert all sets to lists
+mcr_rules_df$lhs <- mcr_rules_df$lhs %>% 
+  str_replace_all(c("\\{|\\}"),"") #%>%
+#strsplit(split=",")
+
+mcr_rules_df$rhs <- mcr_rules_df$rhs %>% 
+  str_replace_all(c("\\{|\\}"),"")
+
+mcr_rules_df$rule <- paste0(mcr_rules_df$lhs, ",", mcr_rules_df$rhs) %>%
+  strsplit(split=",")
+
+## Write out the rules results
+saveRDS(mcr_rules_df,
+        file = "mcr_validation_rules.RDS")
+
+write.csv(mcr_rules_df %>% select(-rule),
+          file = "mcr_validation_rules.csv",
+          append = FALSE)

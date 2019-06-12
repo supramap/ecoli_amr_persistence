@@ -76,14 +76,41 @@ genotypeset.mcr <- lapply(genotypes.mcr,
 genotypesets.mcr <- unique(genotypeset.mcr)
 genotypesets.mcr.gt1 <- genotypesets.mcr[grep(":", genotypesets.mcr)]
 f <- as.formula(paste("mcr ~ 1+.", paste(genotypesets.mcr.gt1, collapse = "+"), sep = "+"))
-# x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
-# y <- Matrix(gdf.mcr$mcr, sparse = T)
-# model.cv <- cv.glmnet(x = x, y = y, family = "binomial", type.measure = "class")
-# coef.mcr <- coef(model.cv, s = "lambda.1se")
-# coef.mcr.names <- rownames(coef.mcr)
-# coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
-# rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
+
+#### GLMNET
+## Setup Parallel Backend
+library(doMC)
+n_cores <- parallel::detectCores()-1
+cat("Number of cores:", n_cores)
+registerDoMC(n_cores)
+
+x <- Matrix(model.matrix(f, gdf.mcr)[, -1], sparse = T)
+y <- Matrix(gdf.mcr$mcr, sparse = T)
+model.cv <- cv.glmnet(x = x,
+                      y = y,
+                      family = "binomial",
+                      type.measure = "class",
+                      keep = TRUE,
+                      parallel = TRUE)
+
+saveRDS(model.cv, "mcr_lr_model.RDS")
+model.cv <- readRDS("mcr_lr_model.RDS")
+
+coef.mcr <- coef(model.cv, s = "lambda.1se")
+coef.mcr.names <- rownames(coef.mcr)
+coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
+rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 #write.csv(as.data.frame(exp(cbind(Odds.Ratio=coef.mcr.nz))), "oddsRatioInt.csv")
+
+## Look at all prevalidated fits to determine best Lambda, based on Sensitivity
+allfits <- model.cv$fit.preval[,1:length(model.cv$lambda)]
+colnames(allfits) <- paste0("Lambda:",model.cv$lambda)
+allfits$actual <- gdf.mcr$mcr
+
+# cor.test(as.numeric(gdf.mcr$mcr), allfits[,1])
+# MLmetrics::Sensitivity(y_pred = allfits[,1],
+#                        y_true = gdf.mcr$mcr,
+#                        positive = lev[1])
 
 ############################
 ## Using caret to perform CV

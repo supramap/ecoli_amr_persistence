@@ -401,3 +401,22 @@ saveRDS(mcr_rules_df,
 write.csv(mcr_rules_df %>% select(-rule),
           file = "mcr_validation_rules.csv",
           append = FALSE)
+
+
+#######################
+## Check for Subsets
+for (i in 1:nrow(mcr_rules_df)){
+  for (j in 1:nrow(orig_mcr_rules_df)){
+    train <- orig_mcr_rules_df$rule[[j]]
+    valid <- mcr_rules_df$rule[[i]]
+    result <- all(train %in% valid)
+    
+    cat("Checking validation [",
+        i,
+        "] against original [",
+        j,
+        "]: ",
+        result,
+        "\n")
+  }
+}

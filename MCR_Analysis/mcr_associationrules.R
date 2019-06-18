@@ -104,7 +104,8 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 ## Generate Rules Iteratively (with the pattern {*|-mcr} => {mcr})
 
 ## Define rule sizes and isolate counts to explore
-rulesizes <- seq(2, 14, by = 1)
+# rulesizes <- seq(2, 14, by = 1)
+rulesizes <- seq(2, 35, by = 1)
 isolatesizes <- lapply(amr.list.raw, length) %>% 
   matrix() %>% 
   data.frame()
@@ -192,10 +193,10 @@ mcr_rules_df$rule <- paste0(mcr_rules_df$lhs, ",", mcr_rules_df$rhs) %>%
 
 ## Write out the rules results
 saveRDS(mcr_rules_df,
-        file = "mcr_rules.RDS")
+        file = "mcr_rules_all.RDS")
 
-write.csv(mcr_rules_df,
-          file = "mcr_rules.csv",
+write.csv(mcr_rules_df %>% select(-rule),
+          file = "mcr_rules_all.csv",
           append = FALSE)
 
 

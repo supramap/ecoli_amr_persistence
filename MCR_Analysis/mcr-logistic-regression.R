@@ -145,16 +145,15 @@ glmctrl <- trainControl(method = "cv",
                         returnResamp = "all",
                         classProbs = TRUE,
                         summaryFunction = sensitivity,
-			verboseIter = TRUE)
+                        workers = n_cores,
+			                  verboseIter = TRUE)
 set.seed(1337)
 model.cv <- train(x, y,
                   method = "glmnet", 
                   trControl = glmctrl,
                   metric = "Sensitivity",
                   # metric = "ROC",
-                  tuneGrid = expand.grid(alpha = seq(0,
-                                                     1,
-                                                     by = 0.1),
+                  tuneGrid = expand.grid(alpha = c(0,1),
                                          lambda = seq(0.001,
                                                       0.1,
                                                       by = 0.01)))

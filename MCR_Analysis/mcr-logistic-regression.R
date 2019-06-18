@@ -145,8 +145,7 @@ glmctrl <- trainControl(method = "cv",
                         returnResamp = "all",
                         classProbs = TRUE,
                         summaryFunction = sensitivity,
-                        workers = n_cores,
-			                  verboseIter = TRUE)
+                        verboseIter = TRUE)
 set.seed(1337)
 model.cv <- train(x, y,
                   method = "glmnet", 

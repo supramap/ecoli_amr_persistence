@@ -310,7 +310,7 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 
 ## Generate Rules Iteratively (with the pattern {*|-mcr} => {mcr})
 ## Define rule sizes and isolate counts to explore
-rulesizes <- seq(2, 14, by = 1)
+rulesizes <- seq(2, 27, by = 1)
 isolatesizes <- lapply(amr.list.raw, length) %>% 
   matrix() %>% 
   data.frame()
@@ -360,7 +360,7 @@ for (i in 1:nrow(rulespace)){
                                        #support = 0.002,
                                        #support = 5*(numerator/length(amr.list.raw)),
                                        support = 0.5*(numerator/length(amr.list.raw)),
-                                       confidence =  2/3,
+                                       confidence = 2/3,
                                        maxtime = 60),
                       appearance = list(default = "none",
                                         lhs = genotypes[which(genotypes != "mcr")],
@@ -406,18 +406,40 @@ write.csv(mcr_rules_df %>% select(-rule),
 
 #######################
 ## Check for Subsets
+orig_mcr_rules_df <- readRDS("mcr_rules_all.RDS")
+
+## Create empty dataframe
+subsets <- data.frame(
+  train_i = integer(0),
+  train_rule = character(0),
+  validation_j = integer(0),
+  validation = character(0)
+)
+
 for (i in 1:nrow(mcr_rules_df)){
   for (j in 1:nrow(orig_mcr_rules_df)){
     train <- orig_mcr_rules_df$rule[[j]]
     valid <- mcr_rules_df$rule[[i]]
     result <- all(train %in% valid)
     
-    cat("Checking validation [",
-        i,
-        "] against original [",
-        j,
-        "]: ",
-        result,
-        "\n")
+    if(result){
+      cat("Found: validation [",
+          i,
+          "] against original [",
+          j,
+          "]: ",
+          result,
+          "\n")
+      
+      subset_iter <- data.frame(
+        train_i = i,
+        train_rule = train,
+        validation_j = j,
+        validation = valid
+      )
+      
+      subsets <- rbind(subsets, subset_iter)
+    }
+    
   }
 }

@@ -407,6 +407,7 @@ write.csv(mcr_rules_df %>% select(-rule),
 #######################
 ## Check for Subsets
 orig_mcr_rules_df <- readRDS("mcr_rules_all.RDS")
+mcr_rules_df <- readRDS("mcr_validation_rules.RDS")
 
 ## Create empty dataframe
 subsets <- data.frame(
@@ -432,9 +433,9 @@ for (i in 1:nrow(mcr_rules_df)){
           "\n")
       
       subset_iter <- data.frame(
-        train_i = i,
+        train_j = j,
         train_rule = train,
-        validation_j = j,
+        validation_i = i,
         validation = valid
       )
       

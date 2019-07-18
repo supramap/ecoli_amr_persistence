@@ -503,7 +503,7 @@ for (i in 1:nrow(orig_mcr_rules_df)){
   lhs_iter <- orig_mcr_rules_df$rule[[i]] %>% str_subset("^mcr", negate = TRUE)
   rhs_iter <- orig_mcr_rules_df$rule[[i]] %>% str_subset("^mcr")
   
-  cat("Testing rules of size:", size, "\n")
+  cat(i,". Testing rules of size:", size, "\n")
   
   ## Check to see if the rule being validated has genotypes not in the validation set
   if (all(lhs_iter %in% genotypes)){

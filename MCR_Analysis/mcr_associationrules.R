@@ -487,6 +487,7 @@ mcr.transactions <- as(mcr.subset, 'transactions')
 
 ## Create empty dataframe
 mcr_rules_df <- data.frame(
+  id = integer(0),
   lhs = character(0),
   rhs = character(0),
   size = numeric(0),
@@ -512,7 +513,8 @@ for (i in 1:nrow(orig_mcr_rules_df)){
                         parameter = list(minlen = size,
                                          maxlen = size,
                                          support = 0.00001,
-                                         confidence = 0.50,
+                                         # confidence = 0.50,
+                                         confidence = 0.00001,
                                          maxtime = 60),
                         appearance = list(default = "none",
                                           lhs = lhs_iter,
@@ -523,6 +525,7 @@ for (i in 1:nrow(orig_mcr_rules_df)){
     if (length(mcr_rules) > 0){
       ## Convert to dataframe
       mcr_rules_df_iter <- data.frame(
+        id = i,
         lhs = labels(lhs(mcr_rules)),
         rhs = labels(rhs(mcr_rules)),
         size = size,

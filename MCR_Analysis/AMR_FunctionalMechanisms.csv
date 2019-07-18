@@ -1,410 +1,410 @@
-AMR Gene,Type,Resistance Mechanism,Sociality,Count
-blaEC,inactivation,antibiotic inactivation,Cooperative,1
-blaEC-5,inactivation,antibiotic inactivation,Cooperative,1
-fosA7,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-blaOXA-1,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-sul2,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
-sat2,inactivation,antibiotic inactivation,Cooperative,1
-aadA5,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-dfrA17,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-aph(6)-Id,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(3'')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaTEM-1,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-mph(A),inactivation,antibiotic inactivation,Cooperative,1
-tet(A),efflux,antibiotic efflux; glycylcycline; tetracycline antibiotic,Selfish,1
-blaCTX-M-15,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-qacEdelta1,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-sul1,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
-catA1,inactivation,antibiotic inactivation,Cooperative,1
-catA,inactivation,antibiotic inactivation,Cooperative,1
-aac(6')-Ib-cr,inactivation,aminoglycoside antibiotic; antibiotic inactivation; fluoroquinolone antibiotic,Cooperative,1
-blaNDM-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-tet(D),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-blaCTX-M-27,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-sat1,inactivation,antibiotic inactivation,Cooperative,1
-fosA,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-dfrA5,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-tet(B),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-aadA1,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY-42,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-aac(6')-Ib4,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(3)-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA2,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaOXA-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-dfrA1,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-aph(3')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-dfrA7,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-floR,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-qepA,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-ble,,,,1
-dfrA8,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-oqxB,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,Selfish,1
-fosA3,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-qacL,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-ampC,inactivation,antibiotic inactivation,Cooperative,1
-aac(6')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-dfrA12,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-aph(4)-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-oqxA,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,Selfish,1
-blaTEM,inactivation,antibiotic inactivation,Cooperative,1
-dfrA14,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-qnrB,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-aac(3)-IId,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA16,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-qacG2,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-dfrA15,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-catB3,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
-mcr-1.1,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-blaNDM-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-aac(3)-VIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaOXA,inactivation,antibiotic inactivation,Cooperative,1
-cmlA1,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-sul3,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
-aac(3)-IV,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-ant(3''),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ib-cr5,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY-2,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-aac(3),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-bleO,,,,1
-qnrS1,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-rmtB1,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-qnrB19,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-ant(2'')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-14,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-arr-3,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
-tet(M),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-qacE,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-aac(3)-II,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-55,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-erm(B),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-aac(3)-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ib-cr7,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aacA,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aacA34,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA10,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA17,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-ant(6),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(3')-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(3')-VIb,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaACC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaACC-1d,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaACT-17,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaACT-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaACT-45,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaACT-52,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaCAR,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaCARB,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaCMY-111,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-23,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-24,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-33,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-44,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-48,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-58,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-59,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-65,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-75,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCMY-82,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCTX-M-104,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-116,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-132,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-134,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-166,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-179,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-182,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaDHA-20,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaDHA-7,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaFOX,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaGES,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaGIL,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaIMI,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaIMP-14,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaIMP-26,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaIMP-6,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaKPC,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaKPC-18,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaLAP-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaLAT,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaLEN-13,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaMIR-12,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
-blaNDM-21,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaNDM-6,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaOCH,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaOKP,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaOXA-129,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaOXA-163,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaOXA-364,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaOXY,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaPC1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaPER-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaPSE,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaR1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaROB,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSED,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSFO-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-11,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-26,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-27,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-33,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSRT,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-105,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-148,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-154,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-156,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-166,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-20,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-207,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-208,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-26,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-3,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-54,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-8,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-9,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaVEB-1,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
-blaVEB-17,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
-blaVEB-5,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
-blaVIM-29,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaVIM-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaZ,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-ble-Sh,,,,1
-catB1,inactivation,antibiotic inactivation,Cooperative,1
-catB8,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
-cmlA4,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-cphA,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-cphA1,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-dfrA22,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrA26,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrA3b,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrA6,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrF,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-ere(C),inactivation,antibiotic inactivation,Cooperative,1
-erm(C),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-erm(F),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-mcr-1.2,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-1.4,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-1.7,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-2,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-3.2,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-oqxA10,efflux,antibiotic efflux,Selfish,1
-oqxA3,efflux,antibiotic efflux,Selfish,1
-oqxB19,efflux,antibiotic efflux,Selfish,1
-oqxB25,efflux,antibiotic efflux,Selfish,1
-oqxB29,efflux,antibiotic efflux,Selfish,1
-oqxB5,efflux,antibiotic efflux,Selfish,1
-qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-qacA,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-qnrVC1,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-rmtB,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-rmtB3,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-rmtD1,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-sat4,inactivation,antibiotic inactivation,Cooperative,1
-smr,efflux,antibiotic efflux,Selfish,1
-tet(41),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(G),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(H-J),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(H),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(M-W-O-S),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(O),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tetA,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-vanR,alteration,antibiotic target alteration,Selfish,1
-vanY,alteration,antibiotic target alteration,Selfish,1
-aac(3)-Ib,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-33,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ian,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadD1,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(3')-VIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaACC-1,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam,Cooperative,1
-blaCMY-140,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaCMY-7,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCTX-M-115,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-174,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-9,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaDHA,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaEC-15,inactivation,antibiotic inactivation,Cooperative,1
-blaI,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaLAP,inactivation,antibiotic inactivation,Cooperative,1
-blaNDM,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaOXA-4,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaSHV-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaTEM-181,inactivation,antibiotic inactivation,Cooperative,1
-blaTEM-210,inactivation,antibiotic inactivation,Cooperative,1
-blaTEM-32,inactivation,antibiotic inactivation,Cooperative,1
-blaTEM-34,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-84,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-catA3,inactivation,antibiotic inactivation,Cooperative,1
-catB11,inactivation,antibiotic inactivation,Cooperative,1
-cfr,alteration,antibiotic target alteration,Selfish,1
-dfr7,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrA21,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-mcr-1.5,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-3,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mef(C),efflux,antibiotic efflux; macrolide antibiotic,Selfish,1
-mph(G),inactivation,antibiotic inactivation,Cooperative,1
-qacB,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-qnrB10,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-qnrS13,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-qnrS4,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-tet(E),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-tet(Y),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-aadA21,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA3,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaACT,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY-16,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-blaCTX-M-125,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaIMP-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaIMP-27,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-blaOXA-232,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaSHV-2A,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-7,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaTEM-10,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-169,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-215,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaVIM-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-catB,inactivation,antibiotic inactivation,Cooperative,1
-dfrA10,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-dfrA24,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-erm-23S_rRNA,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-mcr-5.1,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-qacC,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-qacF,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-qnrB7,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-qnrVC4,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-rmtE,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-aac(6'),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aad9,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(3')-XV,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-64,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaFOX-5,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaGES-5,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaNDM-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-catB2,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
-lnu(A),alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-mcr-3.1,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-mcr-3.5,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-rmtE1,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-tet(31),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-aac(6')-Ib11,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-IIc,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA8,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaKPC-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,Cooperative,1
-blaOXA-244,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaSHV,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaSHV-2,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-blaTEM-176,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-19,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-dfrB1,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-fosA5,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-vat,inactivation,antibiotic inactivation,Cooperative,1
-ant(3'')-Ia,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaTEM-12,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-33,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-35,inactivation,antibiotic inactivation,Cooperative,1
-dfrB4,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-ere(B),inactivation,antibiotic inactivation,Cooperative,1
-lnu(C),alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaIMP-4,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
-qnrD1,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-aph(3')-VI,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-24,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaHER,inactivation,antibiotic inactivation; penam,Cooperative,1
-blaOXA-181,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-qnrB2,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-aph(3')-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaNDM-7,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaTEM-190,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-dfrA23,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-aac(2')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-123,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-dfrA25,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-aadA4,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaTEM-57,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-fosA4,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-aph(3'),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaSHV-1,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
-qnrB1,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-aadA15,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-32,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaTEM-40,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaTEM-52,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-erm(T),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-aac(6')-Il,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ib',inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-abc-f,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY-6,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-cmlA6,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-qnrB4,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-rmtC,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-aph(3')-II,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCMY-4,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
-cmlA,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-erm(42),alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
-qnrB6,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-aadA13,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-mph_3,inactivation,antibiotic inactivation,Cooperative,1
-qepA1,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
-tet(X),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-dfrA19,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-qnrA1,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-dfrA16,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-lnu(B),alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-aadA25,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-arr,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
-blaTEM-30,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-blaNDM-9,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
-blaCTX-M-2,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-armA,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
-blaLAP-2,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaOXA-48,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaTEM-116,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-ere(A),inactivation,antibiotic inactivation,Cooperative,1
-dfrA27,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-mph(E),inactivation,antibiotic inactivation,Cooperative,1
-aadA6,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaOXA-9,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-blaTEM-135,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
-dfrA,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
-msr(E),protection,antibiotic target protection; macrolide antibiotic,Selfish,1
-blaCTX-M-3,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaCTX-M-8,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-arr-2,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
-oqxB2,efflux,antibiotic efflux,Selfish,1
-aadA24,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aadA7,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaOXA-10,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
-qnrS,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-blaDHA-1,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
-blaKPC-3,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,Cooperative,1
-aadA12,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aac(6')-Ib3,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCARB-2,inactivation,antibiotic inactivation; penam,Cooperative,1
-lnu(G),alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-blaKPC-2,inactivation,antibiotic inactivation; penam,Cooperative,1
-clpK,,,,1
-cmlA5,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
-blaCTX-M,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
-qnrS2,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
-blaHER-3,inactivation,antibiotic inactivation,Cooperative,1
-oqxA2,efflux,antibiotic efflux,Selfish,1
-blaCTX-M-65,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-blaSHV-12,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
-catA2,inactivation,antibiotic inactivation,Cooperative,1
-aph(6)-Ic,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-mef(B),efflux,antibiotic efflux; macrolide antibiotic,Selfish,1
-mph(B),inactivation,antibiotic inactivation,Cooperative,1
-aadA22,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-lnu(F),alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
-mcr-1,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
-aph(3''),inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-aph(6)-I,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-blaCTX-M-1,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
-aph(3')-IIa,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
-bla,inactivation,antibiotic inactivation,Cooperative,1
-tet(C),efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+AMR Gene,Gene Category,Type,Resistance Mechanism,Sociality,Count
+blaEC,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaEC-5,bla,inactivation,antibiotic inactivation,Cooperative,1
+fosA7,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+blaOXA-1,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+sul2,sul,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
+sat2,sat,inactivation,antibiotic inactivation,Cooperative,1
+aadA5,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+dfrA17,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+aph(6)-Id,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(3'')-Ib,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaTEM-1,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+mph(A),mph,inactivation,antibiotic inactivation,Cooperative,1
+tet(A),tet,efflux,antibiotic efflux; glycylcycline; tetracycline antibiotic,Selfish,1
+blaCTX-M-15,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+qacEdelta1,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+sul1,sul,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
+catA1,cat,inactivation,antibiotic inactivation,Cooperative,1
+catA,cat,inactivation,antibiotic inactivation,Cooperative,1
+aac(6')-Ib-cr,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation; fluoroquinolone antibiotic,Cooperative,1
+blaNDM-5,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+tet(D),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+blaCTX-M-27,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+sat1,sat,inactivation,antibiotic inactivation,Cooperative,1
+fosA,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+dfrA5,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+tet(B),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+aadA1,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY-42,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+aac(6')-Ib4,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(3)-IIa,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA2,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaOXA-2,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+dfrA1,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+aph(3')-Ia,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+dfrA7,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+floR,flo,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+qepA,qep,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+ble,ble,,,,1
+dfrA8,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+oqxB,oqx,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,Selfish,1
+fosA3,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+qacL,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+ampC,amp,inactivation,antibiotic inactivation,Cooperative,1
+aac(6')-Ib,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+dfrA12,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+aph(4)-Ia,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+oqxA,oqx,efflux,antibiotic efflux; diaminopyrimidine antibiotic; fluoroquinolone antibiotic; glycylcycline; nitrofuran antibiotic; tetracycline antibiotic,Selfish,1
+blaTEM,bla,inactivation,antibiotic inactivation,Cooperative,1
+dfrA14,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+qnrB,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+aac(3)-IId,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA16,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+qacG2,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+dfrA15,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+catB3,cat,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
+mcr-1.1,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+blaNDM-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+aac(3)-VIa,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaOXA,bla,inactivation,antibiotic inactivation,Cooperative,1
+cmlA1,cml,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+sul3,sul,replacement,antibiotic target replacement; sulfonamide antibiotic; sulfone antibiotic,Selfish,1
+aac(3)-IV,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+ant(3''),ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ib-cr5,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY-2,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+aac(3),aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+bleO,ble,,,,1
+qnrS1,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+rmtB1,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+qnrB19,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+ant(2'')-Ia,ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-14,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+arr-3,arr,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
+tet(M),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+qacE,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+aac(3)-II,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-55,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+erm(B),erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+aac(3)-I,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ib-cr7,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aacA,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aacA34,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA10,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA17,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+ant(6),ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(3')-Ib,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(3')-VIb,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaACC,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaACC-1d,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaACT-17,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaACT-4,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaACT-45,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaACT-52,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaCAR,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaCARB,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaCMY-111,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-23,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-24,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-33,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-44,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-48,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-58,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-59,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-65,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-75,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCMY-82,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCTX-M-104,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-116,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-132,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-134,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-166,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-179,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-182,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaDHA-20,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaDHA-7,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaFOX,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaGES,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaGIL,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaIMI,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaIMP-14,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaIMP-26,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaIMP-6,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaKPC,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaKPC-18,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaLAP-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaLAT,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaLEN-13,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaMIR-12,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
+blaNDM-21,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaNDM-6,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaOCH,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaOKP,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaOXA-129,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaOXA-163,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaOXA-364,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaOXY,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaPC1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaPER-2,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaPSE,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaR1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaROB,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSED,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSFO-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-11,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-26,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-27,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-33,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSRT,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-105,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-148,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-154,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-156,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-166,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-20,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-207,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-208,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-26,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-3,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-54,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-8,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-9,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaVEB-1,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
+blaVEB-17,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
+blaVEB-5,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam,Cooperative,1
+blaVIM-29,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaVIM-4,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaZ,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+ble-Sh,ble,,,,1
+catB1,cat,inactivation,antibiotic inactivation,Cooperative,1
+catB8,cat,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
+cmlA4,cml,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+cphA,cph,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+cphA1,cph,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+dfrA22,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrA26,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrA3b,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrA6,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrF,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+ere(C),ere,inactivation,antibiotic inactivation,Cooperative,1
+erm(C),erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+erm(F),erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+mcr-1.2,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-1.4,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-1.7,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-2,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-3.2,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+oqxA10,oqx,efflux,antibiotic efflux,Selfish,1
+oqxA3,oqx,efflux,antibiotic efflux,Selfish,1
+oqxB19,oqx,efflux,antibiotic efflux,Selfish,1
+oqxB25,oqx,efflux,antibiotic efflux,Selfish,1
+oqxB29,oqx,efflux,antibiotic efflux,Selfish,1
+oqxB5,oqx,efflux,antibiotic efflux,Selfish,1
+qac,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+qacA,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+qnrVC1,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+rmtB,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+rmtB3,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+rmtD1,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+sat4,sat,inactivation,antibiotic inactivation,Cooperative,1
+smr,smr,efflux,antibiotic efflux,Selfish,1
+tet(41),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(G),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(H-J),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(H),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(M-W-O-S),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(O),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tetA,tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+vanR,van,alteration,antibiotic target alteration,Selfish,1
+vanY,van,alteration,antibiotic target alteration,Selfish,1
+aac(3)-Ib,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-33,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ia,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ian,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-IIa,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadD1,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(3')-VIa,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaACC-1,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam,Cooperative,1
+blaCMY-140,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaCMY-7,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCTX-M-115,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-174,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-9,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaDHA,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaEC-15,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaI,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaLAP,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaNDM,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaOXA-4,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaSHV-5,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaTEM-181,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaTEM-210,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaTEM-32,bla,inactivation,antibiotic inactivation,Cooperative,1
+blaTEM-34,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-84,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+catA3,cat,inactivation,antibiotic inactivation,Cooperative,1
+catB11,cat,inactivation,antibiotic inactivation,Cooperative,1
+cfr,cfr,alteration,antibiotic target alteration,Selfish,1
+dfr7,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrA21,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+erm,erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+lnu,lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+mcr-1.5,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-3,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mef(C),mef,efflux,antibiotic efflux; macrolide antibiotic,Selfish,1
+mph(G),mph,inactivation,antibiotic inactivation,Cooperative,1
+qacB,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+qnrB10,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+qnrS13,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+qnrS4,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+tet(E),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+tet(Y),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+aadA21,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA3,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaACT,bla,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY-16,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+blaCTX-M-125,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaIMP-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaIMP-27,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+blaOXA-232,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaSHV-2A,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-7,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaTEM-10,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-169,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-215,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaVIM-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+catB,cat,inactivation,antibiotic inactivation,Cooperative,1
+dfrA10,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+dfrA24,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+erm-23S_rRNA,erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+mcr-5.1,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+qacC,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+qacF,qac,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+qnrB7,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+qnrVC4,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+rmtE,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+aac(6'),aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aad9,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(3')-XV,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-64,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaFOX-5,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaGES-5,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaNDM-4,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+catB2,cat,inactivation,antibiotic inactivation; phenicol antibiotic,Cooperative,1
+lnu(A),lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+mcr-3.1,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+mcr-3.5,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+rmtE1,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+tet(31),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+aac(6')-Ib11,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-IIc,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA8,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaKPC-4,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,Cooperative,1
+blaOXA-244,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaSHV,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaSHV-2,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+blaTEM-176,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-19,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+dfrB1,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+fosA5,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+vat,vat,inactivation,antibiotic inactivation,Cooperative,1
+ant(3'')-Ia,ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaTEM-12,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-33,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-35,bla,inactivation,antibiotic inactivation,Cooperative,1
+dfrB4,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+ere(B),ere,inactivation,antibiotic inactivation,Cooperative,1
+lnu(C),lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+ant,ant,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaIMP-4,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam; penem,Cooperative,1
+qnrD1,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+aph(3')-VI,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-24,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaHER,bla,inactivation,antibiotic inactivation; penam,Cooperative,1
+blaOXA-181,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+qnrB2,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+aph(3')-I,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaNDM-7,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaTEM-190,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+dfrA23,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+aac(2')-IIa,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-123,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+dfrA25,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+aadA4,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaTEM-57,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+fosA4,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+aph(3'),aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaSHV-1,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+fos,fos,inactivation,antibiotic inactivation; fosfomycin,Cooperative,1
+qnrB1,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+aadA15,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-32,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaTEM-40,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaTEM-52,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+erm(T),erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+aac(6')-Il,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ib',aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+abc-f,abc,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY-6,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+cmlA6,cml,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+qnrB4,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+rmtC,rmt,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+aph(3')-II,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCMY-4,bla,inactivation,antibiotic inactivation; cephamycin,Cooperative,1
+cmlA,cml,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+erm(42),erm,alteration,antibiotic target alteration; lincosamide antibiotic; macrolide antibiotic; streptogramin antibiotic,Selfish,1
+qnrB6,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+aadA13,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+mph_3,mph,inactivation,antibiotic inactivation,Cooperative,1
+qepA1,qep,efflux,antibiotic efflux; fluoroquinolone antibiotic,Selfish,1
+tet(X),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+dfrA19,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+qnrA1,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+dfrA16,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+lnu(B),lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+aadA25,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+arr,arr,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
+blaTEM-30,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+blaNDM-9,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; cephamycin; penam,Cooperative,1
+blaCTX-M-2,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+armA,arm,alteration,aminoglycoside antibiotic; antibiotic target alteration,Selfish,1
+blaLAP-2,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaOXA-48,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaTEM-116,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+ere(A),ere,inactivation,antibiotic inactivation,Cooperative,1
+dfrA27,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+mph(E),mph,inactivation,antibiotic inactivation,Cooperative,1
+aadA6,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaOXA-9,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+blaTEM-135,bla,inactivation,antibiotic inactivation; cephalosporin; monobactam; penam; penem,Cooperative,1
+dfrA,dfr,replacement,antibiotic target replacement; diaminopyrimidine antibiotic,Selfish,1
+msr(E),msr,protection,antibiotic target protection; macrolide antibiotic,Selfish,1
+blaCTX-M-3,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaCTX-M-8,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+arr-2,arr,inactivation,antibiotic inactivation; rifamycin antibiotic,Cooperative,1
+oqxB2,oqx,efflux,antibiotic efflux,Selfish,1
+aadA24,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aadA7,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaOXA-10,bla,inactivation,antibiotic inactivation; cephalosporin; penam,Cooperative,1
+qnrS,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+blaDHA-1,bla,inactivation,antibiotic inactivation; cephalosporin; cephamycin,Cooperative,1
+blaKPC-3,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; monobactam; penam,Cooperative,1
+aadA12,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aac(6')-Ib3,aac,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCARB-2,bla,inactivation,antibiotic inactivation; penam,Cooperative,1
+lnu(G),lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+blaKPC-2,bla,inactivation,antibiotic inactivation; penam,Cooperative,1
+clpK,clp,,,,1
+cmlA5,cml,efflux,antibiotic efflux; phenicol antibiotic,Selfish,1
+blaCTX-M,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+tet,tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1
+qnrS2,qnr,protection,antibiotic target protection; fluoroquinolone antibiotic,Selfish,1
+blaHER-3,bla,inactivation,antibiotic inactivation,Cooperative,1
+oqxA2,oqx,efflux,antibiotic efflux,Selfish,1
+blaCTX-M-65,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+blaSHV-12,bla,inactivation,antibiotic inactivation; carbapenem; cephalosporin; penam,Cooperative,1
+catA2,cat,inactivation,antibiotic inactivation,Cooperative,1
+aph(6)-Ic,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+mef(B),mef,efflux,antibiotic efflux; macrolide antibiotic,Selfish,1
+mph(B),mph,inactivation,antibiotic inactivation,Cooperative,1
+aadA22,aad,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+lnu(F),lnu,alteration,antibiotic target alteration; lincosamide antibiotic,Selfish,1
+mcr-1,mcr,alteration,antibiotic target alteration; peptide antibiotic,Selfish,1
+aph(3''),aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+aph(6)-I,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+blaCTX-M-1,bla,inactivation,antibiotic inactivation; cephalosporin,Cooperative,1
+aph(3')-IIa,aph,inactivation,aminoglycoside antibiotic; antibiotic inactivation,Cooperative,1
+bla,bla,inactivation,antibiotic inactivation,Cooperative,1
+tet(C),tet,efflux,antibiotic efflux; tetracycline antibiotic,Selfish,1

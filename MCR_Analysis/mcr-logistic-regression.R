@@ -89,7 +89,8 @@ y <- Matrix(gdf.mcr$mcr, sparse = T)
 model.cv <- cv.glmnet(x = x,
                       y = y,
                       family = "binomial",
-                      type.measure = "class",
+                      #type.measure = "class",
+                      type.measure = "auc",
                       keep = TRUE,
                       parallel = TRUE)
 
@@ -161,7 +162,8 @@ model.cv <- train(x, y,
 
 saveRDS(model.cv, "mcr_lr_model.RDS")
 
-model.cv <- readRDS("mcr_lr_model.RDS")
+# model.cv <- readRDS("mcr_lr_model.RDS")
+model.cv <- readRDS("mcr_lr_model_caret.RDS")
 
 model.cv$bestTune
 coef.mcr <- coef(model.cv$finalModel,

@@ -1,8 +1,8 @@
 library(tidyr)
 library(dplyr)
 
-rules <- readRDS("mcr_rules_all.RDS")
-gene <- read.csv("AMR_FunctionalMechanisms.csv", header=T)
+rules <- readRDS("../mcr_rules_all.RDS")
+gene <- read.csv("../AMR_FunctionalMechanisms.csv", header=T)
 
 #Identify genes are their respective socialities
 for (i in 1:nrow(gene)) {
@@ -49,9 +49,9 @@ for (i in 1:nrow(newruleslhs)) {
 }
 
 #==========RMSD Calculations===========================================================
-
-all_rules <- readRDS("mcr_rules_all.RDS")
-val_rules <- readRDS("mcr_validation_rules.RDS")
+library(dplyr)
+all_rules <- readRDS("../mcr_rules_all.RDS")
+val_rules <- readRDS("../mcr_validation_rules.RDS")
 
 #Join excluding column-list called "rule" (column 8) because of error and irrelevancy
 inner_rules <- inner_join(all_rules[,-8], val_rules[,-8], by="lhs")
@@ -59,15 +59,177 @@ left_rules <- left_join(all_rules[,-8], val_rules[,-8], by="lhs")
 
 #Set non-matching sets conf,supp,lift to 0
 left_rules$support.y[is.na(left_rules$support.y)] <- 0
-left_rules$confidence.y[is.na(left_rules$confidence.y)] <- 0
-left_rules$lift.y[is.na(left_rules$lift.y)] <- 0
+left_rules$confidence.y[is.na(left_rules$confidence.y)] <- 1
+# left_rules$lift.y[is.na(left_rules$lift.y)] <- 1
 
 #RMSD Calculations
+mse_inner_support <- mean((inner_rules$support.x - inner_rules$support.y)^2)
+mse_left_support <- mean((left_rules$support.x - left_rules$support.y)^2)
 rmsd_inner_support <- sqrt((sum((abs(inner_rules$support.x - inner_rules$support.y))^2))/nrow(inner_rules))
 rmsd_left_support <- sqrt((sum((abs(left_rules$support.x - left_rules$support.y))^2))/nrow(left_rules))
 
+mse_inner_confidence <- mean((inner_rules$confidence.x - inner_rules$confidence.y)^2)
+mse_left_confidence <- mean((left_rules$confidence.x - left_rules$confidence.y)^2)
 rmsd_inner_confidence <- sqrt((sum((abs(inner_rules$confidence.x - inner_rules$confidence.y))^2))/nrow(inner_rules))
 rmsd_left_confidence <- sqrt((sum((abs(left_rules$confidence.x - left_rules$confidence.y))^2))/nrow(left_rules))
 
-rmsd_inner_lift <- sqrt((sum((abs(inner_rules$lift.x - inner_rules$lift.y))^2))/nrow(inner_rules))
-rmsd_left_lift <- sqrt((sum((abs(left_rules$lift.x - left_rules$lift.y))^2))/nrow(left_rules))
+# rmsd_inner_lift <- sqrt((sum((abs(inner_rules$lift.x - inner_rules$lift.y))^2))/nrow(inner_rules))
+# rmsd_left_lift <- sqrt((sum((abs(left_rules$lift.x - left_rules$lift.y))^2))/nrow(left_rules))
+
+###############################
+## Coop/Self Ratio for MCR vs. Not
+## Distribution of coopertivity of MCR-containing isolates
+## Look in LR script to line 51
+
+## Cols w/ coop-prefix/everything else (for mcr containing vs. not)
+library(jsonlite)
+library(stringr)
+library(glmnet)
+library(caret)
+#library(arules)
+
+# Run these *nix commands
+#sed 's/'\''//g' PDG000000004.1024.reference_target.tree.newick | sed 's/:-*[0-9]\.*[0-9]*\(e-[0-9]*\)*//g' | sed 's/,'\('/'\('/g' | sed 's/,/ /g' > e.coli.paren
+#sed 's/'\)'*'\('*'\ '*PDT/,PDT/g' e.coli.paren | sed 's/^,//g' | sed 's/'\)'*;$//g' > e.coli.ids
+#---------
+pdt <- unique(names(read.csv("../e.coli.ids")))
+
+#json.stream <- fromJSON("https://www.ncbi.nlm.nih.gov/pathogens/ngram?start=0&limit=1000000&q=%5Bdisplay()%2Chist(geo_loc_name%2Cisolation_source%2Ccollected_by%2Chost%2Cproperty%2Ctarget_creation_date)%5D.from(pathogen).usingschema(%2Fschema%2Fpathogen).matching(status%3D%3D%5B%22current%22%5D+and+q%3D%3D%22taxgroup_name%253A%2522E.coli%2520and%2520Shigella%2522%22).sort(target_creation_date%2Casc)&_search=false&rows=20&page=1&sidx=target_creation_date&sord=asc)")
+#saveRDS(json.stream, file = "e.coli.RDS")
+json.stream <- readRDS("../e.coli.RDS")
+
+id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
+creation_date_time <- as.POSIXct(json.stream[["ngout"]][["data"]][["content"]][["target_creation_date"]], format = "%Y-%m-%dT%H:%M:%SZ")
+collection_year <- as.numeric(substr(json.stream[["ngout"]][["data"]][["content"]][["collection_date"]], 1, 4))
+collection_year[is.na(collection_year)] <- as.numeric(format(creation_date_time[is.na(collection_year)], "%Y"))
+location <- json.stream[["ngout"]][["data"]][["content"]][["geo_loc_name"]]
+isolation_type <- json.stream[["ngout"]][["data"]][["content"]][["epi_type"]]
+isolation_source <- json.stream[["ngout"]][["data"]][["content"]][["isolation_source"]]
+fdf <- data.frame(id, creation_date_time, collection_year, location, isolation_type, isolation_source)
+rdf <- fdf[fdf$id %in% pdt,]
+fgenotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
+names(fgenotypes) <- id
+rgenotypes <- fgenotypes
+rgenotypes[!(names(fgenotypes) %in% pdt)] <- NULL
+#fgenotypes[fgenotypes == "NULL"] <- NULL
+#rgenotypes[rgenotypes == "NULL"] <- NULL
+genotypes <- fgenotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+genoid <- id[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+
+# ---------
+# Genotypes
+# ---------
+genotypesall <- unique(sort(unlist(genotypes)))
+genobinv <- lapply(genotypes, function(x){(genotypesall %in% x) * 1})
+gdf <- as.data.frame(matrix(unlist(genobinv), ncol = length(genotypesall), byrow = T))
+names(gdf) <- genotypesall
+gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
+gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
+# gdf.mcr$mcr <- as.factor(gdf.mcr$mcr)
+
+allisolates <- gdf.mcr
+onlymcrisolates <- gdf.mcr %>% filter(mcr == 1)
+onlyblaisolates <- gdf.mcr %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
+onlyrmtisolates <- gdf.mcr %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
+onlyermisolates <- gdf.mcr %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
+
+
+## Identify genes are their respective socialities
+gene <- read.csv("../AMR_FunctionalMechanisms.csv", header=T)
+
+for (i in 1:nrow(gene)) {
+  coop = ifelse(gene$Sociality == "Cooperative", paste(gene$AMR.Gene), NA)
+  self = ifelse(gene$Sociality == "Selfish", paste(gene$AMR.Gene), NA)
+  unkn = ifelse(gene$Sociality == "", paste(gene$AMR.Gene), NA)
+  gene$coop <- coop
+  gene$self <- self
+  gene$unkn <- unkn
+}
+
+#Makes vectors contaning genes in their categories
+coop_vector <- c(gene$coop[!is.na(gene$coop)])
+self_vector <- c(gene$self[!is.na(gene$self)])
+unkn_vector <- c(gene$self[!is.na(gene$unkn)])
+
+coop_vector_ors <- paste(coop_vector, collapse = "|")
+self_vector_ors <- paste(self_vector, collapse = "|")
+unkn_vector_ors <- paste(unkn_vector, collapse = "|")
+all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
+
+allisolates <- allisolates %>% 
+  mutate(count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+  # mutate(if (numself==0){ratio = 1}
+  #        else if (numself!=0){ratio = numcoop/(numself)})
+
+View(allisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+
+hist(allisolates$pctself)
+
+
+onlymcrisolates <- onlymcrisolates %>% 
+  mutate(count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+# mutate(if (numself==0){ratio = 1}
+#        else if (numself!=0){ratio = numcoop/(numself)})
+
+View(onlymcrisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+
+hist(onlymcrisolates$pctself)
+
+
+onlyblaisolates <- onlyblaisolates %>% 
+  mutate(count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+# mutate(if (numself==0){ratio = 1}
+#        else if (numself!=0){ratio = numcoop/(numself)})
+
+View(onlyblaisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+
+hist(onlyblaisolates$pctself)
+
+
+onlyrmtisolates <- onlyrmtisolates %>% 
+  mutate(count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+# mutate(if (numself==0){ratio = 1}
+#        else if (numself!=0){ratio = numcoop/(numself)})
+
+View(onlyrmtisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+
+hist(onlyrmtisolates$pctself)
+
+onlyermisolates <- onlyermisolates %>% 
+  mutate(count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+# mutate(if (numself==0){ratio = 1}
+#        else if (numself!=0){ratio = numcoop/(numself)})
+
+View(onlyermisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+
+hist(onlyermisolates$pctself)

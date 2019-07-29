@@ -146,7 +146,7 @@ for (i in 1:nrow(gene)) {
   gene$unkn <- unkn
 }
 
-#Makes vectors contaning genes in their categories
+## Makes vectors contaning genes in their categories
 coop_vector <- c(gene$coop[!is.na(gene$coop)])
 self_vector <- c(gene$self[!is.na(gene$self)])
 unkn_vector <- c(gene$self[!is.na(gene$unkn)])
@@ -155,6 +155,8 @@ coop_vector_ors <- paste(coop_vector, collapse = "|")
 self_vector_ors <- paste(self_vector, collapse = "|")
 unkn_vector_ors <- paste(unkn_vector, collapse = "|")
 all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
+
+## Look at ratios overall vs. only MCR vs only ...
 
 allisolates <- allisolates %>% 
   mutate(count = rowSums(select(., matches(all_vector_ors))),

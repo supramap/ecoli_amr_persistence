@@ -156,82 +156,120 @@ self_vector_ors <- paste(self_vector, collapse = "|")
 unkn_vector_ors <- paste(unkn_vector, collapse = "|")
 all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
 
+## Get isolates with at least 1 individualist gene
+onlyselfisolates <- gdf.mcr %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
+
 ## Look at ratios overall vs. only MCR vs only ...
 
 allisolates <- allisolates %>% 
-  mutate(count = rowSums(select(., matches(all_vector_ors))),
+  mutate(set = "all",
+         count = rowSums(select(., matches(all_vector_ors))),
          numcoop = rowSums(select(., matches(coop_vector_ors))),
          numself = rowSums(select(., matches(self_vector_ors))),
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count)
-  # mutate(if (numself==0){ratio = 1}
-  #        else if (numself!=0){ratio = numcoop/(numself)})
-
-View(allisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
 
 hist(allisolates$pctself)
 
 
-onlymcrisolates <- onlymcrisolates %>% 
-  mutate(count = rowSums(select(., matches(all_vector_ors))),
+onlyselfisolates <- onlyselfisolates %>% 
+  mutate(set = "self",
+         count = rowSums(select(., matches(all_vector_ors))),
          numcoop = rowSums(select(., matches(coop_vector_ors))),
          numself = rowSums(select(., matches(self_vector_ors))),
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count)
-# mutate(if (numself==0){ratio = 1}
-#        else if (numself!=0){ratio = numcoop/(numself)})
 
-View(onlymcrisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
+hist(onlyindividualisticisolates$pctself)
+
+onlymcrisolates <- onlymcrisolates %>% 
+  mutate(set = "mcr",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
 
 hist(onlymcrisolates$pctself)
 
 
 onlyblaisolates <- onlyblaisolates %>% 
-  mutate(count = rowSums(select(., matches(all_vector_ors))),
+  mutate(set = "bla",
+         count = rowSums(select(., matches(all_vector_ors))),
          numcoop = rowSums(select(., matches(coop_vector_ors))),
          numself = rowSums(select(., matches(self_vector_ors))),
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count)
-# mutate(if (numself==0){ratio = 1}
-#        else if (numself!=0){ratio = numcoop/(numself)})
-
-View(onlyblaisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
 
 hist(onlyblaisolates$pctself)
 
 
 onlyrmtisolates <- onlyrmtisolates %>% 
-  mutate(count = rowSums(select(., matches(all_vector_ors))),
+  mutate(set = "rmt",
+         count = rowSums(select(., matches(all_vector_ors))),
          numcoop = rowSums(select(., matches(coop_vector_ors))),
          numself = rowSums(select(., matches(self_vector_ors))),
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count)
-# mutate(if (numself==0){ratio = 1}
-#        else if (numself!=0){ratio = numcoop/(numself)})
-
-View(onlyrmtisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
 
 hist(onlyrmtisolates$pctself)
 
 onlyermisolates <- onlyermisolates %>% 
-  mutate(count = rowSums(select(., matches(all_vector_ors))),
+  mutate(set = "erm",
+         count = rowSums(select(., matches(all_vector_ors))),
          numcoop = rowSums(select(., matches(coop_vector_ors))),
          numself = rowSums(select(., matches(self_vector_ors))),
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count)
-# mutate(if (numself==0){ratio = 1}
-#        else if (numself!=0){ratio = numcoop/(numself)})
-
-View(onlyermisolates %>% select(count, numcoop, numself, numunkn, ratio, pctcoop, pctself))                   
 
 hist(onlyermisolates$pctself)
+
+
+## Analyze Distributions of ALL vs. MCR
+# devtools::install_github("kassambara/easyGgplot2")
+library(easyGgplot2)
+library(ggsci)
+library(ggplot2)
+
+mcr_vs_self_vs_all_plotdata <- rbind(allisolates %>%
+                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
+                                     onlyselfisolates %>%
+                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
+                                     onlymcrisolates %>%
+                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself))
+
+write.csv(mcr_vs_self_vs_all_plotdata,
+          file = "mcr_vs_self_vs_all_plotdata.csv")
+
+ggplot2.histogram(data=mcr_vs_self_vs_all_plotdata,
+                  xName='pctself',
+                  groupName='set',
+                  xtitle = "Percentage of Selfish Genes",
+                  ytitle = "Density",
+                  legendPosition="top",
+                  alpha=0.75,
+                  addDensity=TRUE) + 
+  scale_color_rickandmorty() + 
+  scale_fill_rickandmorty()
+
+## Stats tests
+shapiro.test(sample(mcr_vs_self_vs_all_plotdata$pctself,size = 5000))
+## (NOT NORMAL)
+mcr_vs_self_vs_all_plotdata$set <- factor(mcr_vs_self_vs_all_plotdata$set) 
+
+kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata)
+kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "self"))
+kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "mcr"))
+kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "all"))

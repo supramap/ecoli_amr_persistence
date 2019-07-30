@@ -2,3 +2,9 @@
 Icon?
 .RData
 .Rhistory
+.Rapp.history
+**/.DS_Store
+**/Icon?
+**/.RData
+**/.Rhistory
+**/.Rapp.history

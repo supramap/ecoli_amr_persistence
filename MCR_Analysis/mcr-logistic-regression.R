@@ -207,5 +207,76 @@ newy <- Matrix(newgdf.mcr$mcr, sparse = T)
 test.sv <- predict(model.cv, newx = x, s = "lambda.min", type = "response")
 test.cv <- predict(model.cv, newx = newx, s = "lambda.min", type = "response")
 
-table((test.sv > 0.15) * 1, gdf.mcr$mcr)
-table((test.cv > 0.01) * 1, newgdf.mcr$mcr)
+# table((test.sv > 0.15) * 1, gdf.mcr$mcr)
+# table((test.cv > 0.01) * 1, newgdf.mcr$mcr)
+
+######################
+## Get Odds Ratios for Each Model
+model.cv <- readRDS("mcr_lr_model.RDS")
+coef.mcr <- coef(model.cv, s = "lambda.min")
+coef.mcr.names <- rownames(coef.mcr)
+coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
+rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
+oddratios_glm <- data.frame(AMR=coef.mcr.names[nonzeroCoef(coef.mcr)], Odds.Ratio=exp(coef.mcr[nonzeroCoef(coef.mcr)]))
+
+model.cv.smote <- readRDS("mcr_lr_model_smote.RDS")
+model.cv <- model.cv.smote
+coef.mcr <- coef(model.cv, s = "lambda.min")
+coef.mcr.names <- rownames(coef.mcr)
+coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
+rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
+oddratios_smote <- data.frame(AMR=coef.mcr.names[nonzeroCoef(coef.mcr)], Odds.Ratio=exp(coef.mcr[nonzeroCoef(coef.mcr)]))
+
+oddsratios <- full_join(oddratios_glm, oddratios_smote, by = "AMR")
+colnames(oddsratios) <- c("GeneSet", "OddsRatio_glm", "OddsRatio_smote")
+write.csv(oddsratios, "model_oddsratios.csv", row.names = FALSE)
+
+######################
+## Generate ROC curves for Each Model
+library(pROC)
+library(ggplot2)
+
+model.cv.glm <- readRDS("mcr_lr_model.RDS")
+model.cv.smote <- readRDS("mcr_lr_model_smote.RDS")
+
+test.cv.glm <- predict(model.cv.glm, newx = newx, s = "lambda.min", type = "response")
+test.cv.smote <- predict(model.cv.smote, newx = newx, s = "lambda.min", type = "response")
+
+rocobj.glm <- roc(newgdf.mcr$mcr, test.cv.glm[,1])
+rocobj.smote <- roc(newgdf.mcr$mcr, test.cv.smote[,1])
+
+ggroc(list(glm=rocobj.glm, smote=rocobj.smote)) +
+  theme_minimal() +
+  ggtitle("ROC curve") + 
+  xlab("Specificity") +
+  ylab("Sensitivity") + 
+  labs(fill = "Model") + 
+  geom_segment(aes(x = 1,
+                   xend = 0,
+                   y = 0,
+                   yend = 1),
+               color="grey",
+               linetype="dashed")
+
+## Analyze and compares the ROC curves
+auc(rocobj.glm)
+auc(rocobj.smote)
+
+roc.test(rocobj.glm, rocobj.smote)
+
+allcoords_glm <- coords(rocobj.glm,
+                        ret = "all",
+                        transpose = FALSE) %>% 
+  mutate(is_best = ifelse(allcoords_glm$threshold == coords(rocobj.glm, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
+         model = "glm")
+
+allcoords_smote <- coords(rocobj.smote,
+                          ret = "all",
+                          transpose = FALSE) %>% 
+  mutate(is_best = ifelse(allcoords_smote$threshold == coords(rocobj.smote, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
+         model = "smote")
+
+allcoords <- rbind(allcoords_glm, allcoords_smote)
+
+write.csv(allcoords, "ROCcoordinates.csv", row.names = FALSE)
+

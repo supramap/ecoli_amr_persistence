@@ -355,10 +355,11 @@ gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
 # gdf.mcr$mcr <- as.factor(gdf.mcr$mcr)
 
 allisolates <- gdf.mcr
+nonmcrisolates <- gdf.mcr %>% filter(mcr == 0)
 onlymcrisolates <- gdf.mcr %>% filter(mcr == 1)
-onlyblaisolates <- gdf.mcr %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
-onlyrmtisolates <- gdf.mcr %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
-onlyermisolates <- gdf.mcr %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
+# onlyblaisolates <- gdf.mcr %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
+# onlyrmtisolates <- gdf.mcr %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
+# onlyermisolates <- gdf.mcr %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
 
 
 ## Identify genes are their respective socialities
@@ -383,7 +384,7 @@ self_vector_ors <- paste(self_vector, collapse = "|")
 unkn_vector_ors <- paste(unkn_vector, collapse = "|")
 all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
 
-## Get isolates with at least 1 individualist gene
+## Get isolates with at least 1 individualistic gene
 onlyselfisolates <- gdf.mcr %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
 
 ## Look at ratios overall vs. only MCR vs only ...
@@ -411,7 +412,19 @@ onlyselfisolates <- onlyselfisolates %>%
          pctcoop = numcoop/count,
          pctself = numself/count)
 
-hist(onlyindividualisticisolates$pctself)
+hist(onlyselfisolates$pctself)
+
+nonmcrisolates <- nonmcrisolates %>% 
+  mutate(set = "non-mcr",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count)
+
+hist(nonmcrisolates$pctself)
 
 onlymcrisolates <- onlymcrisolates %>% 
   mutate(set = "mcr",
@@ -426,42 +439,42 @@ onlymcrisolates <- onlymcrisolates %>%
 hist(onlymcrisolates$pctself)
 
 
-onlyblaisolates <- onlyblaisolates %>% 
-  mutate(set = "bla",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyblaisolates$pctself)
-
-
-onlyrmtisolates <- onlyrmtisolates %>% 
-  mutate(set = "rmt",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyrmtisolates$pctself)
-
-onlyermisolates <- onlyermisolates %>% 
-  mutate(set = "erm",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyermisolates$pctself)
+# onlyblaisolates <- onlyblaisolates %>% 
+#   mutate(set = "bla",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyblaisolates$pctself)
+# 
+# 
+# onlyrmtisolates <- onlyrmtisolates %>% 
+#   mutate(set = "rmt",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyrmtisolates$pctself)
+# 
+# onlyermisolates <- onlyermisolates %>% 
+#   mutate(set = "erm",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyermisolates$pctself)
 
 
 ## Analyze Distributions of ALL vs. MCR
@@ -470,17 +483,19 @@ library(easyGgplot2)
 library(ggsci)
 library(ggplot2)
 
-mcr_vs_self_vs_all_plotdata <- rbind(allisolates %>%
-                                       select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                     onlyselfisolates %>%
-                                       select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                     onlymcrisolates %>%
-                                       select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself))
+mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates %>%
+                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
+                                            onlyselfisolates %>%
+                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
+                                            nonmcrisolates %>% 
+                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
+                                            onlymcrisolates %>%
+                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself))
 
-write.csv(mcr_vs_self_vs_all_plotdata,
-          file = "mcr_vs_self_vs_all_plotdata.csv")
+write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
+          file = "mcr_vs_nonmcr_self_vs_all_plotdata")
 
-ggplot2.histogram(data=mcr_vs_self_vs_all_plotdata,
+ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
                   xName='pctself',
                   groupName='set',
                   xtitle = "Percentage of Selfish Genes",
@@ -492,53 +507,17 @@ ggplot2.histogram(data=mcr_vs_self_vs_all_plotdata,
   scale_fill_rickandmorty()
 
 ## Stats tests
-shapiro.test(sample(mcr_vs_self_vs_all_plotdata$pctself,size = 5000))
+shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
 ## (NOT NORMAL)
-mcr_vs_self_vs_all_plotdata$set <- factor(mcr_vs_self_vs_all_plotdata$set) 
+mcr_vs_nonmcr_self_vs_all_plotdata$set <- factor(mcr_vs_nonmcr_self_vs_all_plotdata$set) 
 
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata)
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "self"))
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "mcr"))
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "all"))
-
-
-
-###########################
-## Analyze Distributions of ALL vs. MCR
-# devtools::install_github("kassambara/easyGgplot2")
-library(easyGgplot2)
-library(ggsci)
-library(ggplot2)
-
-mcr_vs_self_vs_all_plotdata <- rbind(allisolates %>%
-                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                     onlyselfisolates %>%
-                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                     onlymcrisolates %>%
-                                        select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself))
-
-write.csv(mcr_vs_self_vs_all_plotdata,
-          file = "mcr_vs_self_vs_all_plotdata.csv")
-
-ggplot2.histogram(data=mcr_vs_self_vs_all_plotdata,
-                  xName='pctself',
-                  groupName='set',
-                  xtitle = "Percentage of Selfish Genes",
-                  ytitle = "Density",
-                  legendPosition="top",
-                  alpha=0.75,
-                  addDensity=TRUE) + 
-  scale_color_rickandmorty() + 
-  scale_fill_rickandmorty()
-
-## Stats tests
-shapiro.test(sample(mcr_vs_self_vs_all_plotdata$pctself,size = 5000))
-## (NOT NORMAL)
-mcr_vs_self_vs_all_plotdata$set <- factor(mcr_vs_self_vs_all_plotdata$set) 
-
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata)
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "self"))
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "mcr"))
-kruskal.test(pctself ~ set, data = mcr_vs_self_vs_all_plotdata %>% filter(set != "all"))
-
-
+## All
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata)
+## MCR vs Non-MCR
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "self" && set != "nonmcr"))
+## Selfish vs. All
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "mcr" && set != "nonmcr"))
+## MCR vs Selfish
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "all" && set != "nonmcr"))
+## Non-MCR vs Selfish
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "self" && set != "mcr"))

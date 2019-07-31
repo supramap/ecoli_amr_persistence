@@ -311,7 +311,7 @@ write.csv(rules %>% select(-genevector), "../mcr_lr_model_oddsratios.csv", row.n
 ## Cols w/ coop-prefix/everything else (for mcr containing vs. not)
 library(jsonlite)
 library(stringr)
-library(glmnet)
+#library(glmnet)
 library(caret)
 #library(arules)
 
@@ -376,7 +376,7 @@ for (i in 1:nrow(gene)) {
 
 ## Makes vectors contaning genes in their categories
 coop_vector <- c(gene$coop[!is.na(gene$coop)])
-self_vector <- c(gene$self[!is.na(gene$self)])
+self_vector <- c(gene$self[!is.na(gene$self)],"mcr")
 unkn_vector <- c(gene$self[!is.na(gene$unkn)])
 
 coop_vector_ors <- paste(coop_vector, collapse = "|")
@@ -397,7 +397,8 @@ allisolates <- allisolates %>%
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
-         pctself = numself/count)
+         pctself = numself/count) %>% 
+  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(allisolates$pctself)
 
@@ -410,7 +411,8 @@ onlyselfisolates <- onlyselfisolates %>%
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
-         pctself = numself/count)
+         pctself = numself/count) %>% 
+  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlyselfisolates$pctself)
 
@@ -422,7 +424,8 @@ nonmcrisolates <- nonmcrisolates %>%
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
-         pctself = numself/count)
+         pctself = numself/count) %>% 
+  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(nonmcrisolates$pctself)
 
@@ -434,7 +437,8 @@ onlymcrisolates <- onlymcrisolates %>%
          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
-         pctself = numself/count)
+         pctself = numself/count) %>% 
+  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlymcrisolates$pctself)
 
@@ -483,17 +487,10 @@ library(easyGgplot2)
 library(ggsci)
 library(ggplot2)
 
-mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates %>%
-                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                            onlyselfisolates %>%
-                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                            nonmcrisolates %>% 
-                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself),
-                                            onlymcrisolates %>%
-                                              select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself))
+mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates, onlyselfisolates, nonmcrisolates, onlymcrisolates)
 
 write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
-          file = "mcr_vs_nonmcr_self_vs_all_plotdata")
+          file = "mcr_vs_nonmcr_self_vs_all_plotdata.csv")
 
 ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
                   xName='pctself',

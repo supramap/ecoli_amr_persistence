@@ -111,15 +111,15 @@ colnames(gdf.mcr.smote)[colnames(gdf.mcr.smote) == "class"] <- "mcr"
 x.smote <- Matrix(model.matrix(f, gdf.mcr.smote)[, -1], sparse = T)
 y.smote <- Matrix(gdf.mcr.smote$mcr, sparse = T)
 set.seed(123456789)
-model.cv.smote <- cv.glmnet(x = x.smote,
+model.cv.adasyn <- cv.glmnet(x = x.smote,
                             y = y.smote,
                             family = "binomial",
                             alpha = 1,
                             nfolds = floor(length(y) / 10),
                             type.measure = "auc",
                             parallel = T)
-saveRDS(model.cv.smote, "mcr_lr_model_smote.RDS")
-model.cv.smote <- readRDS("mcr_lr_model_smote.RDS")
+saveRDS(model.cv.adasyn, "mcr_lr_model_adasyn.RDS")
+model.cv.adasyn <- readRDS("mcr_lr_model_adasyn.RDS")
 
 ### Use adasyn/smote?
 #model.cv <- model.cv.smote
@@ -219,17 +219,17 @@ coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
 oddratios_glm <- data.frame(AMR=coef.mcr.names[nonzeroCoef(coef.mcr)], Odds.Ratio=exp(coef.mcr[nonzeroCoef(coef.mcr)]))
 
-model.cv.smote <- readRDS("mcr_lr_model_smote.RDS")
-model.cv <- model.cv.smote
+model.cv.adasyn <- readRDS("mcr_lr_model_adasyn.RDS")
+model.cv <- model.cv.adasyn
 coef.mcr <- coef(model.cv, s = "lambda.min")
 coef.mcr.names <- rownames(coef.mcr)
 coef.mcr.nz <- Matrix(coef.mcr[nonzeroCoef(coef.mcr)], sparse = T)
 rownames(coef.mcr.nz) <- coef.mcr.names[nonzeroCoef(coef.mcr)]
-oddratios_smote <- data.frame(AMR=coef.mcr.names[nonzeroCoef(coef.mcr)], Odds.Ratio=exp(coef.mcr[nonzeroCoef(coef.mcr)]))
+oddratios_adasyn <- data.frame(AMR=coef.mcr.names[nonzeroCoef(coef.mcr)], Odds.Ratio=exp(coef.mcr[nonzeroCoef(coef.mcr)]))
 
-oddsratios <- full_join(oddratios_glm, oddratios_smote, by = "AMR")
-colnames(oddsratios) <- c("GeneSet", "OddsRatio_glm", "OddsRatio_smote")
-write.csv(oddsratios, "model_oddsratios.csv", row.names = FALSE)
+oddsratios <- full_join(oddratios_glm, oddratios_adasyn, by = "AMR")
+colnames(oddsratios) <- c("GeneSet", "OddsRatio_glm", "OddsRatio_adasyn")
+write.csv(oddsratios, "mcr_lr_model_oddsratios.csv", row.names = FALSE)
 
 ######################
 ## Generate ROC curves for Each Model
@@ -237,15 +237,15 @@ library(pROC)
 library(ggplot2)
 
 model.cv.glm <- readRDS("mcr_lr_model.RDS")
-model.cv.smote <- readRDS("mcr_lr_model_smote.RDS")
+model.cv.adasyn <- readRDS("mcr_lr_model_adasyn.RDS")
 
 test.cv.glm <- predict(model.cv.glm, newx = newx, s = "lambda.min", type = "response")
-test.cv.smote <- predict(model.cv.smote, newx = newx, s = "lambda.min", type = "response")
+test.cv.adasyn <- predict(model.cv.adasyn, newx = newx, s = "lambda.min", type = "response")
 
 rocobj.glm <- roc(newgdf.mcr$mcr, test.cv.glm[,1])
-rocobj.smote <- roc(newgdf.mcr$mcr, test.cv.smote[,1])
+rocobj.adasyn <- roc(newgdf.mcr$mcr, test.cv.adasyn[,1])
 
-ggroc(list(glm=rocobj.glm, smote=rocobj.smote)) +
+ggroc(list(glm=rocobj.glm, adasyn=rocobj.adasyn)) +
   theme_minimal() +
   ggtitle("ROC curve") + 
   xlab("Specificity") +
@@ -260,23 +260,23 @@ ggroc(list(glm=rocobj.glm, smote=rocobj.smote)) +
 
 ## Analyze and compares the ROC curves
 auc(rocobj.glm)
-auc(rocobj.smote)
+auc(rocobj.adasyn)
 
-roc.test(rocobj.glm, rocobj.smote)
+roc.test(rocobj.glm, rocobj.adasyn)
 
 allcoords_glm <- coords(rocobj.glm,
                         ret = "all",
                         transpose = FALSE) %>% 
-  mutate(is_best = ifelse(allcoords_glm$threshold == coords(rocobj.glm, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
+  mutate(is_best = ifelse(.$threshold == coords(rocobj.glm, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
          model = "glm")
 
-allcoords_smote <- coords(rocobj.smote,
+allcoords_adasyn <- coords(rocobj.adasyn,
                           ret = "all",
                           transpose = FALSE) %>% 
-  mutate(is_best = ifelse(allcoords_smote$threshold == coords(rocobj.smote, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
-         model = "smote")
+  mutate(is_best = ifelse(.$threshold == coords(rocobj.adasyn, "best", ret = c("threshold"), transpose = FALSE), TRUE, FALSE),
+         model = "adasyn")
 
-allcoords <- rbind(allcoords_glm, allcoords_smote)
+allcoords <- rbind(allcoords_glm, allcoords_adasyn)
 
 write.csv(allcoords, "ROCcoordinates.csv", row.names = FALSE)
 

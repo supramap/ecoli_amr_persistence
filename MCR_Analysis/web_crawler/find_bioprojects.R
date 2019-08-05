@@ -1,5 +1,5 @@
 #######################
-## Script for finding all BioProject numbers for publication scraping
+## Script for finding all BioProject numbers for publication crawling
 ## By: Colby T. Ford, Ph.D., Gabriel Zenarosa, Ph.D., David Brown, Kevin Smith, and Daniel Janies, Ph.D.
 #######################
 
@@ -31,7 +31,7 @@ bioprojects$bioproject_url <- paste0("https://www.ncbi.nlm.nih.gov/bioproject/",
 
 ## Join to MCR Groups (from Odds Ratio Analysis)
 # mcr_groups <- read.csv("MCR_Groups_PDTs.csv")
-mcr_groups <- read.csv("MCR_Groups_ARM_PDTs.csv")
+mcr_groups <- read.csv("allPDTs.csv")
 
 bioprojects <- inner_join(mcr_groups, bioprojects)
 

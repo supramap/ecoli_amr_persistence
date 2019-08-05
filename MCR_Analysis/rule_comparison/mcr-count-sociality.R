@@ -492,6 +492,8 @@ mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates, onlyselfisolates, nonmc
 write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
           file = "mcr_vs_nonmcr_self_vs_all_plotdata.csv")
 
+mcr_vs_nonmcr_self_vs_all_plotdata <- read.csv("mcr_vs_nonmcr_self_vs_all_plotdata.csv")
+
 ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
                   xName='pctself',
                   groupName='set',
@@ -503,18 +505,58 @@ ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
   scale_color_rickandmorty() + 
   scale_fill_rickandmorty()
 
-## Stats tests
+### Stats tests
 shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
 ## (NOT NORMAL)
 mcr_vs_nonmcr_self_vs_all_plotdata$set <- factor(mcr_vs_nonmcr_self_vs_all_plotdata$set) 
 
+### KW Tests
 ## All
 kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata)
 ## MCR vs Non-MCR
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "self" && set != "nonmcr"))
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("self", "all")))
 ## Selfish vs. All
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "mcr" && set != "nonmcr"))
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "non-mcr")))
 ## MCR vs Selfish
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "all" && set != "nonmcr"))
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("non-mcr", "all")))
 ## Non-MCR vs Selfish
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(set != "self" && set != "mcr"))
+kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "all")))
+
+
+### MWU Tests
+
+## Selfish vs. All
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("mcr", "non-mcr")),
+            paired = FALSE)
+
+## MCR vs. All
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("self", "non-mcr")),
+            paired = FALSE)
+
+## Non-MCR vs. All
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("self", "mcr")),
+            paired = FALSE)
+
+## MCR vs Non-MCR
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("self", "all")),
+            paired = FALSE)
+
+## MCR vs Selfish
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("non-mcr", "all")),
+            paired = FALSE)
+
+## Non-MCR vs Selfish
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
+              filter(!set %in% c("mcr", "all")),
+            paired = FALSE)

@@ -13,7 +13,7 @@ library(dplyr)
 #saveRDS(json.stream, file = "json.stream.RDS")
 
 ## Read in Data
-json.stream <- readRDS("e.coli.RDS")
+json.stream <- readRDS("../e.coli.RDS")
 
 ## Get IDs
 id <- json.stream[["ngout"]][["data"]][["content"]][["id"]] %>% as.data.frame()
@@ -91,4 +91,22 @@ publications_by_mcr_group <- publication_output %>%
   cast(publication_url~mcr_group)
 
 # write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
-write.csv(publications_by_mcr_group, "publications_by_ARM_mcr_group.csv")
+write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
+
+## Get list of Pubmed IDs by Rule
+pubmeds <- publication_output %>% 
+  mutate(publications = stringr::str_replace(publications, "/pubmed/",""),
+         rule = stringr::str_replace(mcr_group, "=>mcr","")) %>% 
+  group_by(rule) %>% 
+  mutate(pubmedids = paste0(publications, collapse = ", ")) %>% 
+  select(rule, pubmedids) %>% 
+  unique()
+
+## Read in rules and join in Pubmed IDs
+mcr_rules_df <- readr::read_csv("all_rules.csv")
+
+mcr_rules_df <- mcr_rules_df %>% left_join(pubmeds, by = c("lhs" = "rule"))
+
+readr::write_csv(mcr_rules_df, "allPDTs.csv")
+
+mcr_rules_df_with_pubmeds <- mcr_rules_df %>% filter(!is.na(pubmedids))

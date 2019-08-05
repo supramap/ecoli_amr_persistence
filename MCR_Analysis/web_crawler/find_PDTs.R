@@ -15,7 +15,7 @@ library(arules)
 #saveRDS(json.stream, file = "json.stream.RDS") ## to 1/8/2019
 
 ## Read in Data
-json.stream <- readRDS("e.coli.RDS")
+json.stream <- readRDS("../e.coli.RDS")
 
 amr.list.raw <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
 names(amr.list.raw) <- json.stream[["ngout"]][["data"]][["content"]][["id"]]
@@ -66,6 +66,8 @@ GLM_rules <- LR_rules %>%
 
 mcr_rules_df <- bind_rows(ARM_rules, ADASYN_rules, GLM_rules)
 
+readr::write_csv(mcr_rules_df, "all_rules.csv")
+
 ## Create strings of each genotype
 mcrgenotypes <- sapply(mcr.subset, function(x){unlist(x) %>% paste0(collapse = ",")}) %>%
   as.data.frame()
@@ -73,7 +75,13 @@ colnames(mcrgenotypes) <- "genotype"
 
 ## Create Empty Dataframe of All PDTs with MCR
 matches <- data.frame(pdt = names(mcr.subset),
-                      genotype = mcrgenotypes$genotype)
+                      genotype = mcrgenotypes$genotype
+)
+
+matches <- data.frame(method = character(0),
+                      id = numeric(0),
+                      pdt = character(0),
+                      genotype = character(0))
 
 ## Create a function to compare the rule vs. the genotype sets
 comparefxn <- function(a, b){
@@ -109,29 +117,32 @@ for (i in 1:nrow(mcr_rules_df)){
   matches <- cbind(matches, itermatches) ## Append to dataframe
 }
 
-## Check to see if there are any matches
-for (i in 2:ncol(matches)){
-  cat(i,
-      ". ",
-      colnames(matches[,i]),
-      ": ",
-      print(levels(as.factor(matches[,i]))),
-      "\n",
-      sep = "")
-} 
+# saveRDS(matches, "matches.RDS")
+# matches <- readRDS("matches.RDS")
 
-## Reshape to Get only Subsets/Supersets/Matches
+## Check to see if there are any matches
+# for (i in 2:ncol(matches)){
+#   cat(i,
+#       ". ",
+#       colnames(matches[,i]),
+#       ": ",
+#       print(levels(as.factor(matches[,i]))),
+#       "\n",
+#       sep = "")
+# } 
+
+## Reshape to Get only Subsets/Matches
 library(reshape2)
 
 outputpdts <- melt(matches, id = c("pdt", "genotype")) %>% 
-  filter(value == "Subset") %>% 
+  filter(value %in% c("Match","Subset")) %>% 
   select(-one_of("value"))
 
 colnames(outputpdts) <- c("id", "genotype", "mcr_group")
 
 ## Separate IDs into PDG and PDT numbers
 outputpdts <- outputpdts %>%
-  separate(id, c("pdg", "pdt"), sep = "_") %>%
+  tidyr::separate(id, c("pdg", "pdt"), sep = "_") %>%
   select(-c("pdg","genotype"))
 
 readr::write_csv(outputpdts, "allPDTs.csv")

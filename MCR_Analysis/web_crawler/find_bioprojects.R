@@ -91,7 +91,7 @@ publications_by_mcr_group <- publication_output %>%
   cast(publication_url~mcr_group)
 
 # write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
-write.csv(publications_by_mcr_group, "publications_by_mcr_group.csv")
+readr::write_csv(publications_by_mcr_group, "publications_by_mcr_group.csv", na = "")
 
 ## Get list of Pubmed IDs by Rule
 pubmeds <- publication_output %>% 
@@ -107,6 +107,6 @@ mcr_rules_df <- readr::read_csv("all_rules.csv")
 
 mcr_rules_df <- mcr_rules_df %>% left_join(pubmeds, by = c("lhs" = "rule"))
 
-readr::write_csv(mcr_rules_df, "allPDTs.csv")
+readr::write_csv(mcr_rules_df, "allPDTs.csv", na = "")
 
 mcr_rules_df_with_pubmeds <- mcr_rules_df %>% filter(!is.na(pubmedids))

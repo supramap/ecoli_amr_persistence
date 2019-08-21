@@ -158,7 +158,7 @@ self_vector_ors <- paste(self_vector, collapse = "|")
 unkn_vector_ors <- paste(unkn_vector, collapse = "|")
 all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
 
-## Get isolates with at least 1 individualist gene
+## Get isolates with at least 1 individualistic gene
 onlyselfisolates <- gdf.mcr %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
 
 ## Look at ratios overall vs. only MCR vs only ...
@@ -201,42 +201,42 @@ onlymcrisolates <- onlymcrisolates %>%
 hist(onlymcrisolates$pctself)
 
 
-onlyblaisolates <- onlyblaisolates %>% 
-  mutate(set = "bla",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyblaisolates$pctself)
-
-
-onlyrmtisolates <- onlyrmtisolates %>% 
-  mutate(set = "rmt",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyrmtisolates$pctself)
-
-onlyermisolates <- onlyermisolates %>% 
-  mutate(set = "erm",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count)
-
-hist(onlyermisolates$pctself)
+# onlyblaisolates <- onlyblaisolates %>% 
+#   mutate(set = "bla",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyblaisolates$pctself)
+# 
+# 
+# onlyrmtisolates <- onlyrmtisolates %>% 
+#   mutate(set = "rmt",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyrmtisolates$pctself)
+# 
+# onlyermisolates <- onlyermisolates %>% 
+#   mutate(set = "erm",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count)
+# 
+# hist(onlyermisolates$pctself)
 
 ######################
 ## For Regression Models

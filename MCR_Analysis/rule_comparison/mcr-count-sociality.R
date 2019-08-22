@@ -311,6 +311,7 @@ write.csv(rules %>% select(-genevector), "../mcr_lr_model_oddsratios.csv", row.n
 ## Cols w/ coop-prefix/everything else (for mcr containing vs. not)
 library(jsonlite)
 library(stringr)
+library(dplyr)
 #library(glmnet)
 library(caret)
 #library(arules)
@@ -386,7 +387,7 @@ all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors
 
 ## Get isolates with at least 1 individualistic gene
 onlyselfisolates <- gdf.mcr %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
-
+selfwithoutmcr <- onlyselfisolates %>% filter(mcr == 0)
 ## Look at ratios overall vs. only MCR vs only ...
 
 allisolates <- allisolates %>% 
@@ -442,6 +443,18 @@ onlymcrisolates <- onlymcrisolates %>%
 
 hist(onlymcrisolates$pctself)
 
+selfwithoutmcr <- selfwithoutmcr %>% 
+  mutate(set = "self_without_mcr",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(selfwithoutmcr$pctself)
 
 # onlyblaisolates <- onlyblaisolates %>% 
 #   mutate(set = "bla",
@@ -487,7 +500,11 @@ library(easyGgplot2)
 library(ggsci)
 library(ggplot2)
 
-mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates, onlyselfisolates, nonmcrisolates, onlymcrisolates)
+mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates,
+                                            onlyselfisolates,
+                                            nonmcrisolates,
+                                            onlymcrisolates,
+                                            selfwithoutmcr)
 
 write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
           file = "mcr_vs_nonmcr_self_vs_all_plotdata.csv")
@@ -525,38 +542,17 @@ kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter
 
 ### MWU Tests
 
-## Selfish vs. All
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("mcr", "non-mcr")),
-            paired = FALSE)
-
-## MCR vs. All
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("self", "non-mcr")),
-            paired = FALSE)
-
-## Non-MCR vs. All
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("self", "mcr")),
-            paired = FALSE)
 
 ## MCR vs Non-MCR
 wilcox.test(pctself ~ set,
             data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("self", "all")),
+              filter(set %in% c("mcr", "non-mcr")),
             paired = FALSE)
 
-## MCR vs Selfish
+
+## MCR vs Non-MCR_Selfish
 wilcox.test(pctself ~ set,
             data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("non-mcr", "all")),
+              filter(set %in% c("mcr", "self_without_mcr")),
             paired = FALSE)
 
-## Non-MCR vs Selfish
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
-              filter(!set %in% c("mcr", "all")),
-            paired = FALSE)

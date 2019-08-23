@@ -207,6 +207,10 @@ newy <- Matrix(newgdf.mcr$mcr, sparse = T)
 test.sv <- predict(model.cv, newx = x, s = "lambda.min", type = "response")
 test.cv <- predict(model.cv, newx = newx, s = "lambda.min", type = "response")
 
+test.sv.adasyn <- predict(model.cv.adasyn, newx = x, s = "lambda.min", type = "response")
+test.cv.adasyn <- predict(model.cv.adasyn, newx = newx, s = "lambda.min", type = "response")
+
+
 # table((test.sv > 0.15) * 1, gdf.mcr$mcr)
 # table((test.cv > 0.01) * 1, newgdf.mcr$mcr)
 
@@ -280,3 +284,13 @@ allcoords <- rbind(allcoords_glm, allcoords_adasyn)
 
 write.csv(allcoords, "ROCcoordinates.csv", row.names = FALSE)
 
+## Create Precision-Recall Curve
+library(DMwR)
+
+## GLM Model
+DMwR::PRcurve(test.sv, gdf.mcr$mcr)
+DMwR::PRcurve(test.cv, newgdf.mcr$mcr)
+
+## Adasyn
+DMwR::PRcurve(test.sv, gdf.mcr$mcr)
+DMwR::PRcurve(test.cv.adasyn, newgdf.mcr$mcr)

@@ -344,6 +344,11 @@ rgenotypes[!(names(fgenotypes) %in% pdt)] <- NULL
 genotypes <- fgenotypes[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
 genoid <- id[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
 
+collection_year_filtered <- collection_year[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+location_filtered <- location[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+isolation_type_filtered <- isolation_type[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
+isolation_source_filtered <-isolation_source[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")] 
+
 # ---------
 # Genotypes
 # ---------
@@ -355,12 +360,19 @@ gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
 gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
 # gdf.mcr$mcr <- as.factor(gdf.mcr$mcr)
 
-allisolates <- gdf.mcr
-nonmcrisolates <- gdf.mcr %>% filter(mcr == 0)
-onlymcrisolates <- gdf.mcr %>% filter(mcr == 1)
-# onlyblaisolates <- gdf.mcr %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
-# onlyrmtisolates <- gdf.mcr %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
-# onlyermisolates <- gdf.mcr %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
+# allisolates <- gdf.mcr
+allisolates <- data.frame(id = genoid,
+                          collection_year = collection_year_filtered,
+                          location = location_filtered,
+                          isolation_type = isolation_type_filtered,
+                          isolation_source = isolation_source_filtered,
+                          gdf.mcr)
+
+nonmcrisolates <- allisolates %>% filter(mcr == 0)
+onlymcrisolates <- allisolates %>% filter(mcr == 1)
+# onlyblaisolates <- allisolates %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
+# onlyrmtisolates <- allisolates %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
+# onlyermisolates <- allisolates %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
 
 
 ## Identify genes are their respective socialities
@@ -386,7 +398,7 @@ unkn_vector_ors <- paste(unkn_vector, collapse = "|")
 all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
 
 ## Get isolates with at least 1 individualistic gene
-onlyselfisolates <- gdf.mcr %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
+onlyselfisolates <- allisolates %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
 selfwithoutmcr <- onlyselfisolates %>% filter(mcr == 0)
 ## Look at ratios overall vs. only MCR vs only ...
 
@@ -399,7 +411,7 @@ allisolates <- allisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(allisolates$pctself)
 
@@ -413,7 +425,7 @@ onlyselfisolates <- onlyselfisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlyselfisolates$pctself)
 
@@ -426,7 +438,7 @@ nonmcrisolates <- nonmcrisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(nonmcrisolates$pctself)
 
@@ -439,7 +451,7 @@ onlymcrisolates <- onlymcrisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlymcrisolates$pctself)
 
@@ -452,7 +464,7 @@ selfwithoutmcr <- selfwithoutmcr %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(selfwithoutmcr$pctself)
 
@@ -504,7 +516,8 @@ mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates,
                                             onlyselfisolates,
                                             nonmcrisolates,
                                             onlymcrisolates,
-                                            selfwithoutmcr)
+                                            selfwithoutmcr) %>% 
+  mutate(country = stringr::str_extract(location, "^[A-za-z ]+"))
 
 write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
           file = "mcr_vs_nonmcr_self_vs_all_plotdata.csv")

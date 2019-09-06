@@ -347,7 +347,7 @@ genoid <- id[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%
 collection_year_filtered <- collection_year[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
 location_filtered <- location[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
 isolation_type_filtered <- isolation_type[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")]
-isolation_source_filtered <-isolation_source[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")] 
+isolation_source_filtered <- isolation_source[creation_date_time >= as.POSIXct("2016-04-04 20:14:38", format = "%Y-%m-%d %H:%M:%S")] 
 
 # ---------
 # Genotypes
@@ -367,7 +367,23 @@ allisolates <- data.frame(id = genoid,
                           isolation_type = isolation_type_filtered,
                           isolation_source = isolation_source_filtered,
                           gdf.mcr)
+allisolates <- allisolates %>% 
+  tidyr::separate(location,
+                  c("country", NA),
+                  sep = ":",
+                  extra = "drop")
 
+## By Country
+chinaisolates <- allisolates %>% filter(country == "China")
+nonchinaisolates <- allisolates %>% filter(country != "China")
+
+## By Isolate Type
+clinicalisolates <- allisolates %>% filter(isolation_type == "clinical")
+environmentalisolates <- allisolates %>% filter(isolation_type == "environmental/other")
+clinicalmcrisolates <- allisolates %>% filter(isolation_type == "clinical") %>% filter(mcr == 1)
+environmentalmcrisolates <- allisolates %>% filter(isolation_type == "environmental/other") %>% filter(mcr == 1)
+
+## By Gene Type Subset
 nonmcrisolates <- allisolates %>% filter(mcr == 0)
 onlymcrisolates <- allisolates %>% filter(mcr == 1)
 # onlyblaisolates <- allisolates %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
@@ -400,6 +416,11 @@ all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors
 ## Get isolates with at least 1 individualistic gene
 onlyselfisolates <- allisolates %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
 selfwithoutmcr <- onlyselfisolates %>% filter(mcr == 0)
+
+## Exclude counting MCR as Individualistic
+mcrisolates_notcountingmcr <- allisolates %>% filter(mcr == 1) %>% mutate(mcr = 0)
+onlyselfisolates_notcountingmcr <- allisolates %>% mutate(mcr = 0) %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
+
 ## Look at ratios overall vs. only MCR vs only ...
 
 allisolates <- allisolates %>% 
@@ -411,11 +432,91 @@ allisolates <- allisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(allisolates$pctself)
 
+## By Country
+chinaisolates <- chinaisolates %>% 
+  mutate(set = "chineseisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
+hist(chinaisolates$pctself)
+
+nonchinaisolates <- nonchinaisolates %>% 
+  mutate(set = "nonchineseisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(nonchinaisolates$pctself)
+
+## By Isolate Type
+clinicalisolates <- clinicalisolates %>% 
+  mutate(set = "clinicalisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(clinicalisolates$pctself)
+
+environmentalisolates <- environmentalisolates %>% 
+  mutate(set = "environmentalisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(environmentalisolates$pctself)
+
+clinicalmcrisolates <- clinicalmcrisolates %>% 
+  mutate(set = "clinicalmcrisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(clinicalmcrisolates$pctself)
+
+environmentalmcrisolates <- environmentalmcrisolates %>% 
+  mutate(set = "environmentalmcrisolates",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(environmentalmcrisolates$pctself)
+
+## MCR vs Non-MCR vs Individualistic vs All
 onlyselfisolates <- onlyselfisolates %>% 
   mutate(set = "self",
          count = rowSums(select(., matches(all_vector_ors))),
@@ -425,7 +526,7 @@ onlyselfisolates <- onlyselfisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlyselfisolates$pctself)
 
@@ -438,7 +539,7 @@ nonmcrisolates <- nonmcrisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(nonmcrisolates$pctself)
 
@@ -451,7 +552,7 @@ onlymcrisolates <- onlymcrisolates %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(onlymcrisolates$pctself)
 
@@ -464,9 +565,36 @@ selfwithoutmcr <- selfwithoutmcr %>%
   mutate(ratio = numcoop/(numself),
          pctcoop = numcoop/count,
          pctself = numself/count) %>% 
-  select(id, collection_year, location, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
 
 hist(selfwithoutmcr$pctself)
+
+## ## MCR vs Non-MCR vs Individualistic vs All (not counting MCR as Individualistic)
+mcrisolates_notcountingmcr <- mcrisolates_notcountingmcr %>% 
+  mutate(set = "mcr_notcountingmcr",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(mcrisolates_notcountingmcr$pctself)
+
+selfwithoutmcr_notcountingmcr <- selfwithoutmcr_notcountingmcr %>% 
+  mutate(set = "self_without_mcr_notcountingmcr",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+
+hist(selfwithoutmcr_notcountingmcr$pctself)
 
 # onlyblaisolates <- onlyblaisolates %>% 
 #   mutate(set = "bla",
@@ -512,12 +640,13 @@ library(easyGgplot2)
 library(ggsci)
 library(ggplot2)
 
+## MCR vs Non-MCR vs Individualistic vs All
 mcr_vs_nonmcr_self_vs_all_plotdata <- rbind(allisolates,
                                             onlyselfisolates,
                                             nonmcrisolates,
                                             onlymcrisolates,
-                                            selfwithoutmcr) %>% 
-  mutate(country = stringr::str_extract(location, "^[A-za-z ]+"))
+                                            selfwithoutmcr) # %>% 
+  # mutate(country = stringr::str_extract(location, "^[A-za-z ]+"))
 
 write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
           file = "mcr_vs_nonmcr_self_vs_all_plotdata.csv")
@@ -534,6 +663,34 @@ ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
                   addDensity=TRUE) + 
   scale_color_rickandmorty() + 
   scale_fill_rickandmorty()
+
+## By Country
+chinese_vs_non_chinese_plotdata <- rbind(chinaisolates,
+                                        nonchinaisolates)
+
+write.csv(chinese_vs_non_chinese_plotdata,
+          file = "chinese_vs_non_chinese_plotdata.csv")
+
+## By Isolation Type
+clinical_vs_environmental_plotdata <- rbind(clinicalisolates,
+                                            environmentalisolates)
+
+write.csv(clinical_vs_environmental_plotdata,
+          file = "clinical_vs_environmental_plotdata.csv")
+
+clinical_vs_environmental_MCR_plotdata <- rbind(clinicalmcrisolates,
+                                                environmentalmcrisolates)
+
+write.csv(clinical_vs_environmental_MCR_plotdata,
+          file = "clinical_vs_environmental_MCR_plotdata.csv")
+
+## MCR vs Non-MCR vs Individualistic vs All (not counting MCR as Individualistic)
+mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata <- rbind(mcrisolates_notcountingmcr,
+                                                       selfwithoutmcr_notcountingmcr,
+                                                       nonmcrisolates)
+
+write.csv(mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata,
+          file = "mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata.csv")
 
 ### Stats tests
 shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
@@ -554,8 +711,6 @@ kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter
 
 
 ### MWU Tests
-
-
 ## MCR vs Non-MCR
 wilcox.test(pctself ~ set,
             data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
@@ -567,5 +722,33 @@ wilcox.test(pctself ~ set,
 wilcox.test(pctself ~ set,
             data = mcr_vs_nonmcr_self_vs_all_plotdata %>%
               filter(set %in% c("mcr", "self_without_mcr")),
+            paired = FALSE)
+
+## Chinese vs. Non-Chinese Isolates
+wilcox.test(pctself ~ set,
+            data = chinese_vs_non_chinese_plotdata %>%
+              filter(set %in% c("chineseisolates", "nonchineseisolates")),
+            paired = FALSE)
+
+## Clinical vs. Environmental Isolates
+wilcox.test(pctself ~ set,
+            data = clinical_vs_environmental_plotdata,
+            paired = FALSE)
+
+## Clinical vs. Environmental MCR Isolates
+wilcox.test(pctself ~ set,
+            data = clinical_vs_environmental_MCR_plotdata,
+            paired = FALSE)
+
+## MCR vs Non-MCR (not counting MCR as Individualistic)
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
+              filter(set %in% c("mcr_notcountingmcr", "non-mcr")),
+            paired = FALSE)
+
+## MCR vs Non-MCR_Selfish (not counting MCR as Individualistic)
+wilcox.test(pctself ~ set,
+            data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
+              filter(set %in% c("mcr_notcountingmcr", "self_without_mcr_notcountingmcr")),
             paired = FALSE)
 

@@ -1,3 +1,11 @@
+############################################################
+## Scripts for qualifying rule sociality and              ##
+## for understanding set distributions                    ##
+## By:  Kevin Smith, Colby T. Ford, Ph.D.,                ##
+##      Gabriel Zenarosa, Ph.D., David Brown,             ##
+##      and Daniel Janies, Ph.D.                          ##
+############################################################
+
 library(tidyr)
 library(dplyr)
 

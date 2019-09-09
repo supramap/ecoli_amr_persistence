@@ -78,10 +78,10 @@ matches <- data.frame(pdt = names(mcr.subset),
                       genotype = mcrgenotypes$genotype
 )
 
-matches <- data.frame(method = character(0),
-                      id = numeric(0),
-                      pdt = character(0),
-                      genotype = character(0))
+# matches <- data.frame(method = character(0),
+#                       id = numeric(0),
+#                       pdt = character(0),
+#                       genotype = character(0))
 
 ## Create a function to compare the rule vs. the genotype sets
 comparefxn <- function(a, b){

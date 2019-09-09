@@ -368,6 +368,7 @@ gdf.mcr <- gdf[,-grep("mcr", names(gdf))]
 gdf.mcr$mcr <- (rowSums(gdf[,grep("mcr", names(gdf))]) > 0) * 1
 # gdf.mcr$mcr <- as.factor(gdf.mcr$mcr)
 
+## Subset Data for Distribution Analyses
 # allisolates <- gdf.mcr
 allisolates <- data.frame(id = genoid,
                           collection_year = collection_year_filtered,
@@ -394,10 +395,6 @@ environmentalmcrisolates <- allisolates %>% filter(isolation_type == "environmen
 ## By Gene Type Subset
 nonmcrisolates <- allisolates %>% filter(mcr == 0)
 onlymcrisolates <- allisolates %>% filter(mcr == 1)
-# onlyblaisolates <- allisolates %>% filter_at(vars(starts_with("bla")), any_vars(. == 1))
-# onlyrmtisolates <- allisolates %>% filter_at(vars(starts_with("rmt")), any_vars(. == 1))
-# onlyermisolates <- allisolates %>% filter_at(vars(starts_with("erm")), any_vars(. == 1))
-
 
 ## Identify genes are their respective socialities
 gene <- read.csv("../AMR_FunctionalMechanisms.csv", header=T)
@@ -604,43 +601,6 @@ selfwithoutmcr_notcountingmcr <- selfwithoutmcr_notcountingmcr %>%
 
 hist(selfwithoutmcr_notcountingmcr$pctself)
 
-# onlyblaisolates <- onlyblaisolates %>% 
-#   mutate(set = "bla",
-#          count = rowSums(select(., matches(all_vector_ors))),
-#          numcoop = rowSums(select(., matches(coop_vector_ors))),
-#          numself = rowSums(select(., matches(self_vector_ors))),
-#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-#   mutate(ratio = numcoop/(numself),
-#          pctcoop = numcoop/count,
-#          pctself = numself/count)
-# 
-# hist(onlyblaisolates$pctself)
-# 
-# 
-# onlyrmtisolates <- onlyrmtisolates %>% 
-#   mutate(set = "rmt",
-#          count = rowSums(select(., matches(all_vector_ors))),
-#          numcoop = rowSums(select(., matches(coop_vector_ors))),
-#          numself = rowSums(select(., matches(self_vector_ors))),
-#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-#   mutate(ratio = numcoop/(numself),
-#          pctcoop = numcoop/count,
-#          pctself = numself/count)
-# 
-# hist(onlyrmtisolates$pctself)
-# 
-# onlyermisolates <- onlyermisolates %>% 
-#   mutate(set = "erm",
-#          count = rowSums(select(., matches(all_vector_ors))),
-#          numcoop = rowSums(select(., matches(coop_vector_ors))),
-#          numself = rowSums(select(., matches(self_vector_ors))),
-#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-#   mutate(ratio = numcoop/(numself),
-#          pctcoop = numcoop/count,
-#          pctself = numself/count)
-# 
-# hist(onlyermisolates$pctself)
-
 
 ## Analyze Distributions of ALL vs. MCR
 # devtools::install_github("kassambara/easyGgplot2")
@@ -700,22 +660,22 @@ mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata <- rbind(mcrisolates_notcountingmc
 write.csv(mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata,
           file = "mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata.csv")
 
-### Stats tests
-shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
-## (NOT NORMAL)
-mcr_vs_nonmcr_self_vs_all_plotdata$set <- factor(mcr_vs_nonmcr_self_vs_all_plotdata$set) 
+# ### Stats tests
+# shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
+# ## (NOT NORMAL)
+# mcr_vs_nonmcr_self_vs_all_plotdata$set <- factor(mcr_vs_nonmcr_self_vs_all_plotdata$set) 
 
-### KW Tests
-## All
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata)
-## MCR vs Non-MCR
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("self", "all")))
-## Selfish vs. All
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "non-mcr")))
-## MCR vs Selfish
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("non-mcr", "all")))
-## Non-MCR vs Selfish
-kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "all")))
+# ### KW Tests
+# ## All
+# kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata)
+# ## MCR vs Non-MCR
+# kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("self", "all")))
+# ## Selfish vs. All
+# kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "non-mcr")))
+# ## MCR vs Selfish
+# kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("non-mcr", "all")))
+# ## Non-MCR vs Selfish
+# kruskal.test(pctself ~ set, data = mcr_vs_nonmcr_self_vs_all_plotdata %>% filter(!set %in% c("mcr", "all")))
 
 
 ### MWU Tests
@@ -760,3 +720,89 @@ wilcox.test(pctself ~ set,
               filter(set %in% c("mcr_notcountingmcr", "self_without_mcr_notcountingmcr")),
             paired = FALSE)
 
+################
+## Subset Comparisons for Isolates with Gene Sets Matching Rules
+
+rules <- read.csv("../web_crawler/all_rules.csv") %>% 
+  mutate(lhs = stringr::str_replace_all(lhs, "[^A-Za-z0-9,]", ".")) %>% 
+  mutate(lhs = stringr::str_split(lhs, pattern=","))
+
+allisolates_sets <- allisolates %>% 
+  mutate(set = "all",
+         count = rowSums(select(., matches(all_vector_ors))),
+         numcoop = rowSums(select(., matches(coop_vector_ors))),
+         numself = rowSums(select(., matches(self_vector_ors))),
+         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+  mutate(ratio = numcoop/(numself),
+         pctcoop = numcoop/count,
+         pctself = numself/count) %>% 
+  select(-one_of(c("collection_year",
+            "country",
+            "isolation_type",
+            "isolation_source"))) %>% 
+  mutate(set = NA)
+
+genes <- colnames(allisolates_sets %>% select(-one_of(c("id","set","count","numcoop","numself","numunkn","ratio","pctcoop","pctself"))))
+
+for (i in 1:nrow(allisolates_sets)){
+  cat(paste0(i,"."))
+  i_set <- c()
+  iter_row <- allisolates_sets[i,]
+  for (j in seq_along(genes)){
+    gene <- genes[j]
+    val <- iter_row[[gene]]
+    if (val == 1){
+      i_set <- c(i_set, gene)
+    }
+  }
+  cat(paste0(i_set,"\n"))
+  if (length(i_set > 0)){
+    allisolates_sets$set[[i]] <- paste0(i_set,collapse = ",")
+  }
+}
+
+allisolates_sets <- allisolates_sets %>% 
+  select(id, set) %>% 
+  mutate(set_vect = stringr::str_split(set, pattern=","),
+         mcr = allisolates$mcr,
+         match = NA,
+         match_lhs = NA)
+
+for (i in 1:nrow(allisolates_sets)){
+  for (j in 1:nrow(rules)){
+    set <- unlist(allisolates_sets$set_vect[i])
+    rule_lhs <- unlist(rules$lhs[j])
+    rule <- c(unlist(rules$lhs[j]), as.character(rules$rhs[j]))
+    
+    cat("Comparing set", i, "with rule", j, "\n")
+    
+    if(allisolates_sets$mcr[i] == 1){
+      
+      if(all(rule %in% set)){
+        allisolates_sets$match[i] <- TRUE
+        break
+      } else {
+        allisolates_sets$match[i] <- FALSE
+      }
+      
+    } else {
+      if(all(rule_lhs %in% set)){
+        allisolates_sets$match_lhs[i] <- TRUE
+        break
+      } else {
+        allisolates_sets$match_lhs[i] <- FALSE
+      }
+    }
+    
+  }
+}
+
+saveRDS(allisolates_sets, "allisolates_sets.RDS")
+
+## Percentage individualistic genes for rule matches vs. non-matches
+
+## Percentage individualistic genes for lhs rule matches vs. non-matches
+
+## Percentage individualistic genes for lhs rule matches: mcr vs. non-mcr
+
+## Percentage individualistic genes for lhs rule non-matches: mcr vs. non-mcr

@@ -799,10 +799,10 @@ for (i in 1:nrow(allisolates_sets)){
 
 saveRDS(allisolates_sets, "allisolates_sets.RDS")
 
-## Percentage individualistic genes for rule matches vs. non-matches
+## Rule matches vs. non-matches
 
-## Percentage individualistic genes for lhs rule matches vs. non-matches
+## lhs Rule matches vs. non-matches (without MCR)
 
-## Percentage individualistic genes for lhs rule matches: mcr vs. non-mcr
+## lhs Rule matches: mcr vs. non-mcr
 
-## Percentage individualistic genes for lhs rule non-matches: mcr vs. non-mcr
+## lhs Rule non-matches: mcr vs. non-mcr

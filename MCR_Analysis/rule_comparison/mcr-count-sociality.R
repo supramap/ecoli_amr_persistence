@@ -797,12 +797,58 @@ for (i in 1:nrow(allisolates_sets)){
   }
 }
 
-saveRDS(allisolates_sets, "allisolates_sets.RDS")
+saveRDS(allisolates_sets, "allisolates_sets_comparison.RDS")
+
+allisolates_sets_comparison <- readRDS("allisolates_sets_comparison.RDS")
+allisolates_sets_comparison$pctself <- allisolates$pctself
+
+## Create match sets
+rule_matches <- allisolates_sets_comparison %>%
+  filter(match == TRUE) %>% 
+  mutate(set = "rule matches")
+
+rule_non_matches <- allisolates_sets_comparison %>%
+  filter(match != TRUE) %>% 
+  mutate(set = "rule non-matches")
+
+lhs_rule_matches <- allisolates_sets_comparison %>%
+  filter(match_lhs == TRUE,
+         mcr == 0) %>% 
+  mutate(set = "rule lhs matches")
+
+lhs_rule_non_matches <- allisolates_sets_comparison %>%
+  filter(match_lhs != TRUE,
+         mcr == 0) %>% 
+  mutate(set = "rule lhs non-matches")
+
+rule_matches_vs_rule_non_matches_plotdata <- rbind(rule_matches,
+                                                   rule_non_matches,
+                                                   lhs_rule_matches,
+                                                   lhs_rule_non_matches)
+saveRDS(rule_matches_vs_rule_non_matches_plotdata, "rule_matches_vs_rule_non_matches_plotdata.RDS")
+write.csv(rule_matches_vs_rule_non_matches_plotdata %>% mutate(set_vect = paste0(set_vect)),
+          file = "rule_matches_vs_rule_non_matches_plotdata.csv")
 
 ## Rule matches vs. non-matches
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule non-matches")),
+            paired = FALSE)
 
 ## lhs Rule matches vs. non-matches (without MCR)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule lhs matches", "rule lhs non-matches")),
+            paired = FALSE)
 
-## lhs Rule matches: mcr vs. non-mcr
+## Rule matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule lhs matches")),
+            paired = FALSE)
 
-## lhs Rule non-matches: mcr vs. non-mcr
+## Rule non-matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule non-matches", "rule lhs non-matches")),
+            paired = FALSE)

@@ -397,7 +397,11 @@ nonmcrisolates <- allisolates %>% filter(mcr == 0)
 onlymcrisolates <- allisolates %>% filter(mcr == 1)
 
 ## Identify genes are their respective socialities
-gene <- read.csv("../AMR_FunctionalMechanisms.csv", header=T)
+gene <- read.csv("../AMR_FunctionalMechanisms.csv", header=T) %>% 
+  filter(Gene.Category != "mcr") # To avoid counting mcr as individualistic
+
+mcrs <- read.csv("../AMR_FunctionalMechanisms.csv", header=T) %>% 
+  filter(Gene.Category == "mcr")
 
 for (i in 1:nrow(gene)) {
   coop = ifelse(gene$Sociality == "Cooperative", paste(gene$AMR.Gene), NA)
@@ -410,13 +414,16 @@ for (i in 1:nrow(gene)) {
 
 ## Makes vectors contaning genes in their categories
 coop_vector <- c(gene$coop[!is.na(gene$coop)])
-self_vector <- c(gene$self[!is.na(gene$self)],"mcr")
+# self_vector <- c(gene$self[!is.na(gene$self)],"mcr") # To count mcr as individualistic
+self_vector <- c(gene$self[!is.na(gene$self)])
 unkn_vector <- c(gene$self[!is.na(gene$unkn)])
+mcr_vector <- c(as.character(mcrs$AMR.Gene))
 
 coop_vector_ors <- paste(coop_vector, collapse = "|")
 self_vector_ors <- paste(self_vector, collapse = "|")
-unkn_vector_ors <- paste(unkn_vector, collapse = "|")
-all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors)
+unkn_vector_ors <- paste(unique(unkn_vector), collapse = "|")
+mcr_vector_ors <- paste(mcr_vector, collapse = "|")
+all_vector_ors <- paste0(coop_vector_ors,"|",self_vector_ors,"|",unkn_vector_ors,"|",mcr_vector_ors)
 
 ## Get isolates with at least 1 individualistic gene
 onlyselfisolates <- allisolates %>% filter_at(vars(matches(self_vector_ors)), any_vars(. == 1))
@@ -575,31 +582,31 @@ selfwithoutmcr <- selfwithoutmcr %>%
 hist(selfwithoutmcr$pctself)
 
 ## ## MCR vs Non-MCR vs Individualistic vs All (not counting MCR as Individualistic)
-mcrisolates_notcountingmcr <- mcrisolates_notcountingmcr %>% 
-  mutate(set = "mcr_notcountingmcr",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count) %>% 
-  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
-
-hist(mcrisolates_notcountingmcr$pctself)
-
-selfwithoutmcr_notcountingmcr <- selfwithoutmcr_notcountingmcr %>% 
-  mutate(set = "self_without_mcr_notcountingmcr",
-         count = rowSums(select(., matches(all_vector_ors))),
-         numcoop = rowSums(select(., matches(coop_vector_ors))),
-         numself = rowSums(select(., matches(self_vector_ors))),
-         numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
-  mutate(ratio = numcoop/(numself),
-         pctcoop = numcoop/count,
-         pctself = numself/count) %>% 
-  select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
-
-hist(selfwithoutmcr_notcountingmcr$pctself)
+# mcrisolates_notcountingmcr <- mcrisolates_notcountingmcr %>% 
+#   mutate(set = "mcr_notcountingmcr",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count) %>% 
+#   select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+# 
+# hist(mcrisolates_notcountingmcr$pctself)
+# 
+# onlyselfisolates_notcountingmcr <- onlyselfisolates_notcountingmcr %>% 
+#   mutate(set = "self_without_mcr_notcountingmcr",
+#          count = rowSums(select(., matches(all_vector_ors))),
+#          numcoop = rowSums(select(., matches(coop_vector_ors))),
+#          numself = rowSums(select(., matches(self_vector_ors))),
+#          numunkn = rowSums(select(., matches(unkn_vector_ors)))) %>% 
+#   mutate(ratio = numcoop/(numself),
+#          pctcoop = numcoop/count,
+#          pctself = numself/count) %>% 
+#   select(id, collection_year, country, isolation_type, isolation_source, set, count, numcoop, numself, numunkn, ratio, pctcoop, pctself)
+# 
+# hist(onlyselfisolates_notcountingmcr$pctself)
 
 
 ## Analyze Distributions of ALL vs. MCR
@@ -653,12 +660,12 @@ write.csv(clinical_vs_environmental_MCR_plotdata,
           file = "clinical_vs_environmental_MCR_plotdata.csv")
 
 ## MCR vs Non-MCR vs Individualistic vs All (not counting MCR as Individualistic)
-mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata <- rbind(mcrisolates_notcountingmcr,
-                                                       selfwithoutmcr_notcountingmcr,
-                                                       nonmcrisolates)
-
-write.csv(mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata,
-          file = "mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata.csv")
+# mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata <- rbind(mcrisolates_notcountingmcr,
+#                                                        selfwithoutmcr_notcountingmcr,
+#                                                        nonmcrisolates)
+# 
+# write.csv(mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata,
+#           file = "mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata.csv")
 
 # ### Stats tests
 # shapiro.test(sample(mcr_vs_nonmcr_self_vs_all_plotdata$pctself,size = 5000))
@@ -708,17 +715,17 @@ wilcox.test(pctself ~ set,
             data = clinical_vs_environmental_MCR_plotdata,
             paired = FALSE)
 
-## MCR vs Non-MCR (not counting MCR as Individualistic)
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
-              filter(set %in% c("mcr_notcountingmcr", "non-mcr")),
-            paired = FALSE)
-
-## MCR vs Non-MCR_Selfish (not counting MCR as Individualistic)
-wilcox.test(pctself ~ set,
-            data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
-              filter(set %in% c("mcr_notcountingmcr", "self_without_mcr_notcountingmcr")),
-            paired = FALSE)
+# ## MCR vs Non-MCR (not counting MCR as Individualistic)
+# wilcox.test(pctself ~ set,
+#             data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
+#               filter(set %in% c("mcr_notcountingmcr", "non-mcr")),
+#             paired = FALSE)
+# 
+# ## MCR vs Non-MCR_Selfish (not counting MCR as Individualistic)
+# wilcox.test(pctself ~ set,
+#             data = mcr_vs_nonmcr_vs_self_notcountingmcr_plotdata %>% 
+#               filter(set %in% c("mcr_notcountingmcr", "self_without_mcr_notcountingmcr")),
+#             paired = FALSE)
 
 ################
 ## Subset Comparisons for Isolates with Gene Sets Matching Rules
@@ -852,3 +859,4 @@ wilcox.test(pctself ~ set,
             data = rule_matches_vs_rule_non_matches_plotdata %>% 
               filter(set %in% c("rule non-matches", "rule lhs non-matches")),
             paired = FALSE)
+

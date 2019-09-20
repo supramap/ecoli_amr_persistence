@@ -628,16 +628,16 @@ write.csv(mcr_vs_nonmcr_self_vs_all_plotdata,
 
 mcr_vs_nonmcr_self_vs_all_plotdata <- read.csv("mcr_vs_nonmcr_self_vs_all_plotdata.csv")
 
-ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
-                  xName='pctself',
-                  groupName='set',
-                  xtitle = "Percentage of Selfish Genes",
-                  ytitle = "Density",
-                  legendPosition="top",
-                  alpha=0.75,
-                  addDensity=TRUE) + 
-  scale_color_rickandmorty() + 
-  scale_fill_rickandmorty()
+# ggplot2.histogram(data=mcr_vs_nonmcr_self_vs_all_plotdata,
+#                   xName='pctself',
+#                   groupName='set',
+#                   xtitle = "Percentage of Selfish Genes",
+#                   ytitle = "Density",
+#                   legendPosition="top",
+#                   alpha=0.75,
+#                   addDensity=TRUE) + 
+#   scale_color_rickandmorty() + 
+#   scale_fill_rickandmorty()
 
 ## By Country
 chinese_vs_non_chinese_plotdata <- rbind(chinaisolates,
@@ -860,3 +860,16 @@ wilcox.test(pctself ~ set,
               filter(set %in% c("rule non-matches", "rule lhs non-matches")),
             paired = FALSE)
 
+################
+## Comparisons for Gene Sets in the Rules (from ARM and GLM)
+rules_sets <- readRDS("../web_crawler/all_rules.RDS") %>% 
+  mutate(pct_self = NA)
+
+
+for (i in 1:nrow(rules_sets)){
+  pct_self <- length(which(unlist(rules_sets$rule[i]) %in% self_vector))/(rules_sets$size[i])
+  rules_sets$pct_self[i] <- pct_self
+}
+
+saveRDS(rules_sets, "../web_crawler/all_rules.RDS")
+readr::write_csv(rules_sets %>% select(-rule), "../web_crawler/all_rules.csv")

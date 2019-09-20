@@ -64,9 +64,11 @@ GLM_rules <- LR_rules %>%
   na.omit()
 
 
-mcr_rules_df <- bind_rows(ARM_rules, ADASYN_rules, GLM_rules)
+mcr_rules_df <- bind_rows(ARM_rules, ADASYN_rules, GLM_rules) %>%
+  mutate(rule = stringr::str_split(lhs, pattern=","))
 
-readr::write_csv(mcr_rules_df, "all_rules.csv")
+saveRDS(mcr_rules_df, "all_rules.RDS")
+readr::write_csv(mcr_rules_df %>% select(-rule), "all_rules.csv")
 
 ## Create strings of each genotype
 mcrgenotypes <- sapply(mcr.subset, function(x){unlist(x) %>% paste0(collapse = ",")}) %>%

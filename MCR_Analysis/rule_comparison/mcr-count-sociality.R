@@ -806,32 +806,193 @@ for (i in 1:nrow(allisolates_sets)){
 
 saveRDS(allisolates_sets, "allisolates_sets_comparison.RDS")
 
-allisolates_sets_comparison <- readRDS("allisolates_sets_comparison.RDS")
-allisolates_sets_comparison$pctself <- allisolates$pctself
+allisolates_sets_comparison <- readRDS("allisolates_sets_comparison.RDS") %>% 
+  mutate(pctself = allisolates$pctself)
+allisolates_sets_onlyARM <- readRDS("allisolates_sets_onlyARM.RDS") %>% 
+  mutate(pctself = allisolates$pctself)
+allisolates_sets_onlyLR <- readRDS("allisolates_sets_onlyLR.RDS") %>% 
+  mutate(pctself = allisolates$pctself)
+allisolates_sets_onlyGLM <- readRDS("allisolates_sets_onlyGLM.RDS") %>% 
+  mutate(pctself = allisolates$pctself)
+allisolates_sets_onlyADASYN <- readRDS("allisolates_sets_onlyADASYN.RDS") %>% 
+  mutate(pctself = allisolates$pctself)
 
-## Create match sets
-rule_matches <- allisolates_sets_comparison %>%
+## Create match sets - All Rules
+rule_matches_all <- allisolates_sets_comparison %>%
   filter(match == TRUE) %>% 
-  mutate(set = "rule matches")
+  mutate(comparison = "all rules",
+         method = "ARM and LR",
+         algorithm = "All",
+         set = "rule matches")
 
-rule_non_matches <- allisolates_sets_comparison %>%
+rule_non_matches_all <- allisolates_sets_comparison %>%
   filter(match != TRUE) %>% 
-  mutate(set = "rule non-matches")
+  mutate(comparison = "all rules",
+         method = "ARM and LR",
+         algorithm = "All",
+         set = "rule non-matches")
 
-lhs_rule_matches <- allisolates_sets_comparison %>%
+lhs_rule_matches_all <- allisolates_sets_comparison %>%
   filter(match_lhs == TRUE,
          mcr == 0) %>% 
-  mutate(set = "rule lhs matches")
+  mutate(comparison = "all rules",
+         method = "ARM and LR",
+         algorithm = "All",
+         set = "rule lhs matches")
 
-lhs_rule_non_matches <- allisolates_sets_comparison %>%
+lhs_rule_non_matches_all <- allisolates_sets_comparison %>%
   filter(match_lhs != TRUE,
          mcr == 0) %>% 
-  mutate(set = "rule lhs non-matches")
+  mutate(comparison = "all rules",
+         method = "ARM and LR",
+         algorithm = "All",
+         set = "rule lhs non-matches")
 
-rule_matches_vs_rule_non_matches_plotdata <- rbind(rule_matches,
-                                                   rule_non_matches,
-                                                   lhs_rule_matches,
-                                                   lhs_rule_non_matches)
+## Create match sets - ARM Rules
+rule_matches_ARM <- allisolates_sets_onlyARM %>%
+  filter(match == TRUE) %>% 
+  mutate(comparison = "ARM rules",
+         method = "ARM",
+         algorithm = "apriori",
+         set = "rule matches")
+
+rule_non_matches_ARM <- allisolates_sets_onlyARM %>%
+  filter(match != TRUE) %>% 
+  mutate(comparison = "ARM rules",
+         method = "ARM",
+         algorithm = "apriori",
+         set = "rule non-matches")
+
+lhs_rule_matches_ARM <- allisolates_sets_onlyARM %>%
+  filter(match_lhs == TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "ARM rules",
+         method = "ARM",
+         algorithm = "apriori",
+         set = "rule lhs matches")
+
+lhs_rule_non_matches_ARM <- allisolates_sets_onlyARM %>%
+  filter(match_lhs != TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "ARM rules",
+         method = "ARM",
+         algorithm = "apriori",
+         set = "rule lhs non-matches")
+
+## Create match sets - LR Rules
+rule_matches_LR <- allisolates_sets_onlyLR %>%
+  filter(match == TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM and ADASYN",
+         set = "rule matches")
+
+rule_non_matches_LR <- allisolates_sets_onlyLR %>%
+  filter(match != TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM and ADASYN",
+         set = "rule non-matches")
+
+lhs_rule_matches_LR <- allisolates_sets_onlyLR %>%
+  filter(match_lhs == TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM and ADASYN",
+         set = "rule lhs matches")
+
+lhs_rule_non_matches_LR <- allisolates_sets_onlyLR %>%
+  filter(match_lhs != TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM and ADASYN",
+         set = "rule lhs non-matches")
+
+## Create match sets - GLM Rules
+rule_matches_GLM <- allisolates_sets_onlyGLM %>%
+  filter(match == TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM",
+         set = "rule matches")
+
+rule_non_matches_GLM <- allisolates_sets_onlyGLM %>%
+  filter(match != TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM",
+         set = "rule non-matches")
+
+lhs_rule_matches_GLM <- allisolates_sets_onlyGLM %>%
+  filter(match_lhs == TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM",
+         set = "rule lhs matches")
+
+lhs_rule_non_matches_GLM <- allisolates_sets_onlyGLM %>%
+  filter(match_lhs != TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "GLM",
+         set = "rule lhs non-matches")
+
+## Create match sets - ADASYN Rules
+rule_matches_ADASYN <- allisolates_sets_onlyADASYN %>%
+  filter(match == TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "ADASYN",
+         set = "rule matches")
+
+rule_non_matches_ADASYN <- allisolates_sets_onlyADASYN %>%
+  filter(match != TRUE) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "ADASYN",
+         set = "rule non-matches")
+
+lhs_rule_matches_ADASYN <- allisolates_sets_onlyADASYN %>%
+  filter(match_lhs == TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "ADASYN",
+         set = "rule lhs matches")
+
+lhs_rule_non_matches_ADASYN <- allisolates_sets_onlyADASYN %>%
+  filter(match_lhs != TRUE,
+         mcr == 0) %>% 
+  mutate(comparison = "LR rules",
+         method = "LR",
+         algorithm = "ADASYN",
+         set = "rule lhs non-matches")
+
+
+rule_matches_vs_rule_non_matches_plotdata <- rbind(rule_matches_all,
+                                                   rule_non_matches_all,
+                                                   lhs_rule_matches_all,
+                                                   lhs_rule_non_matches_all,
+                                                   rule_matches_ARM,
+                                                   rule_non_matches_ARM,
+                                                   lhs_rule_matches_ARM,
+                                                   lhs_rule_non_matches_ARM,
+                                                   rule_matches_LR,
+                                                   rule_non_matches_LR,
+                                                   lhs_rule_matches_LR,
+                                                   lhs_rule_non_matches_LR,
+                                                   rule_matches_GLM,
+                                                   rule_non_matches_GLM,
+                                                   lhs_rule_matches_GLM,
+                                                   lhs_rule_non_matches_GLM,
+                                                   rule_matches_ADASYN,
+                                                   rule_non_matches_ADASYN,
+                                                   lhs_rule_matches_ADASYN,
+                                                   lhs_rule_non_matches_ADASYN)
 saveRDS(rule_matches_vs_rule_non_matches_plotdata, "rule_matches_vs_rule_non_matches_plotdata.RDS")
 write.csv(rule_matches_vs_rule_non_matches_plotdata %>% mutate(set_vect = paste0(set_vect)),
           file = "rule_matches_vs_rule_non_matches_plotdata.csv")

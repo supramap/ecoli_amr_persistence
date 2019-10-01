@@ -997,29 +997,112 @@ saveRDS(rule_matches_vs_rule_non_matches_plotdata, "rule_matches_vs_rule_non_mat
 write.csv(rule_matches_vs_rule_non_matches_plotdata %>% mutate(set_vect = paste0(set_vect)),
           file = "rule_matches_vs_rule_non_matches_plotdata.csv")
 
+### SET COMPARISONS - STATS TESTS (ALL)
 ## Rule matches vs. non-matches
 wilcox.test(pctself ~ set,
             data = rule_matches_vs_rule_non_matches_plotdata %>% 
-              filter(set %in% c("rule matches", "rule non-matches")),
-            paired = FALSE)
+              filter(set %in% c("rule matches", "rule non-matches"),
+                     algorithm == "All"),
+            paired = FALSE,
+            alternative = "greater")
 
 ## lhs Rule matches vs. non-matches (without MCR)
-wilcox.test(pctself ~ set,
-            data = rule_matches_vs_rule_non_matches_plotdata %>% 
-              filter(set %in% c("rule lhs matches", "rule lhs non-matches")),
-            paired = FALSE)
+# wilcox.test(pctself ~ set,
+#             data = rule_matches_vs_rule_non_matches_plotdata %>% 
+#               filter(set %in% c("rule lhs matches", "rule lhs non-matches"),
+#                      algorithm == "All"),
+#             paired = FALSE)
 
 ## Rule matches: mcr vs. non-mcr (lhs)
 wilcox.test(pctself ~ set,
             data = rule_matches_vs_rule_non_matches_plotdata %>% 
-              filter(set %in% c("rule matches", "rule lhs matches")),
-            paired = FALSE)
+              filter(set %in% c("rule matches", "rule lhs matches"),
+                     algorithm == "All"),
+            paired = FALSE,
+            alternative = "less")
 
 ## Rule non-matches: mcr vs. non-mcr (lhs)
 wilcox.test(pctself ~ set,
             data = rule_matches_vs_rule_non_matches_plotdata %>% 
-              filter(set %in% c("rule non-matches", "rule lhs non-matches")),
-            paired = FALSE)
+              filter(set %in% c("rule non-matches", "rule lhs non-matches"),
+                     algorithm == "All"),
+            paired = FALSE,
+            alternative = "less")
+
+### SET COMPARISONS - STATS TESTS (ARM)
+## Rule matches vs. non-matches
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule non-matches"),
+                     algorithm == "apriori"),
+            paired = FALSE,
+            alternative = "greater")
+
+## Rule matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule lhs matches"),
+                     algorithm == "apriori"),
+            paired = FALSE,
+            alternative = "less")
+
+## Rule non-matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule non-matches", "rule lhs non-matches"),
+                     algorithm == "apriori"),
+            paired = FALSE,
+            alternative = "less")
+
+### SET COMPARISONS - STATS TESTS (GLM)
+## Rule matches vs. non-matches
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule non-matches"),
+                     algorithm == "GLM"),
+            paired = FALSE,
+            alternative = "greater")
+
+## Rule matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule lhs matches"),
+                     algorithm == "GLM"),
+            paired = FALSE,
+            alternative = "less")
+
+## Rule non-matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule non-matches", "rule lhs non-matches"),
+                     algorithm == "GLM"),
+            paired = FALSE,
+            alternative = "less")
+
+### SET COMPARISONS - STATS TESTS (ADASYN)
+## Rule matches vs. non-matches
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule non-matches"),
+                     algorithm == "ADASYN"),
+            paired = FALSE,
+            alternative = "greater")
+
+## Rule matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule matches", "rule lhs matches"),
+                     algorithm == "ADASYN"),
+            paired = FALSE,
+            alternative = "less")
+
+## Rule non-matches: mcr vs. non-mcr (lhs)
+wilcox.test(pctself ~ set,
+            data = rule_matches_vs_rule_non_matches_plotdata %>% 
+              filter(set %in% c("rule non-matches", "rule lhs non-matches"),
+                     algorithm == "ADASYN"),
+            paired = FALSE,
+            alternative = "less")
 
 ################
 ## Comparisons for Gene Sets in the Rules (from ARM and GLM)

@@ -1,0 +1,5 @@
+/users/djanies/bin/tnt p e.coli.genotypes_reroot_bin_PDT000343334.tnt.txt
+outgroup 0;
+reroot 0;
+taxnam =;
+ts* the.tre; save; ts/;

@@ -1,0 +1,4096 @@
+Reading from e.coli.genotypes_reroot_bin_PDT000343334.tnt.txt 
+TNT - max. ram = 10000.00 Mbytes 
+No ram used yet 
+Matrix (409x29255, 16 states). Memory required for data:  68.92 Mbytes 
+1 trees read (trees 0-0) 
+Again reading from changescomammandtntap.txt 
+ 
+From absent to present  
+ 
+Char 0 ('genotype_aadA2'), min/max changes (815-908) 
+ 
+             0   
+                 
+      0  815-908 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 1 ('genotype_blaEC-5'), min/max changes (10-15) 
+ 
+             0 
+               
+      0  10-15 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 2 ('genotype_blaTEM-1'), min/max changes (2158-2854) 
+ 
+             0     
+                   
+      0  2158-2854 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 3 ('genotype_dfrA12'), min/max changes (662-769) 
+ 
+             0   
+                 
+      0  662-769 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 4 ('genotype_mph(A)'), min/max changes (858-1054) 
+ 
+             0     
+                   
+      0   858-1054 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 5 ('genotype_qacEdelta1'), min/max changes (1536-1953) 
+ 
+             0     
+                   
+      0  1536-1953 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 6 ('genotype_sul1'), min/max changes (1551-1939) 
+ 
+             0     
+                   
+      0  1551-1939 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 7 ('genotype_blaEC'), min/max changes (23-29) 
+ 
+             0 
+               
+      0  23-29 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 8 ('genotype_tet(A)'), min/max changes (2006-2593) 
+ 
+             0     
+                   
+      0  2006-2593 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 9 ('genotype_aph(3'')-Ib'), min/max changes (2370-3181) 
+ 
+             0     
+                   
+      0  2370-3181 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 10 ('genotype_aph(6)-Id'), min/max changes (2366-3174) 
+ 
+             0     
+                   
+      0  2366-3174 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 11 ('genotype_sul2'), min/max changes (2155-2964) 
+ 
+             0     
+                   
+      0  2155-2964 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 12 ('genotype_tet(B)'), min/max changes (1768-2101) 
+ 
+             0     
+                   
+      0  1768-2101 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 13 ('genotype_aadA1'), min/max changes (1548-1861) 
+ 
+             0     
+                   
+      0  1548-1861 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 14 ('genotype_dfrA1'), min/max changes (733-812) 
+ 
+             0   
+                 
+      0  733-812 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 15 ('genotype_qnrB19'), min/max changes (167-168) 
+ 
+             0   
+                 
+      0  167-168 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 16 ('genotype_sat2'), min/max changes (365-448) 
+ 
+             0   
+                 
+      0  365-448 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 17 ('genotype_blaCMY'), min/max changes (55-55) 
+ 
+             0 
+               
+      0  55-55 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 18 ('genotype_dfrA8'), min/max changes (298-322) 
+ 
+             0   
+                 
+      0  298-322 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 19 ('genotype_aadA5'), min/max changes (481-646) 
+ 
+             0   
+                 
+      0  481-646 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 20 ('genotype_dfrA17'), min/max changes (531-698) 
+ 
+             0   
+                 
+      0  531-698 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 21 ('genotype_erm(B)'), min/max changes (246-263) 
+ 
+             0   
+                 
+      0  246-263 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 22 ('genotype_dfrA5'), min/max changes (207-226) 
+ 
+             0   
+                 
+      0  207-226 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 23 ('genotype_qnrS13'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 24 ('genotype_fosA7'), min/max changes (49-74) 
+ 
+             0 
+               
+      0  49-74 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 25 ('genotype_blaCTX-M-27'), min/max changes (76-77) 
+ 
+             0 
+               
+      0  76-77 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 26 ('genotype_blaOXA-1'), min/max changes (325-395) 
+ 
+             0   
+                 
+      0  325-395 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 27 ('genotype_catA1'), min/max changes (579-667) 
+ 
+             0   
+                 
+      0  579-667 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 28 ('genotype_blaTEM-40'), min/max changes (13-13) 
+ 
+             0 
+               
+      0  13-13 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 29 ('genotype_qacE'), min/max changes (144-145) 
+ 
+             0   
+                 
+      0  144-145 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 30 ('genotype_dfrA14'), min/max changes (572-659) 
+ 
+             0   
+                 
+      0  572-659 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 31 ('genotype_qnrS1'), min/max changes (524-575) 
+ 
+             0   
+                 
+      0  524-575 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 32 ('genotype_tet(C)'), min/max changes (219-233) 
+ 
+             0   
+                 
+      0  219-233 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 33 ('genotype_aph(3')-Ia'), min/max changes (1044-1220) 
+ 
+             0     
+                   
+      0  1044-1220 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 34 ('genotype_aac(3)-IIa'), min/max changes (256-284) 
+ 
+             0   
+                 
+      0  256-284 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 35 ('genotype_aac(3)-IV'), min/max changes (271-291) 
+ 
+             0   
+                 
+      0  271-291 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 36 ('genotype_aph(4)-Ia'), min/max changes (251-262) 
+ 
+             0   
+                 
+      0  251-262 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 37 ('genotype_blaTEM'), min/max changes (214-224) 
+ 
+             0   
+                 
+      0  214-224 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 38 ('genotype_cmlA1'), min/max changes (468-526) 
+ 
+             0   
+                 
+      0  468-526 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 39 ('genotype_mcr-1.1'), min/max changes (363-401) 
+ 
+             0   
+                 
+      0  363-401 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 40 ('genotype_qacL'), min/max changes (469-535) 
+ 
+             0   
+                 
+      0  469-535 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 41 ('genotype_sul3'), min/max changes (531-630) 
+ 
+             0   
+                 
+      0  531-630 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 42 ('genotype_blaACT'), min/max changes (3-4) 
+ 
+             0 
+               
+      0   3-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 43 ('genotype_catA'), min/max changes (8-8) 
+ 
+             0 
+               
+      0   8-8  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 44 ('genotype_fosA'), min/max changes (92-106) 
+ 
+             0   
+                 
+      0   92-106 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 45 ('genotype_oqxA'), min/max changes (204-227) 
+ 
+             0   
+                 
+      0  204-227 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 46 ('genotype_oqxB'), min/max changes (227-251) 
+ 
+             0   
+                 
+      0  227-251 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 47 ('genotype_aac(3)-IId'), min/max changes (486-542) 
+ 
+             0   
+                 
+      0  486-542 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 48 ('genotype_blaCTX-M-15'), min/max changes (361-439) 
+ 
+             0   
+                 
+      0  361-439 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 49 ('genotype_dfrA25'), min/max changes (10-10) 
+ 
+             0 
+               
+      0  10-10 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 50 ('genotype_blaKPC-2'), min/max changes (44-46) 
+ 
+             0 
+               
+      0  44-46 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 51 ('genotype_bleO'), min/max changes (295-328) 
+ 
+             0   
+                 
+      0  295-328 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 52 ('genotype_floR'), min/max changes (866-959) 
+ 
+             0   
+                 
+      0  866-959 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 53 ('genotype_dfrA7'), min/max changes (136-152) 
+ 
+             0   
+                 
+      0  136-152 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 54 ('genotype_aac(3)-VIa'), min/max changes (250-267) 
+ 
+             0   
+                 
+      0  250-267 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 55 ('genotype_qacG2'), min/max changes (77-77) 
+ 
+             0 
+               
+      0  77-77 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 56 ('genotype_blaOXA'), min/max changes (51-52) 
+ 
+             0 
+               
+      0  51-52 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 57 ('genotype_blaCMY-2'), min/max changes (437-470) 
+ 
+             0   
+                 
+      0  437-470 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 58 ('genotype_aadA7'), min/max changes (34-34) 
+ 
+             0 
+               
+      0  34-34 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 59 ('genotype_ampC'), min/max changes (90-90) 
+ 
+             0 
+               
+      0  90-90 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 60 ('genotype_mph(B)'), min/max changes (87-92) 
+ 
+             0 
+               
+      0  87-92 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 61 ('genotype_aac(6')-Ib-cr5'), min/max changes (238-278) 
+ 
+             0   
+                 
+      0  238-278 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 62 ('genotype_blaNDM-5'), min/max changes (67-78) 
+ 
+             0 
+               
+      0  67-78 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 63 ('genotype_ble'), min/max changes (258-279) 
+ 
+             0   
+                 
+      0  258-279 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 64 ('genotype_catB3'), min/max changes (214-232) 
+ 
+             0   
+                 
+      0  214-232 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 65 ('genotype_tet(M)'), min/max changes (279-296) 
+ 
+             0   
+                 
+      0  279-296 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 66 ('genotype_blaTEM-34'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 67 ('genotype_blaLAP-2'), min/max changes (24-24) 
+ 
+             0 
+               
+      0  24-24 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 68 ('genotype_catA2'), min/max changes (67-70) 
+ 
+             0 
+               
+      0  67-70 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 69 ('genotype_blaHER-3'), min/max changes (52-53) 
+ 
+             0 
+               
+      0  52-53 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 70 ('genotype_aadA6'), min/max changes (28-28) 
+ 
+             0 
+               
+      0  28-28 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 71 ('genotype_blaOXA-2'), min/max changes (16-18) 
+ 
+             0 
+               
+      0  16-18 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 72 ('genotype_qnrB1'), min/max changes (12-12) 
+ 
+             0 
+               
+      0  12-12 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 73 ('genotype_aph(3')-IIa'), min/max changes (205-214) 
+ 
+             0   
+                 
+      0  205-214 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 74 ('genotype_aph(6)-Ic'), min/max changes (83-88) 
+ 
+             0 
+               
+      0  83-88 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 75 ('genotype_blaOXA-10'), min/max changes (34-35) 
+ 
+             0 
+               
+      0  34-35 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 76 ('genotype_qacF'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 77 ('genotype_qnrVC4'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 78 ('genotype_blaDHA-1'), min/max changes (35-36) 
+ 
+             0 
+               
+      0  35-36 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 79 ('genotype_qnrB'), min/max changes (37-38) 
+ 
+             0 
+               
+      0  37-38 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 80 ('genotype_blaCTX-M-55'), min/max changes (241-253) 
+ 
+             0   
+                 
+      0  241-253 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 81 ('genotype_aadA15'), min/max changes (13-14) 
+ 
+             0 
+               
+      0  13-14 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 82 ('genotype_aadA8'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 83 ('genotype_qepA'), min/max changes (23-24) 
+ 
+             0 
+               
+      0  23-24 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 84 ('genotype_blaCTX-M-14'), min/max changes (291-307) 
+ 
+             0   
+                 
+      0  291-307 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 85 ('genotype_blaTEM-176'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 86 ('genotype_aadA22'), min/max changes (89-91) 
+ 
+             0 
+               
+      0  89-91 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 87 ('genotype_blaCTX-M-1'), min/max changes (168-179) 
+ 
+             0   
+                 
+      0  168-179 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 88 ('genotype_blaTEM-210'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 89 ('genotype_blaTEM-35'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 90 ('genotype_lnu(F)'), min/max changes (100-102) 
+ 
+             0   
+                 
+      0  100-102 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 91 ('genotype_blaOXA-181'), min/max changes (8-9) 
+ 
+             0 
+               
+      0   8-9  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 92 ('genotype_aph(3')-VI'), min/max changes (8-8) 
+ 
+             0 
+               
+      0   8-8  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 93 ('genotype_armA'), min/max changes (24-26) 
+ 
+             0 
+               
+      0  24-26 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 94 ('genotype_blaNDM-1'), min/max changes (49-51) 
+ 
+             0 
+               
+      0  49-51 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 95 ('genotype_mph(E)'), min/max changes (27-29) 
+ 
+             0 
+               
+      0  27-29 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 96 ('genotype_msr(E)'), min/max changes (28-30) 
+ 
+             0 
+               
+      0  28-30 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 97 ('genotype_blaCTX-M-3'), min/max changes (29-29) 
+ 
+             0 
+               
+      0  29-29 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 98 ('genotype_blaCTX-M-65'), min/max changes (64-68) 
+ 
+             0 
+               
+      0  64-68 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 99 ('genotype_blaSHV-12'), min/max changes (67-68) 
+ 
+             0 
+               
+      0  67-68 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 100 ('genotype_arr'), min/max changes (21-21) 
+ 
+             0 
+               
+      0  21-21 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 101 ('genotype_mph_3'), min/max changes (18-18) 
+ 
+             0 
+               
+      0  18-18 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 102 ('genotype_ant(2'')-Ia'), min/max changes (87-93) 
+ 
+             0 
+               
+      0  87-93 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 103 ('genotype_cmlA'), min/max changes (16-16) 
+ 
+             0 
+               
+      0  16-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 104 ('genotype_cmlA6'), min/max changes (15-15) 
+ 
+             0 
+               
+      0  15-15 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 105 ('genotype_dfrA24'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 106 ('genotype_tet(D)'), min/max changes (45-53) 
+ 
+             0 
+               
+      0  45-53 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 107 ('genotype_fosA3'), min/max changes (177-195) 
+ 
+             0   
+                 
+      0  177-195 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 108 ('genotype_oqxA2'), min/max changes (62-63) 
+ 
+             0 
+               
+      0  62-63 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 109 ('genotype_blaCTX-M-64'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 110 ('genotype_lnu(G)'), min/max changes (42-42) 
+ 
+             0 
+               
+      0  42-42 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 111 ('genotype_blaTEM-135'), min/max changes (28-28) 
+ 
+             0 
+               
+      0  28-28 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 112 ('genotype_bla'), min/max changes (214-218) 
+ 
+             0   
+                 
+      0  214-218 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 113 ('genotype_blaTEM-30'), min/max changes (21-21) 
+ 
+             0 
+               
+      0  21-21 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 114 ('genotype_abc-f'), min/max changes (15-16) 
+ 
+             0 
+               
+      0  15-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 115 ('genotype_blaPSE'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 116 ('genotype_qnrA1'), min/max changes (19-19) 
+ 
+             0 
+               
+      0  19-19 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 117 ('genotype_qnrS'), min/max changes (34-34) 
+ 
+             0 
+               
+      0  34-34 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 118 ('genotype_blaCMY-42'), min/max changes (27-28) 
+ 
+             0 
+               
+      0  27-28 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 119 ('genotype_blaTEM-190'), min/max changes (9-9) 
+ 
+             0 
+               
+      0   9-9  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 120 ('genotype_rmtB1'), min/max changes (83-92) 
+ 
+             0 
+               
+      0  83-92 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 121 ('genotype_aac(6')-Il'), min/max changes (14-14) 
+ 
+             0 
+               
+      0  14-14 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 122 ('genotype_blaVIM-1'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 123 ('genotype_blaCTX-M'), min/max changes (45-45) 
+ 
+             0 
+               
+      0  45-45 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 124 ('genotype_blaOXA-244'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 125 ('genotype_qepA1'), min/max changes (18-18) 
+ 
+             0 
+               
+      0  18-18 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 126 ('genotype_blaTEM-52'), min/max changes (13-13) 
+ 
+             0 
+               
+      0  13-13 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 127 ('genotype_mef(B)'), min/max changes (87-91) 
+ 
+             0 
+               
+      0  87-91 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 128 ('genotype_blaCMY-59'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 129 ('genotype_blaCTX-M-174'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 130 ('genotype_blaCMY-4'), min/max changes (16-16) 
+ 
+             0 
+               
+      0  16-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 131 ('genotype_blaCARB-2'), min/max changes (42-42) 
+ 
+             0 
+               
+      0  42-42 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 132 ('genotype_ere(B)'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 133 ('genotype_blaEC-15'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 134 ('genotype_aac(3)-II'), min/max changes (214-223) 
+ 
+             0   
+                 
+      0  214-223 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 135 ('genotype_ere(A)'), min/max changes (26-27) 
+ 
+             0 
+               
+      0  26-27 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 136 ('genotype_aac(6')-Ib''), min/max changes (15-15) 
+ 
+             0 
+               
+      0  15-15 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 137 ('genotype_blaOXA-9'), min/max changes (28-28) 
+ 
+             0 
+               
+      0  28-28 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 138 ('genotype_aac(2')-IIa'), min/max changes (10-11) 
+ 
+             0 
+               
+      0  10-11 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 139 ('genotype_blaCAR'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 140 ('genotype_aac(3)-Ib'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 141 ('genotype_blaKPC-4'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 142 ('genotype_blaDHA'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 143 ('genotype_aph(3')-I'), min/max changes (9-9) 
+ 
+             0 
+               
+      0   9-9  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 144 ('genotype_blaGIL'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 145 ('genotype_aac(6')-Ia'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 146 ('genotype_aadA3'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 147 ('genotype_catB2'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 148 ('genotype_qnrB10'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 149 ('genotype_aac(6')-Ib3'), min/max changes (40-42) 
+ 
+             0 
+               
+      0  40-42 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 150 ('genotype_blaTEM-3'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 151 ('genotype_aadA16'), min/max changes (38-39) 
+ 
+             0 
+               
+      0  38-39 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 152 ('genotype_arr-3'), min/max changes (127-131) 
+ 
+             0   
+                 
+      0  127-131 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 153 ('genotype_dfrA27'), min/max changes (27-30) 
+ 
+             0 
+               
+      0  27-30 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 154 ('genotype_aadA25'), min/max changes (21-21) 
+ 
+             0 
+               
+      0  21-21 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 155 ('genotype_ant(3'')-Ia'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 156 ('genotype_fos'), min/max changes (12-12) 
+ 
+             0 
+               
+      0  12-12 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 157 ('genotype_aadA12'), min/max changes (38-38) 
+ 
+             0 
+               
+      0  38-38 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 158 ('genotype_blaNDM-7'), min/max changes (9-9) 
+ 
+             0 
+               
+      0   9-9  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 159 ('genotype_blaOXA-48'), min/max changes (25-25) 
+ 
+             0 
+               
+      0  25-25 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 160 ('genotype_arr-2'), min/max changes (32-32) 
+ 
+             0 
+               
+      0  32-32 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 161 ('genotype_blaNDM-21'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 162 ('genotype_cmlA5'), min/max changes (44-44) 
+ 
+             0 
+               
+      0  44-44 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 163 ('genotype_mcr-1'), min/max changes (118-126) 
+ 
+             0   
+                 
+      0  118-126 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 164 ('genotype_blaTEM-32'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 165 ('genotype_blaCTX-M-125'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 166 ('genotype_qnrB6'), min/max changes (17-17) 
+ 
+             0 
+               
+      0  17-17 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 167 ('genotype_qnrB2'), min/max changes (8-8) 
+ 
+             0 
+               
+      0   8-8  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 168 ('genotype_aac(6')-Ib4'), min/max changes (14-16) 
+ 
+             0 
+               
+      0  14-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 169 ('genotype_aph(3')-XV'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 170 ('genotype_blaACC-1'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 171 ('genotype_blaCTX-M-2'), min/max changes (23-23) 
+ 
+             0 
+               
+      0  23-23 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 172 ('genotype_tet(Y)'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 173 ('genotype_aac(6')-Ib-cr'), min/max changes (171-214) 
+ 
+             0   
+                 
+      0  171-214 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 174 ('genotype_lnu(C)'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 175 ('genotype_blaHER'), min/max changes (8-8) 
+ 
+             0 
+               
+      0   8-8  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 176 ('genotype_vat'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 177 ('genotype_ant(3'')'), min/max changes (176-195) 
+ 
+             0   
+                 
+      0  176-195 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 178 ('genotype_dfrA15'), min/max changes (42-43) 
+ 
+             0 
+               
+      0  42-43 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 179 ('genotype_blaCTX-M-134'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 180 ('genotype_blaCTX-M-24'), min/max changes (8-8) 
+ 
+             0 
+               
+      0   8-8  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 181 ('genotype_qnrS2'), min/max changes (50-51) 
+ 
+             0 
+               
+      0  50-51 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 182 ('genotype_erm(42)'), min/max changes (17-17) 
+ 
+             0 
+               
+      0  17-17 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 183 ('genotype_oqxB2'), min/max changes (33-34) 
+ 
+             0 
+               
+      0  33-34 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 184 ('genotype_cfr'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 185 ('genotype_blaNDM-9'), min/max changes (22-22) 
+ 
+             0 
+               
+      0  22-22 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 186 ('genotype_mcr-1.2'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 187 ('genotype_aac(6')-Ib'), min/max changes (180-210) 
+ 
+             0   
+                 
+      0  180-210 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 188 ('genotype_tet'), min/max changes (46-46) 
+ 
+             0 
+               
+      0  46-46 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 189 ('genotype_aadA21'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 190 ('genotype_blaLAP'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 191 ('genotype_aac(6')-IIa'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 192 ('genotype_blaVEB-17'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 193 ('genotype_erm'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 194 ('genotype_mcr-3.5'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 195 ('genotype_qnrD1'), min/max changes (7-7) 
+ 
+             0 
+               
+      0   7-7  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 196 ('genotype_aadA13'), min/max changes (18-18) 
+ 
+             0 
+               
+      0  18-18 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 197 ('genotype_qac'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 198 ('genotype_blaCTX-M-8'), min/max changes (29-31) 
+ 
+             0 
+               
+      0  29-31 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 199 ('genotype_blaSHV-2'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 200 ('genotype_lnu(A)'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 201 ('genotype_blaGES'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 202 ('genotype_blaGES-5'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 203 ('genotype_blaIMI'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 204 ('genotype_ble-Sh'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 205 ('genotype_blaKPC-3'), min/max changes (36-37) 
+ 
+             0 
+               
+      0  36-37 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 206 ('genotype_aac(3)'), min/max changes (133-139) 
+ 
+             0   
+                 
+      0  133-139 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 207 ('genotype_blaTEM-116'), min/max changes (25-25) 
+ 
+             0 
+               
+      0  25-25 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 208 ('genotype_aph(3')'), min/max changes (12-12) 
+ 
+             0 
+               
+      0  12-12 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 209 ('genotype_aadA24'), min/max changes (34-36) 
+ 
+             0 
+               
+      0  34-36 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 210 ('genotype_qnrB7'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 211 ('genotype_aph(3'')'), min/max changes (123-124) 
+ 
+             0   
+                 
+      0  123-124 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 212 ('genotype_blaMIR-12'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 213 ('genotype_aph(6)-I'), min/max changes (164-169) 
+ 
+             0   
+                 
+      0  164-169 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 214 ('genotype_dfrA16'), min/max changes (20-20) 
+ 
+             0 
+               
+      0  20-20 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 215 ('genotype_qacC'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 216 ('genotype_blaOXY'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 217 ('genotype_blaSHV-33'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 218 ('genotype_oqxA3'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 219 ('genotype_oqxB19'), min/max changes (1-2) 
+ 
+             0 
+               
+      0   1-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 220 ('genotype_erm(T)'), min/max changes (13-13) 
+ 
+             0 
+               
+      0  13-13 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 221 ('genotype_blaTEM-33'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 222 ('genotype_blaTEM-169'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 223 ('genotype_blaTEM-84'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 224 ('genotype_blaIMP-4'), min/max changes (7-7) 
+ 
+             0 
+               
+      0   7-7  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 225 ('genotype_blaCMY-6'), min/max changes (15-16) 
+ 
+             0 
+               
+      0  15-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 226 ('genotype_sat4'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 227 ('genotype_blaTEM-9'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 228 ('genotype_blaCMY-24'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 229 ('genotype_blaTEM-8'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 230 ('genotype_blaTEM-10'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 231 ('genotype_blaTEM-12'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 232 ('genotype_blaOKP'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 233 ('genotype_blaIMP-6'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 234 ('genotype_blaLEN-13'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 235 ('genotype_blaCMY-16'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 236 ('genotype_mef(C)'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 237 ('genotype_mph(G)'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 238 ('genotype_blaSHV-1'), min/max changes (12-14) 
+ 
+             0 
+               
+      0  12-14 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 239 ('genotype_dfrA23'), min/max changes (9-9) 
+ 
+             0 
+               
+      0   9-9  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 240 ('genotype_qacB'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 241 ('genotype_mcr-5.1'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 242 ('genotype_tet(E)'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 243 ('genotype_blaCMY-33'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 244 ('genotype_blaVEB-5'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 245 ('genotype_blaNDM-4'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 246 ('genotype_blaSHV-2A'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 247 ('genotype_tet(H)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 248 ('genotype_clpK'), min/max changes (44-46) 
+ 
+             0 
+               
+      0  44-46 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 249 ('genotype_tet(31)'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 250 ('genotype_catB'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 251 ('genotype_blaOXA-4'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 252 ('genotype_blaCTX-M-132'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 253 ('genotype_blaCTX-M-123'), min/max changes (10-10) 
+ 
+             0 
+               
+      0  10-10 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 254 ('genotype_blaSFO-1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 255 ('genotype_aadA4'), min/max changes (11-11) 
+ 
+             0 
+               
+      0  11-11 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 256 ('genotype_catA3'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 257 ('genotype_blaLAT'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 258 ('genotype_aac(6')'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 259 ('genotype_mcr-3'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 260 ('genotype_rmtE1'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 261 ('genotype_aph(3')-II'), min/max changes (16-16) 
+ 
+             0 
+               
+      0  16-16 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 262 ('genotype_blaCMY-44'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 263 ('genotype_dfrA22'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 264 ('genotype_rmtD1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 265 ('genotype_dfrF'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 266 ('genotype_tet(X)'), min/max changes (18-18) 
+ 
+             0 
+               
+      0  18-18 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 267 ('genotype_blaFOX-5'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 268 ('genotype_dfrA19'), min/max changes (19-19) 
+ 
+             0 
+               
+      0  19-19 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 269 ('genotype_blaLAP-1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 270 ('genotype_blaSHV-7'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 271 ('genotype_blaSHV'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 272 ('genotype_blaSED'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 273 ('genotype_blaCTX-M-32'), min/max changes (13-14) 
+ 
+             0 
+               
+      0  13-14 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 274 ('genotype_aac(6')-Ian'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 275 ('genotype_blaPER-2'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 276 ('genotype_dfrA6'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 277 ('genotype_qnrVC1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 278 ('genotype_mcr-1.5'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 279 ('genotype_aac(6')-Ib11'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 280 ('genotype_rmtC'), min/max changes (15-15) 
+ 
+             0 
+               
+      0  15-15 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 281 ('genotype_mcr-3.2'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 282 ('genotype_qnrB4'), min/max changes (15-17) 
+ 
+             0 
+               
+      0  15-17 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 283 ('genotype_dfr7'), min/max changes (2-3) 
+ 
+             0 
+               
+      0   2-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 284 ('genotype_dfrA'), min/max changes (28-28) 
+ 
+             0 
+               
+      0  28-28 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 285 ('genotype_aac(6')-IIc'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 286 ('genotype_aad9'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 287 ('genotype_erm-23S_rRNA'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 288 ('genotype_blaTEM-207'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 289 ('genotype_dfrA10'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 290 ('genotype_aac(6')-33'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 291 ('genotype_blaCTX-M-115'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 292 ('genotype_aph(3')-Ib'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 293 ('genotype_dfrB4'), min/max changes (6-6) 
+ 
+             0 
+               
+      0   6-6  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 294 ('genotype_blaTEM-166'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 295 ('genotype_blaROB'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 296 ('genotype_blaKPC'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 297 ('genotype_fosA4'), min/max changes (11-11) 
+ 
+             0 
+               
+      0  11-11 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 298 ('genotype_blaCTX-M-116'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 299 ('genotype_ant(6)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 300 ('genotype_blaR1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 301 ('genotype_vanR'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 302 ('genotype_vanY'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 303 ('genotype_fosA5'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 304 ('genotype_qnrS4'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 305 ('genotype_mcr-2'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 306 ('genotype_blaOXA-232'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 307 ('genotype_blaIMP-27'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 308 ('genotype_aadD1'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 309 ('genotype_blaI'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 310 ('genotype_blaZ'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 311 ('genotype_blaIMP-1'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 312 ('genotype_blaNDM-6'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 313 ('genotype_blaCMY-111'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 314 ('genotype_aac(3)-I'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 315 ('genotype_blaACT-17'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 316 ('genotype_blaKPC-18'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 317 ('genotype_blaTEM-20'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 318 ('genotype_mcr-1.7'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 319 ('genotype_mcr-1.4'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 320 ('genotype_blaSHV-5'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 321 ('genotype_blaNDM'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 322 ('genotype_cmlA4'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 323 ('genotype_blaCMY-23'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 324 ('genotype_blaTEM-54'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 325 ('genotype_blaTEM-57'), min/max changes (11-12) 
+ 
+             0 
+               
+      0  11-12 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 326 ('genotype_erm(C)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 327 ('genotype_blaCTX-M-9'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 328 ('genotype_blaCTX-M-179'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 329 ('genotype_blaTEM-19'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 330 ('genotype_blaTEM-26'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 331 ('genotype_tet(O)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 332 ('genotype_blaVEB-1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 333 ('genotype_mcr-3.1'), min/max changes (4-4) 
+ 
+             0 
+               
+      0   4-4  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 334 ('genotype_blaTEM-215'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 335 ('genotype_lnu'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 336 ('genotype_blaCTX-M-182'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 337 ('genotype_cphA'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 338 ('genotype_blaACC-1d'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 339 ('genotype_blaFOX'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 340 ('genotype_cphA1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 341 ('genotype_sat1'), min/max changes (227-265) 
+ 
+             0   
+                 
+      0  227-265 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 342 ('genotype_blaTEM-154'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 343 ('genotype_tet(M-W-O-S)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 344 ('genotype_lnu(B)'), min/max changes (20-20) 
+ 
+             0 
+               
+      0  20-20 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 345 ('genotype_erm(F)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 346 ('genotype_blaCMY-140'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 347 ('genotype_qacA'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 348 ('genotype_blaOXA-129'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 349 ('genotype_dfrA21'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 350 ('genotype_blaDHA-20'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 351 ('genotype_blaCMY-7'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 352 ('genotype_blaSHV-27'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 353 ('genotype_oqxB25'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 354 ('genotype_blaSHV-11'), min/max changes (1-2) 
+ 
+             0 
+               
+      0   1-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 355 ('genotype_oqxB5'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 356 ('genotype_tet(H-J)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 357 ('genotype_aadA17'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 358 ('genotype_blaCTX-M-166'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 359 ('genotype_tetA'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 360 ('genotype_blaCMY-75'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 361 ('genotype_blaCMY-48'), min/max changes (1-2) 
+ 
+             0 
+               
+      0   1-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 362 ('genotype_ant'), min/max changes (7-10) 
+ 
+             0 
+               
+      0   7-10 
+ 
+ 
+ 
+From absent to present  
+ 
+Char 363 ('genotype_blaTEM-208'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 364 ('genotype_ere(C)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 365 ('genotype_aph(3')-VIa'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 366 ('genotype_dfrB1'), min/max changes (5-5) 
+ 
+             0 
+               
+      0   5-5  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 367 ('genotype_blaDHA-7'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 368 ('genotype_blaOCH'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 369 ('genotype_blaACT-52'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 370 ('genotype_catB1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 371 ('genotype_aac(6')-Ib-cr7'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 372 ('genotype_blaOXA-163'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 373 ('genotype_aph(3')-VIb'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 374 ('genotype_aacA34'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 375 ('genotype_blaIMP-14'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 376 ('genotype_oqxB29'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 377 ('genotype_dfrA26'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 378 ('genotype_blaTEM-156'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 379 ('genotype_aacA'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 380 ('genotype_blaSHV-26'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 381 ('genotype_oqxA10'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 382 ('genotype_blaCMY-65'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 383 ('genotype_blaVIM-4'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 384 ('genotype_blaIMP-26'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 385 ('genotype_blaVIM-29'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 386 ('genotype_smr'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 387 ('genotype_blaCMY-82'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 388 ('genotype_blaACT-45'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 389 ('genotype_blaPC1'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 390 ('genotype_blaOXA-364'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 391 ('genotype_rmtE'), min/max changes (3-3) 
+ 
+             0 
+               
+      0   3-3  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 392 ('genotype_blaCMY-58'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 393 ('genotype_catB8'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 394 ('genotype_dfrA3b'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 395 ('genotype_blaACC'), min/max changes (1-2) 
+ 
+             0 
+               
+      0   1-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 396 ('genotype_blaSRT'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 397 ('genotype_tet(41)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 398 ('genotype_rmtB3'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 399 ('genotype_blaTEM-148'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 400 ('genotype_rmtB'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 401 ('genotype_aadA10'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 402 ('genotype_tet(G)'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 403 ('genotype_blaCTX-M-104'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 404 ('genotype_blaTEM-105'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 405 ('genotype_blaCARB'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 406 ('genotype_catB11'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 407 ('genotype_blaACT-4'), min/max changes (1-1) 
+ 
+             0 
+               
+      0   1-1  
+ 
+ 
+ 
+From absent to present  
+ 
+Char 408 ('genotype_blaTEM-181'), min/max changes (2-2) 
+ 
+             0 
+               
+      0   2-2  
+ 
+ 

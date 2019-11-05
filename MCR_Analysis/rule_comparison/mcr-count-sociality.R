@@ -416,7 +416,7 @@ for (i in 1:nrow(gene)) {
 coop_vector <- c(gene$coop[!is.na(gene$coop)])
 # self_vector <- c(gene$self[!is.na(gene$self)],"mcr") # To count mcr as individualistic
 self_vector <- c(gene$self[!is.na(gene$self)])
-unkn_vector <- c(gene$self[!is.na(gene$unkn)])
+unkn_vector <- c(gene$unkn[!is.na(gene$unkn)])
 mcr_vector <- c(as.character(mcrs$AMR.Gene))
 
 coop_vector_ors <- paste(coop_vector, collapse = "|")
@@ -772,8 +772,8 @@ allisolates_sets <- allisolates_sets %>%
   select(id, set) %>% 
   mutate(set_vect = stringr::str_split(set, pattern=","),
          mcr = allisolates$mcr,
-         match = NA,
-         match_lhs = NA)
+         match = FALSE,
+         match_lhs = FALSE)
 
 for (i in 1:nrow(allisolates_sets)){
   for (j in 1:nrow(rules)){

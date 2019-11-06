@@ -2,10 +2,10 @@
 "1","PDT000123337.1",2013,"Netherlands","clinical","stool","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "2","PDT000129097.2",2015,"Denmark","clinical",NA,"clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "3","PDT000129704.1",2013,"Viet Nam","clinical","feces","clinicalmcrisolates",16,6,10,0,0.6,0.375,0.625
-"4","PDT000130968.1",2015,"China","clinical","liver ascites","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"4","PDT000130968.1",2015,"China","clinical","liver ascites","clinicalmcrisolates",12,4,6,2,0.666666666666667,0.333333333333333,0.5
 "5","PDT000132483.8",2016,"USA","clinical","Clinical","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "6","PDT000137641.2",2016,"USA","clinical",NA,"clinicalmcrisolates",6,3,3,0,1,0.5,0.5
-"7","PDT000142661.1",2014,"USA","clinical","urine culture","clinicalmcrisolates",10,5,5,0,1,0.5,0.5
+"7","PDT000142661.1",2014,"USA","clinical","urine culture","clinicalmcrisolates",11,5,5,1,1,0.454545454545455,0.454545454545455
 "8","PDT000144602.1",2016,"Brunei","clinical","farm","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "9","PDT000163381.1",2016,"Germany","clinical","Clinical","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
 "10","PDT000163382.1",2016,"USA","clinical","Clinical","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
@@ -13,41 +13,41 @@
 "12","PDT000163384.1",2016,"USA","clinical","Clinical","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
 "13","PDT000171442.1",2016,"Brazil","clinical","blood","clinicalmcrisolates",10,5,5,0,1,0.5,0.5
 "14","PDT000173623.1",2016,"Brazil","clinical","blood","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"15","PDT000176456.1",2015,"China","clinical","faeces","clinicalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
+"15","PDT000176456.1",2015,"China","clinical","faeces","clinicalmcrisolates",20,7,11,2,0.636363636363636,0.35,0.55
 "16","PDT000177244.1",2016,"Austria","clinical","stool","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "17","PDT000177245.1",2013,"Brazil","clinical","foot pad lesion","clinicalmcrisolates",7,4,3,0,1.33333333333333,0.571428571428571,0.428571428571429
 "18","PDT000181681.2",2014,"Thailand","clinical","urine","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "19","PDT000181739.2",2015,"Thailand","clinical","pus","clinicalmcrisolates",4,2,2,0,1,0.5,0.5
 "20","PDT000189723.1",2014,"Brazil","clinical","rectal swab","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"21","PDT000190871.1",2015,"USA","clinical","Human","clinicalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
+"21","PDT000190871.1",2015,"USA","clinical","Human","clinicalmcrisolates",12,6,5,1,1.2,0.5,0.416666666666667
 "22","PDT000188939.2",2016,"Brazil","clinical","foot secretion","clinicalmcrisolates",2,2,0,0,Inf,1,0
 "23","PDT000137408.2",2013,"Malaysia","clinical","Urine","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
 "24","PDT000177181.2",2017,"USA","clinical",NA,"clinicalmcrisolates",3,3,0,0,Inf,1,0
-"25","PDT000208669.1",2015,"China","clinical","Urine, bladder (ub)","clinicalmcrisolates",17,9,8,0,1.125,0.529411764705882,0.470588235294118
-"26","PDT000209465.1",2014,"China","clinical","blood","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
-"27","PDT000209466.1",2016,"Taiwan","clinical","urine","clinicalmcrisolates",10,5,5,0,1,0.5,0.5
-"28","PDT000209467.1",2015,"China","clinical","blood","clinicalmcrisolates",7,5,2,0,2.5,0.714285714285714,0.285714285714286
+"25","PDT000208669.1",2015,"China","clinical","Urine, bladder (ub)","clinicalmcrisolates",19,9,8,2,1.125,0.473684210526316,0.421052631578947
+"26","PDT000209465.1",2014,"China","clinical","blood","clinicalmcrisolates",14,6,7,1,0.857142857142857,0.428571428571429,0.5
+"27","PDT000209466.1",2016,"Taiwan","clinical","urine","clinicalmcrisolates",11,5,5,1,1,0.454545454545455,0.454545454545455
+"28","PDT000209467.1",2015,"China","clinical","blood","clinicalmcrisolates",8,5,2,1,2.5,0.625,0.25
 "29","PDT000213686.1",2016,NA,"clinical",NA,"clinicalmcrisolates",2,2,0,0,Inf,1,0
-"30","PDT000215974.1",2017,"China","clinical",NA,"clinicalmcrisolates",16,8,8,0,1,0.5,0.5
+"30","PDT000215974.1",2017,"China","clinical",NA,"clinicalmcrisolates",17,8,8,1,1,0.470588235294118,0.470588235294118
 "31","PDT000217694.1",2016,"Spain","clinical","bronchoaspirate sample","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
 "32","PDT000222628.1",2016,"USA","clinical","urine","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "33","PDT000224270.2",2017,"USA","clinical",NA,"clinicalmcrisolates",1,1,0,0,Inf,1,0
 "34","PDT000225231.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
-"35","PDT000225232.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
+"35","PDT000225232.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
 "36","PDT000225233.1",2014,"China","clinical","Blood culture","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"37","PDT000225234.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",17,6,11,0,0.545454545454545,0.352941176470588,0.647058823529412
-"38","PDT000225235.1",2014,"China","clinical","Sputum culture","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"37","PDT000225234.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",18,6,11,1,0.545454545454545,0.333333333333333,0.611111111111111
+"38","PDT000225235.1",2014,"China","clinical","Sputum culture","clinicalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "39","PDT000225236.1",2014,"China","clinical","Ascites","clinicalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
 "40","PDT000225237.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "41","PDT000225238.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"42","PDT000225239.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"42","PDT000225239.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "43","PDT000225240.1",2014,"China","clinical","Urine culture","clinicalmcrisolates",2,2,0,0,Inf,1,0
-"44","PDT000225241.1",2014,"China","clinical","Ascites","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"45","PDT000225242.1",2015,"China","clinical","Urine culture","clinicalmcrisolates",12,7,5,0,1.4,0.583333333333333,0.416666666666667
-"46","PDT000225244.1",2015,"China","clinical","Urine culture","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"44","PDT000225241.1",2014,"China","clinical","Ascites","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"45","PDT000225242.1",2015,"China","clinical","Urine culture","clinicalmcrisolates",13,7,5,1,1.4,0.538461538461538,0.384615384615385
+"46","PDT000225244.1",2015,"China","clinical","Urine culture","clinicalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "47","PDT000227976.1",2016,"Portugal","clinical","urine","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
-"48","PDT000227987.1",2017,"China","clinical","secretion sample","clinicalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"49","PDT000233270.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
+"48","PDT000227987.1",2017,"China","clinical","secretion sample","clinicalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"49","PDT000233270.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
 "50","PDT000233271.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "51","PDT000233275.1",2017,"Thailand","clinical","Rectal swab","clinicalmcrisolates",16,6,10,0,0.6,0.375,0.625
 "52","PDT000233276.1",2017,"Thailand","clinical","Rectal swab","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
@@ -56,16 +56,16 @@
 "55","PDT000233279.1",2017,"Thailand","clinical","Rectal swab","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
 "56","PDT000233281.1",2014,"Thailand","clinical","Rectal swab","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "57","PDT000233297.1",2015,"Thailand","clinical","Rectal swab","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"58","PDT000233299.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
+"58","PDT000233299.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",10,4,5,1,0.8,0.4,0.5
 "59","PDT000233300.1",2014,"Thailand","clinical","Rectal swab","clinicalmcrisolates",4,3,1,0,3,0.75,0.25
 "60","PDT000233301.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "61","PDT000233303.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "62","PDT000233304.1",2017,"Thailand","clinical","Rectal swab","clinicalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"63","PDT000233325.1",2015,"Thailand","clinical","Rectal swab","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"63","PDT000233325.1",2015,"Thailand","clinical","Rectal swab","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "64","PDT000233326.1",2014,"Thailand","clinical","Rectal swab","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
 "65","PDT000233338.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
 "66","PDT000233843.1",2016,"Thailand","clinical","Rectal swab","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"67","PDT000236047.1",2017,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
+"67","PDT000236047.1",2017,"China","clinical","feces","clinicalmcrisolates",20,6,12,2,0.5,0.3,0.6
 "68","PDT000238516.1",2016,"Colombia","clinical","Urine","clinicalmcrisolates",4,2,2,0,1,0.5,0.5
 "69","PDT000238519.1",2013,"Colombia","clinical","Blood","clinicalmcrisolates",4,2,2,0,1,0.5,0.5
 "70","PDT000238521.1",2016,"Colombia","clinical","Vaginal Secretion","clinicalmcrisolates",1,1,0,0,Inf,1,0
@@ -74,10 +74,10 @@
 "73","PDT000238528.1",2016,"Colombia","clinical","Tissue right toe","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "74","PDT000238529.1",2016,"Colombia","clinical",NA,"clinicalmcrisolates",10,5,5,0,1,0.5,0.5
 "75","PDT000238530.1",2013,"Colombia","clinical","Leg secretion","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
-"76","PDT000240704.1",2014,"Laos","clinical","stool","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"77","PDT000240705.1",2014,"Laos","clinical","stool","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
+"76","PDT000240704.1",2014,"Laos","clinical","stool","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"77","PDT000240705.1",2014,"Laos","clinical","stool","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
 "78","PDT000240706.1",2014,"France","clinical","stool","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"79","PDT000240707.1",2014,"Laos","clinical","stool","clinicalmcrisolates",13,3,10,0,0.3,0.230769230769231,0.769230769230769
+"79","PDT000240707.1",2014,"Laos","clinical","stool","clinicalmcrisolates",14,3,10,1,0.3,0.214285714285714,0.714285714285714
 "80","PDT000242482.1",2017,NA,"clinical","laboratory","clinicalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
 "81","PDT000242484.1",2017,"China","clinical","laboratory","clinicalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
 "82","PDT000250700.1",2015,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
@@ -93,27 +93,27 @@
 "92","PDT000270457.1",2016,"Argentina","clinical","urine","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
 "93","PDT000270471.1",2014,"Argentina","clinical","urine","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "94","PDT000270472.1",2016,"Argentina","clinical","urine","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"95","PDT000271760.1",2016,"China","clinical","stool","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"95","PDT000271760.1",2016,"China","clinical","stool","clinicalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "96","PDT000273985.1",2017,"China","clinical","urine","clinicalmcrisolates",7,4,3,0,1.33333333333333,0.571428571428571,0.428571428571429
 "97","PDT000274333.1",2016,"Qatar","clinical","Respiratory secretions","clinicalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"98","PDT000276841.1",2014,"Hong Kong","clinical","Rectal Swab","clinicalmcrisolates",20,10,10,0,1,0.5,0.5
-"99","PDT000276842.1",2013,"China","clinical","Rectal Swab","clinicalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"100","PDT000279220.1",2016,"China","clinical","feces","clinicalmcrisolates",2,2,0,0,Inf,1,0
+"98","PDT000276841.1",2014,"Hong Kong","clinical","Rectal Swab","clinicalmcrisolates",22,10,10,2,1,0.454545454545455,0.454545454545455
+"99","PDT000276842.1",2013,"China","clinical","Rectal Swab","clinicalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"100","PDT000279220.1",2016,"China","clinical","feces","clinicalmcrisolates",3,2,0,1,Inf,0.666666666666667,0
 "101","PDT000285319.1",2015,"France","clinical","urine sample","clinicalmcrisolates",15,7,8,0,0.875,0.466666666666667,0.533333333333333
 "102","PDT000285814.2",2018,"USA","clinical","stool","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"103","PDT000291269.1",2017,"China","clinical","faecal sample","clinicalmcrisolates",19,7,12,0,0.583333333333333,0.368421052631579,0.631578947368421
-"104","PDT000294554.1",2017,"China","clinical",NA,"clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"105","PDT000294555.1",2017,"China","clinical",NA,"clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"106","PDT000294556.1",2017,"China","clinical",NA,"clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"107","PDT000313447.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"108","PDT000313448.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"103","PDT000291269.1",2017,"China","clinical","faecal sample","clinicalmcrisolates",20,7,12,1,0.583333333333333,0.35,0.6
+"104","PDT000294554.1",2017,"China","clinical",NA,"clinicalmcrisolates",12,5,6,1,0.833333333333333,0.416666666666667,0.5
+"105","PDT000294555.1",2017,"China","clinical",NA,"clinicalmcrisolates",12,5,6,1,0.833333333333333,0.416666666666667,0.5
+"106","PDT000294556.1",2017,"China","clinical",NA,"clinicalmcrisolates",12,5,6,1,0.833333333333333,0.416666666666667,0.5
+"107","PDT000313447.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
+"108","PDT000313448.1",2016,"China","clinical","feces","clinicalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "109","PDT000313476.1",2008,"Japan","clinical",NA,"clinicalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
 "110","PDT000321317.1",2016,"Brazil","clinical","urine","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "111","PDT000321318.1",2017,"Brazil","clinical","urine","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "112","PDT000322738.1",2017,"United Kingdom","clinical","human","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
 "113","PDT000325631.1",2017,"Brazil","clinical","blood","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "114","PDT000325632.1",2016,"Brazil","clinical","urine","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"115","PDT000325633.1",2017,"Brazil","clinical","urine","clinicalmcrisolates",5,4,1,0,4,0.8,0.2
+"115","PDT000325633.1",2017,"Brazil","clinical","urine","clinicalmcrisolates",6,4,1,1,4,0.666666666666667,0.166666666666667
 "116","PDT000327854.1",2016,"Viet Nam","clinical",NA,"clinicalmcrisolates",16,6,10,0,0.6,0.375,0.625
 "117","PDT000327855.1",2016,"Viet Nam","clinical",NA,"clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "118","PDT000327856.1",2016,"Viet Nam","clinical",NA,"clinicalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
@@ -122,119 +122,119 @@
 "121","PDT000331967.1",2016,"China","clinical","fecal sample","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "122","PDT000333201.1",2016,"Bolivia","clinical","Postoperative transudate","clinicalmcrisolates",15,8,7,0,1.14285714285714,0.533333333333333,0.466666666666667
 "123","PDT000343295.1",2016,"France","clinical","clinical isolate","clinicalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
-"124","PDT000346531.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"124","PDT000346531.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "125","PDT000346532.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"126","PDT000346533.1",2016,"China","clinical","feces","clinicalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
+"126","PDT000346533.1",2016,"China","clinical","feces","clinicalmcrisolates",12,6,5,1,1.2,0.5,0.416666666666667
 "127","PDT000346534.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "128","PDT000346535.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "129","PDT000346536.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "130","PDT000346537.1",2016,"China","clinical","feces","clinicalmcrisolates",5,3,2,0,1.5,0.6,0.4
-"131","PDT000346538.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"132","PDT000346539.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"133","PDT000346540.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"134","PDT000346541.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
+"131","PDT000346538.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"132","PDT000346539.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,5,1,0.6,0.333333333333333,0.555555555555556
+"133","PDT000346540.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"134","PDT000346541.1",2016,"China","clinical","feces","clinicalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421
 "135","PDT000346542.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"136","PDT000346543.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"137","PDT000346544.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"136","PDT000346543.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"137","PDT000346544.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "138","PDT000346545.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"139","PDT000346546.1",2016,"China","clinical","feces","clinicalmcrisolates",13,3,10,0,0.3,0.230769230769231,0.769230769230769
-"140","PDT000346547.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"141","PDT000346548.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"139","PDT000346546.1",2016,"China","clinical","feces","clinicalmcrisolates",14,3,10,1,0.3,0.214285714285714,0.714285714285714
+"140","PDT000346547.1",2016,"China","clinical","feces","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"141","PDT000346548.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "142","PDT000346549.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "143","PDT000346550.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"144","PDT000346551.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"144","PDT000346551.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "145","PDT000346552.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
 "146","PDT000346553.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
-"147","PDT000346554.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,11,0,0.363636363636364,0.266666666666667,0.733333333333333
-"148","PDT000346555.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"147","PDT000346554.1",2016,"China","clinical","feces","clinicalmcrisolates",16,4,11,1,0.363636363636364,0.25,0.6875
+"148","PDT000346555.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "149","PDT000346556.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "150","PDT000346557.1",2016,"China","clinical","feces","clinicalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
-"151","PDT000346558.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
+"151","PDT000346558.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
 "152","PDT000346559.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
 "153","PDT000346560.1",2016,"China","clinical","feces","clinicalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"154","PDT000346561.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"155","PDT000346562.1",2016,"China","clinical","feces","clinicalmcrisolates",20,9,11,0,0.818181818181818,0.45,0.55
-"156","PDT000346563.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"154","PDT000346561.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"155","PDT000346562.1",2016,"China","clinical","feces","clinicalmcrisolates",21,9,11,1,0.818181818181818,0.428571428571429,0.523809523809524
+"156","PDT000346563.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "157","PDT000346564.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "158","PDT000346565.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"159","PDT000346566.1",2016,"China","clinical","feces","clinicalmcrisolates",19,7,12,0,0.583333333333333,0.368421052631579,0.631578947368421
+"159","PDT000346566.1",2016,"China","clinical","feces","clinicalmcrisolates",20,7,12,1,0.583333333333333,0.35,0.6
 "160","PDT000346567.1",2016,"China","clinical","feces","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
-"161","PDT000346568.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"161","PDT000346568.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "162","PDT000346569.1",2016,"China","clinical","feces","clinicalmcrisolates",8,5,3,0,1.66666666666667,0.625,0.375
-"163","PDT000346570.1",2016,"China","clinical","feces","clinicalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
-"164","PDT000346571.1",2016,"China","clinical","feces","clinicalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
+"163","PDT000346570.1",2016,"China","clinical","feces","clinicalmcrisolates",4,2,1,1,2,0.5,0.25
+"164","PDT000346571.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
 "165","PDT000346572.1",2016,"China","clinical","feces","clinicalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
-"166","PDT000346573.1",2016,"China","clinical","feces","clinicalmcrisolates",17,6,11,0,0.545454545454545,0.352941176470588,0.647058823529412
+"166","PDT000346573.1",2016,"China","clinical","feces","clinicalmcrisolates",19,6,11,2,0.545454545454545,0.315789473684211,0.578947368421053
 "167","PDT000346574.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "168","PDT000346575.1",2016,"China","clinical","feces","clinicalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
 "169","PDT000346576.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"170","PDT000346577.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"170","PDT000346577.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "171","PDT000346578.1",2016,"China","clinical","feces","clinicalmcrisolates",9,2,7,0,0.285714285714286,0.222222222222222,0.777777777777778
 "172","PDT000346579.1",2016,"China","clinical","feces","clinicalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
 "173","PDT000346580.1",2016,"China","clinical","feces","clinicalmcrisolates",6,3,3,0,1,0.5,0.5
 "174","PDT000346581.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "175","PDT000346582.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"176","PDT000346583.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"177","PDT000346584.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"178","PDT000346585.1",2016,"China","clinical","feces","clinicalmcrisolates",8,2,6,0,0.333333333333333,0.25,0.75
+"176","PDT000346583.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"177","PDT000346584.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"178","PDT000346585.1",2016,"China","clinical","feces","clinicalmcrisolates",9,2,6,1,0.333333333333333,0.222222222222222,0.666666666666667
 "179","PDT000346586.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"180","PDT000346587.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"180","PDT000346587.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "181","PDT000346588.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "182","PDT000346589.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"183","PDT000346590.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,9,0,0.333333333333333,0.25,0.75
-"184","PDT000346591.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"185","PDT000346592.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"186","PDT000346593.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"187","PDT000346594.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"188","PDT000346595.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"189","PDT000346596.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"190","PDT000346597.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"191","PDT000346598.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
+"183","PDT000346590.1",2016,"China","clinical","feces","clinicalmcrisolates",13,3,9,1,0.333333333333333,0.230769230769231,0.692307692307692
+"184","PDT000346591.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
+"185","PDT000346592.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"186","PDT000346593.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"187","PDT000346594.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"188","PDT000346595.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
+"189","PDT000346596.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"190","PDT000346597.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"191","PDT000346598.1",2016,"China","clinical","feces","clinicalmcrisolates",7,2,4,1,0.5,0.285714285714286,0.571428571428571
 "192","PDT000346599.1",2016,"China","clinical","feces","clinicalmcrisolates",16,4,12,0,0.333333333333333,0.25,0.75
 "193","PDT000346600.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "194","PDT000346601.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"195","PDT000346602.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"196","PDT000346603.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"195","PDT000346602.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"196","PDT000346603.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "197","PDT000346604.1",2016,"China","clinical","feces","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"198","PDT000346605.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
+"198","PDT000346605.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
 "199","PDT000346606.1",2016,"China","clinical","feces","clinicalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
 "200","PDT000346607.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "201","PDT000346608.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "202","PDT000346609.1",2016,"China","clinical","feces","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "203","PDT000346610.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "204","PDT000346611.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"205","PDT000346612.1",2016,"China","clinical","feces","clinicalmcrisolates",16,4,12,0,0.333333333333333,0.25,0.75
-"206","PDT000346613.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"205","PDT000346612.1",2016,"China","clinical","feces","clinicalmcrisolates",17,4,12,1,0.333333333333333,0.235294117647059,0.705882352941177
+"206","PDT000346613.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "207","PDT000346614.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"208","PDT000346615.1",2016,"China","clinical","feces","clinicalmcrisolates",12,6,6,0,1,0.5,0.5
-"209","PDT000346616.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"208","PDT000346615.1",2016,"China","clinical","feces","clinicalmcrisolates",13,6,6,1,1,0.461538461538462,0.461538461538462
+"209","PDT000346616.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "210","PDT000346617.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "211","PDT000346618.1",2016,"China","clinical","feces","clinicalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
-"212","PDT000346619.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
+"212","PDT000346619.1",2016,"China","clinical","feces","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
 "213","PDT000346620.1",2016,"China","clinical","feces","clinicalmcrisolates",10,5,5,0,1,0.5,0.5
-"214","PDT000346621.1",2016,"China","clinical","feces","clinicalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
-"215","PDT000346622.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"214","PDT000346621.1",2016,"China","clinical","feces","clinicalmcrisolates",13,6,5,2,1.2,0.461538461538462,0.384615384615385
+"215","PDT000346622.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "216","PDT000346623.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "217","PDT000346624.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
 "218","PDT000346625.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "219","PDT000346626.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"220","PDT000346627.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"220","PDT000346627.1",2016,"China","clinical","feces","clinicalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "221","PDT000346628.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "222","PDT000346629.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "223","PDT000346630.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "224","PDT000346631.1",2016,"China","clinical","feces","clinicalmcrisolates",4,2,2,0,1,0.5,0.5
-"225","PDT000346632.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,11,0,0.363636363636364,0.266666666666667,0.733333333333333
+"225","PDT000346632.1",2016,"China","clinical","feces","clinicalmcrisolates",16,4,11,1,0.363636363636364,0.25,0.6875
 "226","PDT000346633.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "227","PDT000346634.1",2016,"China","clinical","feces","clinicalmcrisolates",14,7,7,0,1,0.5,0.5
-"228","PDT000346635.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"229","PDT000346636.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,9,0,0.333333333333333,0.25,0.75
+"228","PDT000346635.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"229","PDT000346636.1",2016,"China","clinical","feces","clinicalmcrisolates",13,3,9,1,0.333333333333333,0.230769230769231,0.692307692307692
 "230","PDT000346637.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
 "231","PDT000346638.1",2016,"China","clinical","feces","clinicalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
-"232","PDT000346639.1",2016,"China","clinical","feces","clinicalmcrisolates",6,1,5,0,0.2,0.166666666666667,0.833333333333333
-"233","PDT000346640.1",2016,"China","clinical","feces","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"234","PDT000346641.1",2016,"China","clinical","feces","clinicalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"235","PDT000346642.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"236","PDT000346643.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"232","PDT000346639.1",2016,"China","clinical","feces","clinicalmcrisolates",7,1,5,1,0.2,0.142857142857143,0.714285714285714
+"233","PDT000346640.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,6,1,0.833333333333333,0.416666666666667,0.5
+"234","PDT000346641.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
+"235","PDT000346642.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"236","PDT000346643.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "237","PDT000346644.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "238","PDT000346645.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "239","PDT000346646.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
@@ -243,115 +243,115 @@
 "242","PDT000346649.1",2016,"China","clinical","feces","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "243","PDT000346650.1",2016,"China","clinical","feces","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "244","PDT000346651.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"245","PDT000346652.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
+"245","PDT000346652.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
 "246","PDT000346653.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"247","PDT000346654.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"248","PDT000346655.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"249","PDT000346656.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
+"247","PDT000346654.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"248","PDT000346655.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
+"249","PDT000346656.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
 "250","PDT000346657.1",2016,"China","clinical","feces","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
 "251","PDT000346658.1",2016,"China","clinical","feces","clinicalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
-"252","PDT000346659.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"253","PDT000346660.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"252","PDT000346659.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,9,2,0.555555555555556,0.3125,0.5625
+"253","PDT000346660.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "254","PDT000346661.1",2016,"China","clinical","feces","clinicalmcrisolates",6,3,3,0,1,0.5,0.5
-"255","PDT000346662.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"256","PDT000346663.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"255","PDT000346662.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"256","PDT000346663.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "257","PDT000346664.1",2016,"China","clinical","feces","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "258","PDT000346665.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"259","PDT000346666.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"260","PDT000346667.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"261","PDT000346668.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
+"259","PDT000346666.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"260","PDT000346667.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"261","PDT000346668.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
 "262","PDT000346669.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
 "263","PDT000346670.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"264","PDT000346671.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"265","PDT000346672.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
+"264","PDT000346671.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
+"265","PDT000346672.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
 "266","PDT000346673.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "267","PDT000346674.1",2016,"China","clinical","feces","clinicalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
 "268","PDT000346675.1",2016,"China","clinical","feces","clinicalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
-"269","PDT000346676.1",2016,"China","clinical","feces","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"269","PDT000346676.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,8,2,0.75,0.375,0.5
 "270","PDT000346677.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
 "271","PDT000346678.1",2016,"China","clinical","feces","clinicalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"272","PDT000346679.1",2016,"China","clinical","feces","clinicalmcrisolates",8,2,6,0,0.333333333333333,0.25,0.75
-"273","PDT000346680.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"274","PDT000346786.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"275","PDT000346789.1",2016,"China","clinical","feces","clinicalmcrisolates",16,3,13,0,0.230769230769231,0.1875,0.8125
+"272","PDT000346679.1",2016,"China","clinical","feces","clinicalmcrisolates",9,2,6,1,0.333333333333333,0.222222222222222,0.666666666666667
+"273","PDT000346680.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"274","PDT000346786.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"275","PDT000346789.1",2016,"China","clinical","feces","clinicalmcrisolates",17,3,13,1,0.230769230769231,0.176470588235294,0.764705882352941
 "276","PDT000346790.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"277","PDT000346809.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"278","PDT000346811.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
+"277","PDT000346809.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"278","PDT000346811.1",2016,"China","clinical","feces","clinicalmcrisolates",3,1,1,1,1,0.333333333333333,0.333333333333333
 "279","PDT000346812.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "280","PDT000346814.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "281","PDT000346816.1",2016,"China","clinical","feces","clinicalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"282","PDT000346817.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
+"282","PDT000346817.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
 "283","PDT000346819.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "284","PDT000346820.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"285","PDT000346821.1",2016,"China","clinical","feces","clinicalmcrisolates",17,5,12,0,0.416666666666667,0.294117647058824,0.705882352941177
-"286","PDT000346823.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"287","PDT000346824.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
+"285","PDT000346821.1",2016,"China","clinical","feces","clinicalmcrisolates",18,5,12,1,0.416666666666667,0.277777777777778,0.666666666666667
+"286","PDT000346823.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,5,1,0.6,0.333333333333333,0.555555555555556
+"287","PDT000346824.1",2016,"China","clinical","feces","clinicalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421
 "288","PDT000346826.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
-"289","PDT000346827.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"290","PDT000346829.1",2016,"China","clinical","feces","clinicalmcrisolates",20,7,13,0,0.538461538461538,0.35,0.65
+"289","PDT000346827.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
+"290","PDT000346829.1",2016,"China","clinical","feces","clinicalmcrisolates",21,7,13,1,0.538461538461538,0.333333333333333,0.619047619047619
 "291","PDT000346830.1",2016,"China","clinical","feces","clinicalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"292","PDT000346832.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"292","PDT000346832.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "293","PDT000346833.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"294","PDT000346834.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"295","PDT000346835.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"296","PDT000346838.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
+"294","PDT000346834.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"295","PDT000346835.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"296","PDT000346838.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
 "297","PDT000346839.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
 "298","PDT000346840.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"299","PDT000346841.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"300","PDT000346843.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
+"299","PDT000346841.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
+"300","PDT000346843.1",2016,"China","clinical","feces","clinicalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421
 "301","PDT000346844.1",2016,"China","clinical","feces","clinicalmcrisolates",9,5,4,0,1.25,0.555555555555556,0.444444444444444
-"302","PDT000346845.1",2016,"China","clinical","feces","clinicalmcrisolates",20,7,13,0,0.538461538461538,0.35,0.65
+"302","PDT000346845.1",2016,"China","clinical","feces","clinicalmcrisolates",21,7,13,1,0.538461538461538,0.333333333333333,0.619047619047619
 "303","PDT000346846.1",2016,"China","clinical","feces","clinicalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
-"304","PDT000346848.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"304","PDT000346848.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "305","PDT000346849.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
-"306","PDT000346850.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
+"306","PDT000346850.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,8,1,0.625,0.357142857142857,0.571428571428571
 "307","PDT000346851.1",2016,"China","clinical","feces","clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "308","PDT000346854.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
-"309","PDT000346855.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"310","PDT000346856.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"309","PDT000346855.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"310","PDT000346856.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "311","PDT000346858.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
 "312","PDT000346859.1",2016,"China","clinical","feces","clinicalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"313","PDT000346861.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"314","PDT000346862.1",2016,"China","clinical","feces","clinicalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
+"313","PDT000346861.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
+"314","PDT000346862.1",2016,"China","clinical","feces","clinicalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
 "315","PDT000346863.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
-"316","PDT000346865.1",2016,"China","clinical","feces","clinicalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
+"316","PDT000346865.1",2016,"China","clinical","feces","clinicalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
 "317","PDT000346866.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "318","PDT000346868.1",2016,"China","clinical","feces","clinicalmcrisolates",15,4,11,0,0.363636363636364,0.266666666666667,0.733333333333333
 "319","PDT000346869.1",2016,"China","clinical","feces","clinicalmcrisolates",17,6,11,0,0.545454545454545,0.352941176470588,0.647058823529412
 "320","PDT000346871.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "321","PDT000346872.1",2016,"China","clinical","feces","clinicalmcrisolates",6,3,3,0,1,0.5,0.5
-"322","PDT000346873.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"322","PDT000346873.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "323","PDT000346874.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"324","PDT000346877.1",2016,"China","clinical","feces","clinicalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"324","PDT000346877.1",2016,"China","clinical","feces","clinicalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "325","PDT000346878.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"326","PDT000346879.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"326","PDT000346879.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "327","PDT000346880.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
-"328","PDT000346882.1",2016,"China","clinical","feces","clinicalmcrisolates",9,2,7,0,0.285714285714286,0.222222222222222,0.777777777777778
+"328","PDT000346882.1",2016,"China","clinical","feces","clinicalmcrisolates",10,2,7,1,0.285714285714286,0.2,0.7
 "329","PDT000346883.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"330","PDT000346884.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"330","PDT000346884.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "331","PDT000346886.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "332","PDT000346887.1",2016,"China","clinical","feces","clinicalmcrisolates",4,2,2,0,1,0.5,0.5
-"333","PDT000346889.1",2016,"China","clinical","feces","clinicalmcrisolates",19,8,11,0,0.727272727272727,0.421052631578947,0.578947368421053
+"333","PDT000346889.1",2016,"China","clinical","feces","clinicalmcrisolates",21,8,11,2,0.727272727272727,0.380952380952381,0.523809523809524
 "334","PDT000346890.1",2016,"China","clinical","feces","clinicalmcrisolates",10,5,5,0,1,0.5,0.5
 "335","PDT000346891.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "336","PDT000346892.1",2016,"China","clinical","feces","clinicalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "337","PDT000346893.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "338","PDT000346894.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
 "339","PDT000346896.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"340","PDT000346897.1",2016,"China","clinical","feces","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"340","PDT000346897.1",2016,"China","clinical","feces","clinicalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "341","PDT000346898.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
 "342","PDT000346899.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"343","PDT000346900.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"343","PDT000346900.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "344","PDT000346901.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
 "345","PDT000346902.1",2016,"China","clinical","feces","clinicalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
 "346","PDT000346904.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "347","PDT000346905.1",2016,"China","clinical","feces","clinicalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
 "348","PDT000346906.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"349","PDT000346907.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"350","PDT000346909.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"351","PDT000346910.1",2016,"China","clinical","feces","clinicalmcrisolates",18,10,8,0,1.25,0.555555555555556,0.444444444444444
-"352","PDT000346911.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"353","PDT000346912.1",2016,"China","clinical","feces","clinicalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"349","PDT000346907.1",2016,"China","clinical","feces","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"350","PDT000346909.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"351","PDT000346910.1",2016,"China","clinical","feces","clinicalmcrisolates",20,10,8,2,1.25,0.5,0.4
+"352","PDT000346911.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"353","PDT000346912.1",2016,"China","clinical","feces","clinicalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "354","PDT000346914.1",2016,"China","clinical","feces","clinicalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
 "355","PDT000346915.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "356","PDT000346916.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
@@ -360,83 +360,83 @@
 "359","PDT000346920.1",2016,"China","clinical","feces","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "360","PDT000346921.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "361","PDT000346923.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"362","PDT000346924.1",2016,"China","clinical","feces","clinicalmcrisolates",5,1,4,0,0.25,0.2,0.8
-"363","PDT000346925.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"364","PDT000346926.1",2016,"China","clinical","feces","clinicalmcrisolates",5,1,4,0,0.25,0.2,0.8
-"365","PDT000346927.1",2016,"China","clinical","feces","clinicalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"366","PDT000346928.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"367","PDT000346929.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"368","PDT000346931.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
-"369","PDT000346932.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"370","PDT000346933.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
+"362","PDT000346924.1",2016,"China","clinical","feces","clinicalmcrisolates",6,1,4,1,0.25,0.166666666666667,0.666666666666667
+"363","PDT000346925.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"364","PDT000346926.1",2016,"China","clinical","feces","clinicalmcrisolates",6,1,4,1,0.25,0.166666666666667,0.666666666666667
+"365","PDT000346927.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"366","PDT000346928.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"367","PDT000346929.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,5,1,0.6,0.333333333333333,0.555555555555556
+"368","PDT000346931.1",2016,"China","clinical","feces","clinicalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421
+"369","PDT000346932.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
+"370","PDT000346933.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,5,1,0.6,0.333333333333333,0.555555555555556
 "371","PDT000346935.1",2016,"China","clinical","feces","clinicalmcrisolates",2,2,0,0,Inf,1,0
-"372","PDT000346936.1",2016,"China","clinical","feces","clinicalmcrisolates",9,2,7,0,0.285714285714286,0.222222222222222,0.777777777777778
-"373","PDT000346937.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"374","PDT000346938.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"372","PDT000346936.1",2016,"China","clinical","feces","clinicalmcrisolates",10,2,7,1,0.285714285714286,0.2,0.7
+"373","PDT000346937.1",2016,"China","clinical","feces","clinicalmcrisolates",3,1,1,1,1,0.333333333333333,0.333333333333333
+"374","PDT000346938.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "375","PDT000346940.1",2016,"China","clinical","feces","clinicalmcrisolates",13,3,10,0,0.3,0.230769230769231,0.769230769230769
-"376","PDT000346941.1",2016,"China","clinical","feces","clinicalmcrisolates",8,3,5,0,0.6,0.375,0.625
+"376","PDT000346941.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,5,1,0.6,0.333333333333333,0.555555555555556
 "377","PDT000346942.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
 "378","PDT000346943.1",2016,"China","clinical","feces","clinicalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "379","PDT000346944.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
 "380","PDT000346945.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
 "381","PDT000346947.1",2016,"China","clinical","feces","clinicalmcrisolates",5,1,4,0,0.25,0.2,0.8
-"382","PDT000346948.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"383","PDT000346949.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"384","PDT000346950.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"382","PDT000346948.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"383","PDT000346949.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"384","PDT000346950.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "385","PDT000346952.1",2016,"China","clinical","feces","clinicalmcrisolates",12,6,6,0,1,0.5,0.5
 "386","PDT000346953.1",2016,"China","clinical","feces","clinicalmcrisolates",2,1,1,0,1,0.5,0.5
-"387","PDT000346954.1",2016,"China","clinical","feces","clinicalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"388","PDT000346955.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"387","PDT000346954.1",2016,"China","clinical","feces","clinicalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"388","PDT000346955.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "389","PDT000346956.1",2016,"China","clinical","feces","clinicalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
-"390","PDT000346958.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"390","PDT000346958.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "391","PDT000346959.1",2016,"China","clinical","feces","clinicalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
 "392","PDT000346960.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"393","PDT000346961.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"394","PDT000346962.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"393","PDT000346961.1",2016,"China","clinical","feces","clinicalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"394","PDT000346962.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "395","PDT000346963.1",2016,"China","clinical","feces","clinicalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "396","PDT000346964.1",2016,"China","clinical","feces","clinicalmcrisolates",8,4,4,0,1,0.5,0.5
-"397","PDT000346965.1",2016,"China","clinical","feces","clinicalmcrisolates",17,6,11,0,0.545454545454545,0.352941176470588,0.647058823529412
-"398","PDT000346966.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"399","PDT000346967.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
+"397","PDT000346965.1",2016,"China","clinical","feces","clinicalmcrisolates",18,6,11,1,0.545454545454545,0.333333333333333,0.611111111111111
+"398","PDT000346966.1",2016,"China","clinical","feces","clinicalmcrisolates",14,5,8,1,0.625,0.357142857142857,0.571428571428571
+"399","PDT000346967.1",2016,"China","clinical","feces","clinicalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
 "400","PDT000346969.1",2016,"China","clinical","feces","clinicalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "401","PDT000346970.1",2016,"China","clinical","feces","clinicalmcrisolates",12,6,6,0,1,0.5,0.5
 "402","PDT000346971.1",2016,"China","clinical","feces","clinicalmcrisolates",2,2,0,0,Inf,1,0
-"403","PDT000346972.1",2016,"China","clinical","feces","clinicalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"403","PDT000346972.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "404","PDT000346973.1",2016,"China","clinical","feces","clinicalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "405","PDT000346974.1",2016,"China","clinical","feces","clinicalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
 "406","PDT000346976.1",2016,"China","clinical","feces","clinicalmcrisolates",1,1,0,0,Inf,1,0
-"407","PDT000346977.1",2016,"China","clinical","feces","clinicalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"408","PDT000346978.1",2016,"China","clinical","feces","clinicalmcrisolates",23,10,13,0,0.769230769230769,0.434782608695652,0.565217391304348
-"409","PDT000346980.1",2016,"China","clinical","feces","clinicalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"407","PDT000346977.1",2016,"China","clinical","feces","clinicalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"408","PDT000346978.1",2016,"China","clinical","feces","clinicalmcrisolates",24,10,13,1,0.769230769230769,0.416666666666667,0.541666666666667
+"409","PDT000346980.1",2016,"China","clinical","feces","clinicalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "410","PDT000346981.1",2016,"China","clinical","feces","clinicalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "411","PDT000347090.1",2018,NA,"clinical",NA,"clinicalmcrisolates",1,1,0,0,Inf,1,0
 "412","PDT000347091.1",2018,NA,"clinical",NA,"clinicalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
-"413","PDT000215983.2",2016,"China","clinical",NA,"clinicalmcrisolates",13,7,6,0,1.16666666666667,0.538461538461538,0.461538461538462
+"413","PDT000215983.2",2016,"China","clinical",NA,"clinicalmcrisolates",14,7,6,1,1.16666666666667,0.5,0.428571428571429
 "414","PDT000393718.1",2017,"New Zealand","clinical","urine","clinicalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
-"415","PDT000124638.1",2014,"China","environmental/other","feces","environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"416","PDT000124642.1",2014,"China","environmental/other","feces","environmentalmcrisolates",10,2,8,0,0.25,0.2,0.8
-"417","PDT000124649.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",17,5,12,0,0.416666666666667,0.294117647058824,0.705882352941177
-"418","PDT000124650.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
+"415","PDT000124638.1",2014,"China","environmental/other","feces","environmentalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"416","PDT000124642.1",2014,"China","environmental/other","feces","environmentalmcrisolates",11,2,8,1,0.25,0.181818181818182,0.727272727272727
+"417","PDT000124649.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",18,5,12,1,0.416666666666667,0.277777777777778,0.666666666666667
+"418","PDT000124650.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
 "419","PDT000124669.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",5,4,1,0,4,0.8,0.2
-"420","PDT000124670.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",14,2,12,0,0.166666666666667,0.142857142857143,0.857142857142857
+"420","PDT000124670.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",15,2,12,1,0.166666666666667,0.133333333333333,0.8
 "421","PDT000124674.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"422","PDT000124676.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",15,3,12,0,0.25,0.2,0.8
-"423","PDT000124681.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",13,3,10,0,0.3,0.230769230769231,0.769230769230769
-"424","PDT000124686.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"425","PDT000124688.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",16,3,13,0,0.230769230769231,0.1875,0.8125
-"426","PDT000124714.1",2013,"China","environmental/other","feces","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"422","PDT000124676.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",16,3,12,1,0.25,0.1875,0.75
+"423","PDT000124681.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",14,3,10,1,0.3,0.214285714285714,0.714285714285714
+"424","PDT000124686.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"425","PDT000124688.1",2012,"China","environmental/other","rectum","environmentalmcrisolates",17,3,13,1,0.230769230769231,0.176470588235294,0.764705882352941
+"426","PDT000124714.1",2013,"China","environmental/other","feces","environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "427","PDT000124715.1",2013,"China","environmental/other","feces","environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "428","PDT000124716.1",2013,"China","environmental/other","feces","environmentalmcrisolates",2,2,0,0,Inf,1,0
-"429","PDT000124725.1",2013,"China","environmental/other","feces","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"429","PDT000124725.1",2013,"China","environmental/other","feces","environmentalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "430","PDT000129098.2",2013,"Denmark","environmental/other",NA,"environmentalmcrisolates",8,4,4,0,1,0.5,0.5
 "431","PDT000129099.2",2012,"Denmark","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "432","PDT000129100.2",2012,"Denmark","environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "433","PDT000129102.2",2014,"Denmark","environmental/other",NA,"environmentalmcrisolates",7,4,3,0,1.33333333333333,0.571428571428571,0.428571428571429
-"434","PDT000129924.1",2016,NA,"environmental/other",NA,"environmentalmcrisolates",17,6,11,0,0.545454545454545,0.352941176470588,0.647058823529412
+"434","PDT000129924.1",2016,NA,"environmental/other",NA,"environmentalmcrisolates",18,6,11,1,0.545454545454545,0.333333333333333,0.611111111111111
 "435","PDT000133944.1",2015,"Poland","environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "436","PDT000133946.1",2015,"Poland","environmental/other",NA,"environmentalmcrisolates",8,4,4,0,1,0.5,0.5
 "437","PDT000134152.1",2015,"Switzerland","environmental/other","poultry meat","environmentalmcrisolates",2,2,0,0,Inf,1,0
-"438","PDT000135480.1",2016,NA,"environmental/other",NA,"environmentalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
+"438","PDT000135480.1",2016,NA,"environmental/other",NA,"environmentalmcrisolates",16,5,10,1,0.5,0.3125,0.625
 "439","PDT000136715.1",2014,"Germany","environmental/other",NA,"environmentalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
 "440","PDT000136716.1",2010,"Germany","environmental/other","liver","environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "441","PDT000136717.1",2013,"Germany","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
@@ -447,55 +447,55 @@
 "446","PDT000168467.1",2016,NA,"environmental/other",NA,"environmentalmcrisolates",7,4,3,0,1.33333333333333,0.571428571428571,0.428571428571429
 "447","PDT000095911.2",2008,"France","environmental/other","Animal feces","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "448","PDT000149831.1",2016,"USA","environmental/other","cecum","environmentalmcrisolates",1,1,0,0,Inf,1,0
-"449","PDT000158042.1",2015,"China","environmental/other","hospital sewage","environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"449","PDT000158042.1",2015,"China","environmental/other","hospital sewage","environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "450","PDT000167675.2",2016,NA,"environmental/other",NA,"environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
 "451","PDT000167714.2",2016,NA,"environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"452","PDT000168712.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",25,12,13,0,0.923076923076923,0.48,0.52
-"453","PDT000168716.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"454","PDT000168717.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,10,9,0,1.11111111111111,0.526315789473684,0.473684210526316
-"455","PDT000168729.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",18,10,8,0,1.25,0.555555555555556,0.444444444444444
-"456","PDT000168734.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",16,8,8,0,1,0.5,0.5
-"457","PDT000168735.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
-"458","PDT000168736.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",10,5,5,0,1,0.5,0.5
-"459","PDT000168743.1",2015,"China","environmental/other","sewage from commercial farm","environmentalmcrisolates",21,11,10,0,1.1,0.523809523809524,0.476190476190476
-"460","PDT000168747.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,10,9,0,1.11111111111111,0.526315789473684,0.473684210526316
-"461","PDT000168748.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"462","PDT000168749.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"463","PDT000168750.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"464","PDT000168751.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"465","PDT000168752.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"466","PDT000168754.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",10,5,5,0,1,0.5,0.5
-"467","PDT000168758.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",15,7,8,0,0.875,0.466666666666667,0.533333333333333
-"468","PDT000168759.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",25,10,15,0,0.666666666666667,0.4,0.6
-"469","PDT000168767.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",17,9,8,0,1.125,0.529411764705882,0.470588235294118
-"470","PDT000168777.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,11,10,0,1.1,0.523809523809524,0.476190476190476
-"471","PDT000168778.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"472","PDT000168779.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,11,10,0,1.1,0.523809523809524,0.476190476190476
-"473","PDT000168785.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"474","PDT000168787.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"475","PDT000168788.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"476","PDT000168794.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",19,8,11,0,0.727272727272727,0.421052631578947,0.578947368421053
-"477","PDT000168799.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",17,8,9,0,0.888888888888889,0.470588235294118,0.529411764705882
-"478","PDT000168809.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"479","PDT000168818.1",2015,"China","environmental/other","anal swabs from commercial chicken farm","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"480","PDT000168821.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"481","PDT000168824.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
-"482","PDT000168827.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"483","PDT000168828.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",16,8,8,0,1,0.5,0.5
-"484","PDT000168837.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"485","PDT000168845.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"486","PDT000168848.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",29,13,16,0,0.8125,0.448275862068966,0.551724137931034
+"452","PDT000168712.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",26,12,13,1,0.923076923076923,0.461538461538462,0.5
+"453","PDT000168716.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"454","PDT000168717.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",20,10,9,1,1.11111111111111,0.5,0.45
+"455","PDT000168729.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,10,8,1,1.25,0.526315789473684,0.421052631578947
+"456","PDT000168734.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",17,8,8,1,1,0.470588235294118,0.470588235294118
+"457","PDT000168735.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,7,11,1,0.636363636363636,0.368421052631579,0.578947368421053
+"458","PDT000168736.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",11,5,5,1,1,0.454545454545455,0.454545454545455
+"459","PDT000168743.1",2015,"China","environmental/other","sewage from commercial farm","environmentalmcrisolates",22,11,10,1,1.1,0.5,0.454545454545455
+"460","PDT000168747.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,10,9,2,1.11111111111111,0.476190476190476,0.428571428571429
+"461","PDT000168748.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"462","PDT000168749.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"463","PDT000168750.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"464","PDT000168751.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"465","PDT000168752.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"466","PDT000168754.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",11,5,5,1,1,0.454545454545455,0.454545454545455
+"467","PDT000168758.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",16,7,8,1,0.875,0.4375,0.5
+"468","PDT000168759.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",27,10,15,2,0.666666666666667,0.37037037037037,0.555555555555556
+"469","PDT000168767.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,9,8,2,1.125,0.473684210526316,0.421052631578947
+"470","PDT000168777.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",22,11,10,1,1.1,0.5,0.454545454545455
+"471","PDT000168778.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"472","PDT000168779.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",22,11,10,1,1.1,0.5,0.454545454545455
+"473","PDT000168785.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",13,5,6,2,0.833333333333333,0.384615384615385,0.461538461538462
+"474","PDT000168787.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"475","PDT000168788.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"476","PDT000168794.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",21,8,11,2,0.727272727272727,0.380952380952381,0.523809523809524
+"477","PDT000168799.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",18,8,9,1,0.888888888888889,0.444444444444444,0.5
+"478","PDT000168809.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",17,6,9,2,0.666666666666667,0.352941176470588,0.529411764705882
+"479","PDT000168818.1",2015,"China","environmental/other","anal swabs from commercial chicken farm","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"480","PDT000168821.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"481","PDT000168824.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",19,7,11,1,0.636363636363636,0.368421052631579,0.578947368421053
+"482","PDT000168827.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",21,9,10,2,0.9,0.428571428571429,0.476190476190476
+"483","PDT000168828.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",17,8,8,1,1,0.470588235294118,0.470588235294118
+"484","PDT000168837.1",2015,"China","environmental/other","commercial chicken farm","environmentalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
+"485","PDT000168845.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"486","PDT000168848.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",31,13,16,2,0.8125,0.419354838709677,0.516129032258065
 "487","PDT000168850.1",2015,"China","environmental/other","cloaca swabs from hatchery farm","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"488","PDT000168860.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",18,9,9,0,1,0.5,0.5
-"489","PDT000168864.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"490","PDT000168867.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",22,10,12,0,0.833333333333333,0.454545454545455,0.545454545454545
-"491","PDT000168870.1",2015,"China","environmental/other","cloaca swabs from hatchery farm","environmentalmcrisolates",8,5,3,0,1.66666666666667,0.625,0.375
-"492","PDT000168871.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",22,10,12,0,0.833333333333333,0.454545454545455,0.545454545454545
-"493","PDT000168873.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"488","PDT000168860.1",2015,"China","environmental/other","chicken legs and breast from supermarket","environmentalmcrisolates",19,9,9,1,1,0.473684210526316,0.473684210526316
+"489","PDT000168864.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
+"490","PDT000168867.1",2015,"China","environmental/other","cecum from slaughterhouse","environmentalmcrisolates",23,10,12,1,0.833333333333333,0.434782608695652,0.521739130434783
+"491","PDT000168870.1",2015,"China","environmental/other","cloaca swabs from hatchery farm","environmentalmcrisolates",9,5,3,1,1.66666666666667,0.555555555555556,0.333333333333333
+"492","PDT000168871.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",23,10,12,1,0.833333333333333,0.434782608695652,0.521739130434783
+"493","PDT000168873.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",12,4,6,2,0.666666666666667,0.333333333333333,0.5
 "494","PDT000168876.1",2014,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
-"495","PDT000168877.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",18,8,10,0,0.8,0.444444444444444,0.555555555555556
-"496","PDT000171419.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"497","PDT000171420.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
+"495","PDT000168877.1",2015,"China","environmental/other","cloaca swabs from commercial farm","environmentalmcrisolates",19,8,10,1,0.8,0.421052631578947,0.526315789473684
+"496","PDT000171419.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"497","PDT000171420.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
 "498","PDT000171421.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",10,5,5,0,1,0.5,0.5
 "499","PDT000171422.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",12,3,9,0,0.333333333333333,0.25,0.75
 "500","PDT000171423.1",2012,"Viet Nam","environmental/other","feces","environmentalmcrisolates",6,4,2,0,2,0.666666666666667,0.333333333333333
@@ -520,7 +520,7 @@
 "519","PDT000181742.2",2015,"Thailand","environmental/other","Canal","environmentalmcrisolates",8,3,5,0,0.6,0.375,0.625
 "520","PDT000181802.2",2015,"Thailand","environmental/other","Farm","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "521","PDT000181803.2",2017,NA,"environmental/other",NA,"environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"522","PDT000181819.2",2015,"Thailand","environmental/other","Canal","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"522","PDT000181819.2",2015,"Thailand","environmental/other","Canal","environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "523","PDT000181837.2",2017,NA,"environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "524","PDT000181848.2",2017,NA,"environmental/other",NA,"environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "525","PDT000184584.1",2016,"Brazil","environmental/other","chicken breast meat","environmentalmcrisolates",6,4,2,0,2,0.666666666666667,0.333333333333333
@@ -535,24 +535,24 @@
 "534","PDT000212782.1",2015,"China","environmental/other","hospital sewage","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "535","PDT000212783.1",2015,"China","environmental/other","Sewage","environmentalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
 "536","PDT000212784.1",2015,"China","environmental/other","Sewage","environmentalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"537","PDT000212786.1",2016,"China","environmental/other","stool","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"538","PDT000212793.1",2015,"China","environmental/other","Sewage","environmentalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
-"539","PDT000219683.1",2016,"China","environmental/other","soil sample","environmentalmcrisolates",18,8,10,0,0.8,0.444444444444444,0.555555555555556
-"540","PDT000219685.1",2016,"China","environmental/other","soil sample","environmentalmcrisolates",16,8,8,0,1,0.5,0.5
-"541","PDT000219684.1",2016,"China","environmental/other","soil","environmentalmcrisolates",19,7,12,0,0.583333333333333,0.368421052631579,0.631578947368421
-"542","PDT000219686.1",2016,"China","environmental/other","soil","environmentalmcrisolates",19,7,12,0,0.583333333333333,0.368421052631579,0.631578947368421
+"537","PDT000212786.1",2016,"China","environmental/other","stool","environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"538","PDT000212793.1",2015,"China","environmental/other","Sewage","environmentalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
+"539","PDT000219683.1",2016,"China","environmental/other","soil sample","environmentalmcrisolates",19,8,10,1,0.8,0.421052631578947,0.526315789473684
+"540","PDT000219685.1",2016,"China","environmental/other","soil sample","environmentalmcrisolates",17,8,8,1,1,0.470588235294118,0.470588235294118
+"541","PDT000219684.1",2016,"China","environmental/other","soil","environmentalmcrisolates",20,7,12,1,0.583333333333333,0.35,0.6
+"542","PDT000219686.1",2016,"China","environmental/other","soil","environmentalmcrisolates",20,7,12,1,0.583333333333333,0.35,0.6
 "543","PDT000219687.1",2016,"China","environmental/other","soil sample","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "544","PDT000219688.1",2016,"China","environmental/other","soil","environmentalmcrisolates",19,7,12,0,0.583333333333333,0.368421052631579,0.631578947368421
 "545","PDT000220632.1",2014,"Colombia","environmental/other","Feed of swine farm","environmentalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
 "546","PDT000233841.1",2014,"Colombia","environmental/other","rectal swab","environmentalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
-"547","PDT000233842.1",2015,"Spain","environmental/other","feces","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"548","PDT000237131.1",2016,"China","environmental/other","food","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"549","PDT000237132.1",2016,"China","environmental/other","food","environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
+"547","PDT000233842.1",2015,"Spain","environmental/other","feces","environmentalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"548","PDT000237131.1",2016,"China","environmental/other","food","environmentalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"549","PDT000237132.1",2016,"China","environmental/other","food","environmentalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
 "550","PDT000237133.1",2016,"China","environmental/other","food","environmentalmcrisolates",9,2,7,0,0.285714285714286,0.222222222222222,0.777777777777778
 "551","PDT000237134.1",2016,"China","environmental/other","food","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"552","PDT000237135.1",2016,"China","environmental/other","clinical","environmentalmcrisolates",19,6,13,0,0.461538461538462,0.315789473684211,0.684210526315789
-"553","PDT000237136.1",2016,"China","environmental/other","clinical","environmentalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"554","PDT000237137.1",2016,"China","environmental/other","food","environmentalmcrisolates",14,4,10,0,0.4,0.285714285714286,0.714285714285714
+"552","PDT000237135.1",2016,"China","environmental/other","clinical","environmentalmcrisolates",20,6,13,1,0.461538461538462,0.3,0.65
+"553","PDT000237136.1",2016,"China","environmental/other","clinical","environmentalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"554","PDT000237137.1",2016,"China","environmental/other","food","environmentalmcrisolates",15,4,10,1,0.4,0.266666666666667,0.666666666666667
 "555","PDT000237138.1",2016,"China","environmental/other","food","environmentalmcrisolates",12,3,9,0,0.333333333333333,0.25,0.75
 "556","PDT000238514.1",2016,"Colombia","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "557","PDT000238515.1",2016,"Colombia","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
@@ -570,107 +570,107 @@
 "569","PDT000264307.1",2011,"Japan","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
 "570","PDT000264497.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",12,6,6,0,1,0.5,0.5
 "571","PDT000264498.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"572","PDT000264500.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"573","PDT000264501.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"572","PDT000264500.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
+"573","PDT000264501.1",2013,"Japan","environmental/other",NA,"environmentalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "574","PDT000274551.2",2017,"Poland","environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"575","PDT000276016.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"575","PDT000276016.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "576","PDT000276017.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"577","PDT000276018.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"578","PDT000276020.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"579","PDT000276021.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",5,1,4,0,0.25,0.2,0.8
-"580","PDT000276022.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
+"577","PDT000276018.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",17,5,11,1,0.454545454545455,0.294117647058824,0.647058823529412
+"578","PDT000276020.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
+"579","PDT000276021.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",6,1,4,1,0.25,0.166666666666667,0.666666666666667
+"580","PDT000276022.1",2014,"China","environmental/other","clinical patient","environmentalmcrisolates",8,3,4,1,0.75,0.375,0.5
 "581","PDT000277855.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"582","PDT000281814.1",2015,"China","environmental/other","pig","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
+"582","PDT000281814.1",2015,"China","environmental/other","pig","environmentalmcrisolates",15,5,9,1,0.555555555555556,0.333333333333333,0.6
 "583","PDT000283184.1",2017,"Brazil","environmental/other","Estuarine","environmentalmcrisolates",5,3,2,0,1.5,0.6,0.4
-"584","PDT000287993.1",2017,"China","environmental/other","not collected","environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"584","PDT000287993.1",2017,"China","environmental/other","not collected","environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "585","PDT000287994.1",2017,"China","environmental/other","not collected","environmentalmcrisolates",10,5,5,0,1,0.5,0.5
 "586","PDT000287995.1",2017,"China","environmental/other","not collected","environmentalmcrisolates",13,7,6,0,1.16666666666667,0.538461538461538,0.461538461538462
 "587","PDT000287996.1",2017,"China","environmental/other","not collected","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"588","PDT000289871.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",13,3,10,0,0.3,0.230769230769231,0.769230769230769
-"589","PDT000289872.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"588","PDT000289871.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,3,10,1,0.3,0.214285714285714,0.714285714285714
+"589","PDT000289872.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "590","PDT000289873.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,7,8,0,0.875,0.466666666666667,0.533333333333333
-"591","PDT000289874.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
-"592","PDT000289875.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,4,11,0,0.363636363636364,0.266666666666667,0.733333333333333
-"593","PDT000289876.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,2,12,0,0.166666666666667,0.142857142857143,0.857142857142857
+"591","PDT000289874.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421
+"592","PDT000289875.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",16,4,11,1,0.363636363636364,0.25,0.6875
+"593","PDT000289876.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,2,12,1,0.166666666666667,0.133333333333333,0.8
 "594","PDT000289877.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"595","PDT000289878.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",20,9,11,0,0.818181818181818,0.45,0.55
+"595","PDT000289878.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",21,9,11,1,0.818181818181818,0.428571428571429,0.523809523809524
 "596","PDT000289879.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,8,6,0,1.33333333333333,0.571428571428571,0.428571428571429
-"597","PDT000289880.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"598","PDT000289881.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",13,6,7,0,0.857142857142857,0.461538461538462,0.538461538461538
+"597","PDT000289880.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
+"598","PDT000289881.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,6,7,1,0.857142857142857,0.428571428571429,0.5
 "599","PDT000289882.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"600","PDT000289883.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"600","PDT000289883.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "601","PDT000289884.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
 "602","PDT000289885.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "603","PDT000289886.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,7,7,0,1,0.5,0.5
 "604","PDT000289887.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,5,5,0,1,0.5,0.5
-"605","PDT000289888.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
+"605","PDT000289888.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",8,3,4,1,0.75,0.375,0.5
 "606","PDT000289889.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "607","PDT000289890.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",7,4,3,0,1.33333333333333,0.571428571428571,0.428571428571429
-"608","PDT000289891.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"608","PDT000289891.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "609","PDT000289892.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "610","PDT000289893.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"611","PDT000289894.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"611","PDT000289894.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "612","PDT000289895.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",21,9,12,0,0.75,0.428571428571429,0.571428571428571
 "613","PDT000289896.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"614","PDT000289897.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"615","PDT000289898.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"616","PDT000289899.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
+"614","PDT000289897.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,3,8,1,0.375,0.25,0.666666666666667
+"615","PDT000289898.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"616","PDT000289899.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
 "617","PDT000289900.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
-"618","PDT000289901.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",18,9,9,0,1,0.5,0.5
+"618","PDT000289901.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",19,9,9,1,1,0.473684210526316,0.473684210526316
 "619","PDT000289902.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"620","PDT000289903.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",18,4,14,0,0.285714285714286,0.222222222222222,0.777777777777778
-"621","PDT000289904.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"622","PDT000289905.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,4,11,0,0.363636363636364,0.266666666666667,0.733333333333333
+"620","PDT000289903.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",19,4,14,1,0.285714285714286,0.210526315789474,0.736842105263158
+"621","PDT000289904.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"622","PDT000289905.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",16,4,11,1,0.363636363636364,0.25,0.6875
 "623","PDT000289906.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"624","PDT000289907.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
+"624","PDT000289907.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,3,7,1,0.428571428571429,0.272727272727273,0.636363636363636
 "625","PDT000289908.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
 "626","PDT000289909.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"627","PDT000289910.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"627","PDT000289910.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "628","PDT000289911.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",20,8,12,0,0.666666666666667,0.4,0.6
-"629","PDT000289912.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
+"629","PDT000289912.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",11,4,6,1,0.666666666666667,0.363636363636364,0.545454545454545
 "630","PDT000289913.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",2,1,1,0,1,0.5,0.5
 "631","PDT000289914.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
 "632","PDT000289915.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "633","PDT000289916.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
 "634","PDT000289917.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "635","PDT000290002.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
-"636","PDT000290003.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
+"636","PDT000290003.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",13,5,7,1,0.714285714285714,0.384615384615385,0.538461538461538
 "637","PDT000291279.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",20,8,12,0,0.666666666666667,0.4,0.6
-"638","PDT000291280.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",13,7,6,0,1.16666666666667,0.538461538461538,0.461538461538462
-"639","PDT000291281.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",19,5,14,0,0.357142857142857,0.263157894736842,0.736842105263158
+"638","PDT000291280.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,7,6,1,1.16666666666667,0.5,0.428571428571429
+"639","PDT000291281.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",20,5,14,1,0.357142857142857,0.25,0.7
 "640","PDT000291282.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "641","PDT000291283.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"642","PDT000291284.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",8,4,4,0,1,0.5,0.5
+"642","PDT000291284.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",9,4,4,1,1,0.444444444444444,0.444444444444444
 "643","PDT000291285.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
 "644","PDT000291286.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
-"645","PDT000291287.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",14,7,7,0,1,0.5,0.5
+"645","PDT000291287.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",15,7,7,1,1,0.466666666666667,0.466666666666667
 "646","PDT000291288.1",2016,"China","environmental/other","not collected","environmentalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
 "647","PDT000294376.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",2,2,0,0,Inf,1,0
 "648","PDT000294377.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
 "649","PDT000294378.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",9,5,4,0,1.25,0.555555555555556,0.444444444444444
 "650","PDT000294379.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"651","PDT000294380.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"652","PDT000294381.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"651","PDT000294380.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
+"652","PDT000294381.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "653","PDT000294382.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"654","PDT000294383.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",8,4,4,0,1,0.5,0.5
+"654","PDT000294383.1",2017,"China","environmental/other","Environment","environmentalmcrisolates",9,4,4,1,1,0.444444444444444,0.444444444444444
 "655","PDT000294384.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",4,1,3,0,0.333333333333333,0.25,0.75
 "656","PDT000294385.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "657","PDT000294386.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",6,3,3,0,1,0.5,0.5
 "658","PDT000294387.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "659","PDT000294388.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
-"660","PDT000294389.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
-"661","PDT000294390.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
-"662","PDT000294391.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"660","PDT000294389.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
+"661","PDT000294390.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
+"662","PDT000294391.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "663","PDT000294392.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
 "664","PDT000294393.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "665","PDT000294394.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "666","PDT000294395.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "667","PDT000294396.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"668","PDT000294397.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
-"669","PDT000294410.1",2016,"China","environmental/other","Bus, public transportation","environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"668","PDT000294397.1",2016,"China","environmental/other","Environment","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
+"669","PDT000294410.1",2016,"China","environmental/other","Bus, public transportation","environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "670","PDT000294785.1",2016,"China","environmental/other","cow dung","environmentalmcrisolates",1,1,0,0,Inf,1,0
 "671","PDT000298014.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"672","PDT000298021.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
+"672","PDT000298021.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
 "673","PDT000298027.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
 "674","PDT000298028.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "675","PDT000298029.1",1975,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
@@ -678,63 +678,63 @@
 "677","PDT000298031.1",2009,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "678","PDT000298032.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
 "679","PDT000298033.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",6,3,3,0,1,0.5,0.5
-"680","PDT000298034.1",2009,"China","environmental/other",NA,"environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"681","PDT000298035.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"682","PDT000298036.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",15,7,8,0,0.875,0.466666666666667,0.533333333333333
-"683","PDT000298037.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",16,6,10,0,0.6,0.375,0.625
+"680","PDT000298034.1",2009,"China","environmental/other",NA,"environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"681","PDT000298035.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
+"682","PDT000298036.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",16,7,8,1,0.875,0.4375,0.5
+"683","PDT000298037.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",17,6,10,1,0.6,0.352941176470588,0.588235294117647
 "684","PDT000298038.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "685","PDT000298039.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",12,6,6,0,1,0.5,0.5
-"686","PDT000298040.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",16,8,8,0,1,0.5,0.5
-"687","PDT000298041.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"686","PDT000298040.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",17,8,8,1,1,0.470588235294118,0.470588235294118
+"687","PDT000298041.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "688","PDT000298042.1",2009,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"689","PDT000298043.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"690","PDT000298044.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",19,9,10,0,0.9,0.473684210526316,0.526315789473684
-"691","PDT000298046.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
+"689","PDT000298043.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
+"690","PDT000298044.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",20,9,10,1,0.9,0.45,0.5
+"691","PDT000298046.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",7,2,3,2,0.666666666666667,0.285714285714286,0.428571428571429
 "692","PDT000298047.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
-"693","PDT000298048.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"693","PDT000298048.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "694","PDT000298049.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",4,3,1,0,3,0.75,0.25
 "695","PDT000298050.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",12,5,7,0,0.714285714285714,0.416666666666667,0.583333333333333
 "696","PDT000298051.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",3,2,1,0,2,0.666666666666667,0.333333333333333
-"697","PDT000298052.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",19,8,11,0,0.727272727272727,0.421052631578947,0.578947368421053
-"698","PDT000298053.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",20,9,11,0,0.818181818181818,0.45,0.55
-"699","PDT000298054.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",7,2,5,0,0.4,0.285714285714286,0.714285714285714
-"700","PDT000298056.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",6,3,3,0,1,0.5,0.5
-"701","PDT000298057.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",20,7,13,0,0.538461538461538,0.35,0.65
-"702","PDT000298058.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"703","PDT000298059.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
+"697","PDT000298052.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",20,8,11,1,0.727272727272727,0.4,0.55
+"698","PDT000298053.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",21,9,11,1,0.818181818181818,0.428571428571429,0.523809523809524
+"699","PDT000298054.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",8,2,5,1,0.4,0.25,0.625
+"700","PDT000298056.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",8,3,3,2,1,0.375,0.375
+"701","PDT000298057.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",22,7,13,2,0.538461538461538,0.318181818181818,0.590909090909091
+"702","PDT000298058.1",2010,"China","environmental/other",NA,"environmentalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
+"703","PDT000298059.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
 "704","PDT000298060.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",6,4,2,0,2,0.666666666666667,0.333333333333333
-"705","PDT000298061.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
+"705","PDT000298061.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
 "706","PDT000298062.1",2004,"China","environmental/other",NA,"environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
 "707","PDT000298063.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",13,7,6,0,1.16666666666667,0.538461538461538,0.461538461538462
 "708","PDT000298066.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",16,5,11,0,0.454545454545455,0.3125,0.6875
-"709","PDT000298067.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
-"710","PDT000298068.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",18,8,10,0,0.8,0.444444444444444,0.555555555555556
-"711","PDT000298069.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
+"709","PDT000298067.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",10,3,6,1,0.5,0.3,0.6
+"710","PDT000298068.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",20,8,10,2,0.8,0.4,0.5
+"711","PDT000298069.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
 "712","PDT000298070.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",4,4,0,0,Inf,1,0
-"713","PDT000298071.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",12,4,8,0,0.5,0.333333333333333,0.666666666666667
-"714","PDT000298072.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",15,8,7,0,1.14285714285714,0.533333333333333,0.466666666666667
-"715","PDT000298073.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"716","PDT000298074.1",2004,"China","environmental/other",NA,"environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"717","PDT000298075.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
-"718","PDT000298076.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",15,6,9,0,0.666666666666667,0.4,0.6
-"719","PDT000298077.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
-"720","PDT000298078.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",3,1,2,0,0.5,0.333333333333333,0.666666666666667
-"721","PDT000298079.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",4,2,2,0,1,0.5,0.5
+"713","PDT000298071.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",13,4,8,1,0.5,0.307692307692308,0.615384615384615
+"714","PDT000298072.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",16,8,7,1,1.14285714285714,0.5,0.4375
+"715","PDT000298073.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
+"716","PDT000298074.1",2004,"China","environmental/other",NA,"environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"717","PDT000298075.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
+"718","PDT000298076.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",16,6,9,1,0.666666666666667,0.375,0.5625
+"719","PDT000298077.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",12,4,7,1,0.571428571428571,0.333333333333333,0.583333333333333
+"720","PDT000298078.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",5,1,2,2,0.5,0.2,0.4
+"721","PDT000298079.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",6,2,2,2,1,0.333333333333333,0.333333333333333
 "722","PDT000298080.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",11,3,8,0,0.375,0.272727272727273,0.727272727272727
-"723","PDT000298082.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
+"723","PDT000298082.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",2,1,0,1,Inf,0.5,0
 "724","PDT000298083.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
 "725","PDT000298084.1",2009,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"726","PDT000298085.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"726","PDT000298085.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "727","PDT000298086.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"728","PDT000298087.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",14,7,7,0,1,0.5,0.5
+"728","PDT000298087.1",2012,"China","environmental/other",NA,"environmentalmcrisolates",15,7,7,1,1,0.466666666666667,0.466666666666667
 "729","PDT000298088.1",2013,"China","environmental/other",NA,"environmentalmcrisolates",21,10,11,0,0.909090909090909,0.476190476190476,0.523809523809524
 "730","PDT000298089.1",2006,"China","environmental/other",NA,"environmentalmcrisolates",11,5,6,0,0.833333333333333,0.454545454545455,0.545454545454545
-"731","PDT000298090.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
+"731","PDT000298090.1",2011,"China","environmental/other",NA,"environmentalmcrisolates",10,3,6,1,0.5,0.3,0.6
 "732","PDT000304274.1",2010,"Denmark","environmental/other","Fjerkrae","environmentalmcrisolates",8,3,5,0,0.6,0.375,0.625
 "733","PDT000308360.1",2017,"Turkey","environmental/other","Chicken meat sample","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "734","PDT000308361.1",2017,"Turkey","environmental/other","Chicken meat sample","environmentalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
 "735","PDT000308402.1",2017,"Turkey","environmental/other","Chicken meat sample","environmentalmcrisolates",2,2,0,0,Inf,1,0
-"736","PDT000181469.3",2015,"China","environmental/other","Sewage","environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"736","PDT000181469.3",2015,"China","environmental/other","Sewage","environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "737","PDT000318166.1",2017,"Germany","environmental/other",NA,"environmentalmcrisolates",7,3,4,0,0.75,0.428571428571429,0.571428571428571
 "738","PDT000321266.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
 "739","PDT000321267.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
@@ -748,8 +748,8 @@
 "747","PDT000321275.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "748","PDT000321276.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "749","PDT000321277.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
-"750","PDT000321278.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
-"751","PDT000321279.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"750","PDT000321278.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
+"751","PDT000321279.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "752","PDT000321280.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "753","PDT000321281.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "754","PDT000321282.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
@@ -761,27 +761,27 @@
 "760","PDT000321288.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
 "761","PDT000321289.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
 "762","PDT000321290.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",2,2,0,0,Inf,1,0
-"763","PDT000321291.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
+"763","PDT000321291.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",14,5,8,1,0.625,0.357142857142857,0.571428571428571
 "764","PDT000321292.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",6,3,3,0,1,0.5,0.5
-"765","PDT000321293.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"766","PDT000321294.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
-"767","PDT000321295.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
+"765","PDT000321293.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",14,5,8,1,0.625,0.357142857142857,0.571428571428571
+"766","PDT000321294.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
+"767","PDT000321295.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",14,5,8,1,0.625,0.357142857142857,0.571428571428571
 "768","PDT000321296.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
-"769","PDT000321298.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
+"769","PDT000321298.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
 "770","PDT000321300.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "771","PDT000321301.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
 "772","PDT000321303.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
-"773","PDT000321305.1",2018,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"774","PDT000321306.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"775","PDT000321307.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"776","PDT000321308.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
+"773","PDT000321305.1",2018,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
+"774","PDT000321306.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
+"775","PDT000321307.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
+"776","PDT000321308.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
 "777","PDT000321309.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",1,1,0,0,Inf,1,0
-"778","PDT000321312.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"779","PDT000321315.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"780","PDT000334835.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",17,7,10,0,0.7,0.411764705882353,0.588235294117647
+"778","PDT000321312.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
+"779","PDT000321315.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",15,5,8,2,0.625,0.333333333333333,0.533333333333333
+"780","PDT000334835.1",2017,"China","environmental/other",NA,"environmentalmcrisolates",18,7,10,1,0.7,0.388888888888889,0.555555555555556
 "781","PDT000338210.1",2018,NA,"environmental/other",NA,"environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "782","PDT000340090.1",2014,"Brazil","environmental/other","feces","environmentalmcrisolates",6,3,3,0,1,0.5,0.5
-"783","PDT000353622.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
+"783","PDT000353622.1",2014,"China","environmental/other",NA,"environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
 "784","PDT000354226.1",2013,"Germany","environmental/other","feces","environmentalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
 "785","PDT000354228.1",2013,"Germany","environmental/other","feces","environmentalmcrisolates",11,6,5,0,1.2,0.545454545454545,0.454545454545455
 "786","PDT000354229.1",2014,"Germany","environmental/other","wound","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
@@ -791,7 +791,7 @@
 "790","PDT000358770.1",2018,NA,"environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
 "791","PDT000360976.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",11,4,7,0,0.571428571428571,0.363636363636364,0.636363636363636
 "792","PDT000360977.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",8,3,5,0,0.6,0.375,0.625
-"793","PDT000360978.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"793","PDT000360978.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "794","PDT000360979.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",6,2,4,0,0.5,0.333333333333333,0.666666666666667
 "795","PDT000360980.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
 "796","PDT000360981.1",2018,"France","environmental/other","Rectal swab","environmentalmcrisolates",1,1,0,0,Inf,1,0
@@ -799,16 +799,16 @@
 "798","PDT000364514.1",2016,"Egypt","environmental/other","Raw milk cheese","environmentalmcrisolates",10,4,6,0,0.666666666666667,0.4,0.6
 "799","PDT000364522.1",2016,"Egypt","environmental/other","Raw milk cheese","environmentalmcrisolates",14,5,9,0,0.555555555555556,0.357142857142857,0.642857142857143
 "800","PDT000364524.1",2016,"Egypt","environmental/other","Raw milk cheese","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
-"801","PDT000365978.1",2012,"China","environmental/other","feces","environmentalmcrisolates",15,5,10,0,0.5,0.333333333333333,0.666666666666667
-"802","PDT000373302.1",2014,"China","environmental/other","Broiler chicken farm","environmentalmcrisolates",14,6,8,0,0.75,0.428571428571429,0.571428571428571
+"801","PDT000365978.1",2012,"China","environmental/other","feces","environmentalmcrisolates",16,5,10,1,0.5,0.3125,0.625
+"802","PDT000373302.1",2014,"China","environmental/other","Broiler chicken farm","environmentalmcrisolates",15,6,8,1,0.75,0.4,0.533333333333333
 "803","PDT000377069.1",2018,"United Kingdom","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
-"804","PDT000388467.1",2018,"China","environmental/other",NA,"environmentalmcrisolates",13,4,9,0,0.444444444444444,0.307692307692308,0.692307692307692
+"804","PDT000388467.1",2018,"China","environmental/other",NA,"environmentalmcrisolates",14,4,9,1,0.444444444444444,0.285714285714286,0.642857142857143
 "805","PDT000388472.1",2012,"France","environmental/other","fecal sample","environmentalmcrisolates",9,4,5,0,0.8,0.444444444444444,0.555555555555556
 "806","PDT000388473.1",2013,"France","environmental/other","fecal sample","environmentalmcrisolates",10,3,7,0,0.428571428571429,0.3,0.7
 "807","PDT000388474.1",2012,"France","environmental/other","fecal sample","environmentalmcrisolates",13,5,8,0,0.625,0.384615384615385,0.615384615384615
-"808","PDT000270533.3",2017,"China","environmental/other","Sewage","environmentalmcrisolates",21,8,13,0,0.615384615384615,0.380952380952381,0.619047619047619
+"808","PDT000270533.3",2017,"China","environmental/other","Sewage","environmentalmcrisolates",23,8,13,2,0.615384615384615,0.347826086956522,0.565217391304348
 "809","PDT000394409.1",2015,"China","environmental/other","Bird (Egret) feces BE2","environmentalmcrisolates",9,3,6,0,0.5,0.333333333333333,0.666666666666667
 "810","PDT000394410.1",2015,"China","environmental/other","Jin River water W2","environmentalmcrisolates",5,2,3,0,0.666666666666667,0.4,0.6
-"811","PDT000394411.1",2015,"China","environmental/other","Jin River water W5","environmentalmcrisolates",18,7,11,0,0.636363636363636,0.388888888888889,0.611111111111111
-"812","PDT000396736.1",2017,"China","environmental/other","chicken droppings","environmentalmcrisolates",16,7,9,0,0.777777777777778,0.4375,0.5625
-"813","PDT000396766.1",2016,"China","environmental/other","retail chicken","environmentalmcrisolates",18,6,12,0,0.5,0.333333333333333,0.666666666666667
+"811","PDT000394411.1",2015,"China","environmental/other","Jin River water W5","environmentalmcrisolates",19,7,11,1,0.636363636363636,0.368421052631579,0.578947368421053
+"812","PDT000396736.1",2017,"China","environmental/other","chicken droppings","environmentalmcrisolates",17,7,9,1,0.777777777777778,0.411764705882353,0.529411764705882
+"813","PDT000396766.1",2016,"China","environmental/other","retail chicken","environmentalmcrisolates",19,6,12,1,0.5,0.315789473684211,0.631578947368421

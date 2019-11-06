@@ -498,15 +498,25 @@ for (i in 1:nrow(allisolates_sets)){
 saveRDS(allisolates_sets, "allisolates_sets_comparison.RDS")
 
 allisolates_sets_comparison <- readRDS("allisolates_sets_comparison.RDS") %>% 
-  mutate(pctself = allisolates$pctself)
+  mutate(pctself = allisolates$pctself) %>%
+  tidyr::replace_na(list(match = FALSE,
+                         match_lhs = FALSE))
 allisolates_sets_onlyARM <- readRDS("allisolates_sets_onlyARM.RDS") %>% 
-  mutate(pctself = allisolates$pctself)
+  mutate(pctself = allisolates$pctself) %>%
+  tidyr::replace_na(list(match = FALSE,
+                         match_lhs = FALSE))
 allisolates_sets_onlyLR <- readRDS("allisolates_sets_onlyLR.RDS") %>% 
-  mutate(pctself = allisolates$pctself)
+  mutate(pctself = allisolates$pctself) %>%
+  tidyr::replace_na(list(match = FALSE,
+                         match_lhs = FALSE))
 allisolates_sets_onlyGLM <- readRDS("allisolates_sets_onlyGLM.RDS") %>% 
-  mutate(pctself = allisolates$pctself)
+  mutate(pctself = allisolates$pctself) %>%
+  tidyr::replace_na(list(match = FALSE,
+                         match_lhs = FALSE))
 allisolates_sets_onlyADASYN <- readRDS("allisolates_sets_onlyADASYN.RDS") %>% 
-  mutate(pctself = allisolates$pctself)
+  mutate(pctself = allisolates$pctself) %>%
+  tidyr::replace_na(list(match = FALSE,
+                         match_lhs = FALSE))
 
 ## Create match sets - All Rules
 rule_matches_all <- allisolates_sets_comparison %>%
@@ -687,6 +697,8 @@ rule_matches_vs_rule_non_matches_plotdata <- rbind(rule_matches_all,
 saveRDS(rule_matches_vs_rule_non_matches_plotdata, "rule_matches_vs_rule_non_matches_plotdata.RDS")
 write.csv(rule_matches_vs_rule_non_matches_plotdata %>% mutate(set_vect = paste0(set_vect)),
           file = "rule_matches_vs_rule_non_matches_plotdata.csv")
+
+rule_matches_vs_rule_non_matches_plotdata <- readRDS("rule_matches_vs_rule_non_matches_plotdata.RDS")
 
 ### SET COMPARISONS - STATS TESTS (ALL)
 ## Rule matches vs. non-matches

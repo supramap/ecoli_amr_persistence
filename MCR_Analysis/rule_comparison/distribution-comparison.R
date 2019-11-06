@@ -72,7 +72,8 @@ allisolates <- data.frame(id = genoid,
                           gdf.mcr)
 allisolates <- allisolates %>% 
   tidyr::separate(location,
-                  c("country", NA),
+                  c("country"),
+                  #c("country", NA),
                   sep = ":",
                   extra = "drop")
 
@@ -461,6 +462,8 @@ allisolates_sets <- allisolates_sets %>%
   select(id, set, mcr) %>%
   mutate(match = FALSE,
          match_lhs = FALSE)
+
+saveRDS(allisolates_sets, "allisolates_sets.RDS")
 
 for (i in 1:nrow(allisolates_sets)){
   for (j in 1:nrow(rules)){

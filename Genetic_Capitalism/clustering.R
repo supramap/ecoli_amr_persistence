@@ -8,7 +8,7 @@ library(dplyr)
 
 ## Get Genotype Counts
 pdt <- unique(names(read.csv("e.coli.ids")))
-json.stream <- readRDS("TNTFileGenerator/e.coli.RDS")
+json.stream <- readRDS("TNT/TNTFileGenerator/e.coli.RDS")
 id <- substr(json.stream[["ngout"]][["data"]][["content"]][["id"]], 19, 33)
 fgenotypes <- json.stream[["ngout"]][["data"]][["content"]][["AMR_genotypes"]]
 names(fgenotypes) <- id

@@ -9,6 +9,6 @@
 
 |  | Script File | Description |
 |:--:|:--------------------:|:-----------------------------------------------------------------------------:|
-| 1. | clustering.R | Script for performing cluster analysis of AMR genotype gains and losses. |
-| 2. | distribution_tests.R | Script for performing distribution tests by AMR group & resistance mechanism. |
-| 3. | TNT_file_generator.R | Script for generating the data file for the TNT-based phylogenetic analysis. |
+| 1. | [clustering.R](clustering.R) | Script for performing cluster analysis of AMR genotype gains and losses. |
+| 2. | [distribution_tests.R](distribution_tests.R) | Script for performing distribution tests by AMR group & resistance mechanism. |
+| 3. | [TNT/TNTFileGenerator/TNT_file_generator.R](TNT/TNTFileGenerator/TNT_file_generator.R) | Script for generating the data file for the TNT-based phylogenetic analysis. |

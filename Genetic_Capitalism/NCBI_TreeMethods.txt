@@ -1,0 +1,187 @@
+#############################################################
+Methods description for ftp://ncbi.nlm.nih.gov/pathogen/
+
+Last updated: Jan 24, 2017 NCBI
+
+#############################################################
+
+_______________________________________________________________________
+
+       
+       National Center for Biotechnology Information (NCBI)
+             National Library of Medicine
+             National Institutes of Health
+             8600 Rockville Pike
+             Bethesda, MD 20894, USA
+             tel: (301) 496-2475
+             fax: (301) 480-9241
+             email: info@ncbi.nlm.nih.gov (for general questions)
+             email: pd-help@ncbi.nlm.nih.gov (for specific questions)
+             
+_______________________________________________________________________
+
+Information used by the NCBI SNP pipeline
+
+All assemblies process through the NCBI Pathogen Detection system, and all assemblies in INSDC (GenBank/ENA/DDBJ) for each organism are assigned target accessions which are versioned for each change in the sequence data (in the form of PDTNNNNNNNNN.N). The assembled genome sequence and the evaluation of each base in the assembly (by using reads mapped back to the assembly from which the reads were derived) are used in the SNP pipeline. (NOTE: assemblies for which the raw read data are not available are potentially problematic as the base quality of the assembly cannot be measured in the same manner.). Bases of dubious quality are excluded for the purposes of SNP calling (see below). The Pathogen Detection system outputs k-mer distances using 18-mers and the Jaccard distance measure, as well as FastME phylogenetic trees of those distances to FTP
+
+Overview of the SNP pipeline
+
+The Goal of the NCBI Pathogen Detection SNP pipeline is to identify pairs that differ by only a few high-quality SNPs in order to aid outbreak and traceback investigations of foodborne bacterial pathogens. SNPs in repeat regions, phages, caused by assembly artifacts, or other recombination events would not be considered high-quality and are excluded. 
+
+Main steps of the pipeline are:
+
+1.	Mask repeat regions in assemblies and remove bad genomes
+2.	Do coarse-grained partitioning of isolates based on pairwise k-mer distances
+3.	Compute pairwise SNPs for all pairs within the same k-mer partition
+4.	Identify additional bad genomes, remove them, and repartition isolates using SNP counts - let us call them target partitions
+5.	Process each target partition by choosing a reference from within the partition, producing SNPs w.r.t. the reference, and producing pairwise SNP counts for all pairs in the target partition as implied by the reference.
+6.	Convert SNP information for each target partition into a maximum compatibility tree with additional outputs for public FTP. 
+
+Assembly processing
+
+Regions of repeat in each assembly are masked by doing a self-blast and using alignments that pass certain thresholds. Parameters for self-blast are (-task megablast -gapopen 11 -gapextend 5 -penalty -5 -reward 1 -max_target_seqs 10000) and thresholds used for retaining alignments are (percent id = 95%, length = 100 bp, evalue = 1e-100) excluding regions aligning to themselves. Only contigs with at least 50 unambiguous bases are used for alignments. Regions in retained alignments are masked using ambiguity character. Contigs with less than 50 unambiguous characters are dropped from the assembly for the purposes of SNP computation.
+
+Assemblies that are of questionable quality are removed from further processing as they may impact the results. Such assemblies are identified using five stats:
+- Unique Kmer count
+- Total genome length
+- Number of unambiguous bases (i.e. bases whose value in the genome is one of A, C, G or T) before masking repeat ranges
+- Number of unambiguous bases after masking repeat ranges
+- Number of bases excluding dropped contigs (i.e. excluding contigs that had less than 50 unambiguous characters, but including the repeat ranges in other contigs)
+
+For each of these five stats, the procedure is:
+1.	Calculate the 25-percentile value and 75-percentile value of the stat among all assemblies
+2.	Taking into account only values within this range, calculate the mean and standard deviation for the stat
+3.	Any assembly that has a value of over 3 standard deviations from the mean is considered of questionable quality
+Initial coarse-grained partitioning of isolates
+
+For each organism group, the isolates are initially partitioned using k-mer pairwise distances. Clusters are formed by single linkage clustering using pairs with k-mer distance at most 0.1 based on the observation that that threshold is large enough that no pair with very few high-quality SNPs between them will be excluded. However, isolates within the same k-mer partition may be up to thousands of SNPs apart. Note that k-mer distances are computed using original assembly and not the one masked for repeats, but previous step may have dropped some assemblies from consideration.
+
+Computing pairwise SNPs for clustering
+
+Steps for computing SNPs for a pair of genomes using assemblies masked for repeat regions for the two genomes are as follows:
+
+1.	The genome with higher contiguity (as measured by N50, or fewer contigs if N50 is same) is taken as the subject and the other one as query (see below).
+2.	Alignment is performed for the pair using same parameters as for finding repeat regions.
+3.	Reciprocal best hits are retained for the pair and alignments are trimmed till there are at least 25 bases at the ends of alignments as matches (ie. 25 identical bases at the ends of alignments). This guarantees that observed ranges are disjoint on each of the two genomes. Alignment ranges are disjoint because of reciprocal best hits.
+4.	If at least 80% of the larger of the two genomes is not present in the trimmed alignments, then the pair is considered too far and SNP computation stops. Otherwise, continue with the the remaining steps.
+5.	Concatenate trimmed alignments on each subject contig in the order of subject positions. 
+6.	Find SNPs that are not bad bases or near bad bases (window of 5 bp on either side), not ambiguous characters, and not in a homopolymer run (of at least 4) if the variation is an indel. Bad bases are identified based on the ratio of majority to minority allele counts in the pileup. (NOTE: The process to identify bad bases continues to be refined and will change in the future).
+7.	A density filtering step is done to find regions of high SNP counts that may not be due to independent mutational events based on a procedure originally published in Science (Harris et al., 2010, Science: 327(5964):469-74. doi: 10.1126/science.1182395) but modified by NCBI. Iterative density filtering is applied to remove regions using log likelihood ratio of at least 25 and SNP positions on the concatenated alignments. This step compares density of SNPs in a region to the density of SNPs in the rest of the genome and removes the most unlikely region in each iteration.
+8.	Report count of the remaining mismatch SNPs and all variations for the pair from regions that were not removed by density filtering.
+
+Creating target partitions
+
+Using pairs with mismatch SNP count of at most 50, form single linkage groups as potential target partitions. Within each such partition, check if there are some potentially problematic genomes that are causing merges between clusters that are distant. This is done by checking if there are bad triples where SNP counts violate triangle inequality by more than a factor of 2 and the largest SNP count among the three pairs is at least 50. If bad triples are found, find the fewest number of genomes that explain all bad triples. Remove those "bad triple" genomes, if any, and redo the single linkage clustering to find target partitions. After removing bad genomes, there can still be pairs in the target partitions that are more than 100 SNPs apart, but in practice, isolates have not been observed that are more than a few hundred SNPs apart.
+
+Processing target partitions
+
+For reporting variations for all isolates in the target partition on the same coordinate system a reference sequence is used. In the NCBI pipeline this is the genome with best contiguity (i.e. highest N50) from the genomes within each partition. Once a reference is chosen, steps for processing the partition are as follows:
+
+1.	Repeat steps 2 - 4 of "Computing pairwise SNPs" (alignment, best hits, unfiltered SNPs) with reference as subject and each isolate as query. 
+2.	For each pair of isolates in the target set, find unusually dense regions of SNPs as follows:
+a.	Infer aligned regions and SNPs as implied by the reference using alignment of the isolates to the reference. Remember the correspondence between reference genome positions and inferred aligned regions.
+b.	Concatenate consecutive aligned regions using positions of the reference contig(s).
+c.	Repeat steps 6 and 7 of "Computing pairwise SNPs" (base level and density filtering) for the pair
+3.	All regions flagged as dense in all pairs and regions that do not align to the reference are considered together to decide if some portions are removed from all genomes or only a few as follows:
+a.	Propagate density filtered regions for all pairs to the reference marking which pairs are giving that region
+b.	Subdivide overlapping ranges to create fewest disjoint ranges such that sets of pairs are different for two consecutive ranges where start of next range is one base pair position more than the end of the previous range. This effectively sets regions that are potentially dense on the reference based on the query genomes that contributed to the density.
+c.	If the minimum number of isolates that explain all pairs associated with the region is less than a quarter of all isolates in the pairs associated with the range, then the region is removed from only those isolates. Otherwise, the number of isolates in the pairs associated with the range are compared to the total number of isolates in the target partition. If the number in pairs is less than a quarter of the total, then region is removed from all isolates in pairs, else removed from all isolates in the target partition. Removal is carried out by replacing all bases in the range by ambiguity character. Thus, there are two types of regions of SNP density, those masked from ALL genomes in the set, and those only masked in a subset of genomes.
+4.	Find all positions on the reference that have not been excluded in the previous step from all genomes and have at least one isolate with a high-quality mismatch SNP. Report all such positions and bases for all isolates at those positions. Mismatches near an indel are not explicitly excluded mismatch SNPs must not be within a 5 base window of a bad base (window of 5 bases) and not an ambiguity character (in sequence itself or made an ambiguity character in the previous step). The final result is a set of high quality SNPs that are considered independent mutational events for distinguishing isolates. Each target partition has its own set of high quality SNPs with respect to that partition.
+5.	These SNPs are used to generate a strict consensus maximum compatibility tree.  Maximum compatibility, in the form applied here, chooses the tree topologies that maximize the number of sites whose history can be explained with at most one change of state.  Equivalently, it minimizes the number of two-state sites that would display homoplasy.  This criterion may be justified by the fact that isolates within a target partition are so closely related that sites with multiple changes will be rare. If there are no multi-allelic or homoplastic sites this tree should have the same topology as the strict consensus of all maximum parsimony trees.
+
+
+
+-------------------------------------------
+
+
+ K-mer Identification and MinHash
+
+Introduction
+
+At multiple points within the Pathogen Detection process, we use a k-mer-based matching and identification scheme.  We have recently converted this to use an approximation of a full match, using an algorithm known as MinHash.  This document will describe how and where we use k-mer identification and the differences and expectations for the MinHash variant of this.
+The k-mer Method
+
+K-mer matching techniques have become widespread in genomic analysis.  The algorithm for the k-mer approach involves two steps: an extraction step and a comparison step.  The crux of using k-mers to match genomes is to reduce all genomes and read sets into a digest that is substantially smaller than the original and easier to subject to a numerical analysis.  The k-mer method allows direct comparison of words of size k (we use k=18) for presence/absence within a genome.  The comparison technique lends itself to multiple different scoring techniques that can be tuned to look for different properties of compared genomes.
+Extraction
+
+For all assembled genomes, we extract all 18-mers from the genome itself.  The process involves:
+
+    Find all overlapping 18-mers across a genome.
+    Any 18-mer with an ambiguity character is dropped.
+    All 18-mers are compared to their reverse complement.  The lexicographically smaller of the two is kept.
+    All 18-mers are converted to a 64-bit integer, using 2 bits for each base.  Currently, we consume 36 bits out of this mantissa
+    k-mers are uniquified.  Frequencies are discarded; we only consider binary presence/absence.
+    The sorted list of k-mers is delta-encoded, converted into a variable-length-element binary array, and gzipped
+
+For all read sets, we extract 18-mers from the read set while applying some additional filtering.  The process for extracting k-mers from a read set is:
+
+    Determine the "high quality range" for each read set.  The high quality range is the range that is free of anomalies in reads.  We test for statistical likelihood of being able to predict the leading/trailing bases in a read, as well as for a high proportion of ambiguities within the edges.  The process involves a comparison of the expected per-base frequencies to standard deviations observed within the set.
+        We trim the read set 5' and 3' until we find a base that has an observed standard deviation in per-position frequencies below twice the avergae per-position deviation for the set
+        We also trim 5' and 3' if the probability of an N at the trailing positions rises above equal probability for A/C/T/G.  We require a run of 5 bases with low-N probability before we can start
+    Extract all 18-mers within the high quality range.  Treat the 18-mers as above for assembled genomes.
+    We further require that an 18-mer shall be included iff there are at least 5 occurrences within the read set.
+    k-mers are encoded as above.
+
+Comparison
+
+k-mer comparison in Pathogen Detect is solved as a brute-force problem.  We have two comparison tasks: an all-by-all task (including incremental updates) and a one-by-all task; these two tasks are used in different contexts.  We use an all-by-all approach to extract the upper-triangular matrix of distances between genomes, for use in developing trees.  We use a one-by-all approach to match a single genome (or small set of genomes, defined by read sets) to determine the best reference genome for purposes of assembly and/or annotation.
+
+Comparison of two k-mer sets involves walking the two sorted lists of k-mers for each pair of genomes being compared.  We count the number of k-mers in common, as well as the number of k-mers unique to each of the two comapred genomes.  These three numbers allow us to compute a variety of standard similarit (and distance) metrics.
+
+For comparison, the k-mer method provides for multiple different metrics.  We have several metrics defined:
+
+    Jaccard index (see https://en.wikipedia.org/wiki/Jaccard_index).  This is the default metric we use, also known as the Union method.  The definition of Jaccard similarity is the count in common divided by the count of the union of the observed k-mers.
+    Cosine similarity (see https://en.wikipedia.org/wiki/Cosine_similarity).  This metric is defined as the dot product of the comparison divided by the cross product of comparison.  In N-space, these are implemented not as dot and cross, but as count in common divided by the geometric average of the length.
+    Min index.  This metric is similar to Jaccard, and is computed as the count in common divided by the length of the smaller of the two k-mer sets.
+    Max index. This metric is similar to Jaccard, and is computed as the count in common divided by the length of the larger of the two k-mer sets.
+
+
+All methods above are described in terms of similarity, and produce scores ranging from 0 (nothing in common) to 1 (identical).  For purposes of pathogen processing, all similarity scores are converted to distance scores (1 - similarity).  Thus, our scores range from 0 (identical) to 1 (entirely dissimilar)
+Uses of the k-mer Method
+
+As mentioned above, we use the k-mer method in three distinct places:
+Generation of Full Trees
+
+For any given set of genomes, we can compute a full tree describing the relationships of all genomes in the set.  To accomplish this, we must compute the upper triangular matrix of distances for all pairs in the set.  We then subject the resulting distance matrix to a standard tree-building algorithm (in the case of pathogen work, we use the FastME algorithm).
+
+Since computing the full set is time consuming, we use an incremental approach.  For any given increment, we know the m new genomes added and the n old genomes retained.  We can then compute the increment as the m x n subset, as well as the upper triangular m x m subset.  This improves tree generation time substantially.
+
+We use full tree computation in two contexts:
+
+    For each declared tax group, we produce two trees (one of submitted public genomes, and one of submitted genomes plus unsubmitted genomes assembled in the pathogen process).  This is done daily, if there are new samples to report.
+    For the entire set of submitted assemblies for all bacteria, we compute a single global tree.  This is done weekly.
+
+Initial Read Set Classification
+
+For initial read set calculation, we combine m incoming read sets and compare to n declared reference genomes.  The reference genomes are a subset of the public genomes, limited to avoid including low quality genomes and genomes from metagenomic samples.  For this computation, we compute the m x n pairs of distances, and further compute the top five closest members in n for each m, ranked by distance.  The top matches and their scores are stored in a database.  The closest match in this list is declared as the reference for use in a reference-guided assembly.
+Final Assembly Classification
+
+Once assembly is completed, we compute the top n matches from the same declared reference genomes used in initial classification.  The final best matches for the newly assembled genome are also stored in a database.  The best match is then used as a reference for annotation.  Currently, the use of this best reference establishes the set of proteins used to annotate the genome.
+Changes when using MinHash
+
+The MinHash technique (see https://en.wikipedia.org/wiki/MinHash) involves developing a stable hash-based algorithm for sampling a large data set.  In essence, a large data set can be reduced to a stable random subset by converting the data points in the large set to a set of hashed values and then reordered according to the hashed values.  The probability of matches within a declared finite subset of the hash space between any two data members (genomes) then approximates the Jaccard score.  (A similar approach can be used to approximate each of the other scoring techniques mentioned above.)
+
+In practical terms, our application of MinHash involves subsampling k-mer space by hashing the k-mer values.  We then select a finite number of hash values, and use these to compute the probability of match within hash space.  The process is as follows:
+MinHash k-mer Extraction
+
+    Follow the guidelines for extracting all k-mers as noted previously.
+    When the final list of 64-but integer k-mer values is obtained, pass each 64-bit value through the 64-bit variant of the FNV hash (www.isthe.com/chongo/tech/comp/fnv/).  This hash function is a well-known stable hash function with good performance in k-mer space.  The result of this step is a different set of 64-bit integer values.
+    Accept the smallest 10,000 hash values for each set.  This step effectively reduces the k-mer set by two orders of magnitude, but preserves a random subset that can be used for comparison
+    Encode the final 64-bit integers as for the normal k-mer set.
+
+MinHash k-mer Comparison
+
+k-mer comparison must also be modified, since we are now sampling the space.  We no longer can know the full value, and must decide when and how we stop comparing.  The process for Jaccard k-mer comparison using MinHash values is:
+
+    Iterate the two ordered lists of hash values smallest to largest.
+    Count the number of matches observed.
+    Stop iterating when either list runs out of hash values.
+    Record the total number of hash values processed.  Since there may be values present in one set but not the other, the resulting total number of hash values may be larger than the size of a single set (10,000 in our case)
+    Report the Jaccard similarity as the count in common divided by the total number of hash values processed.
+    Distance is as above  (1 - similarity)
+
+Benefits and Drawbacks of MinHash
+
+The biggest benefit is speed: the method is 2-3 orders of magnitude faster.  We are not only processing less data, the data we process compresses better.  As the total number of reference genomes has exceeded 30,000 - and the total number of samples processed in the pathogen system is expected to grow into the 106 range - we require this boost in speed in order to keep ahead of the data.
+
+The drawback is a loss of accuracy.  We have experimented with varying sizes of data, and have chosen the smallest 10,000 hash values since it provides the best balance of performance and accuracy.  In our tests, looking at the full comparison of all 35,000 reference genomes to each other, we observe a rate of difference below 1% in actual k-mer distance values.  In the vast majority of cases, the distance values that differ differ in the third or fourth significant digit.  We found no cases in which distance pairs retained at a full k-mer distance threshold of 0.1 were lost when using a MinHash k-mer threshold of 0.1.

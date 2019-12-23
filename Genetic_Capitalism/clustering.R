@@ -55,12 +55,23 @@ library(mclust)
 set.seed(1337)
 meanclust <- Mclust(data[,6:7])
 
+## Uncertainty by Cluster
+uncert <- data.frame(cluster = meanclust$classification,
+                     uncertainty = meanclust$uncertainty) %>%
+  group_by(cluster) %>%
+  summarise(mean = mean(uncertainty))
+
+## Likelihood Ratio Test Statistic
+lrts <- mclustBootstrapLRT(meanclust$data, modelName = meanclust$modelName, maxG = 5)
+
+## Cluster Counts
 data$cluster <- factor(meanclust$classification)
 
 cluster_counts <- data %>% 
   group_by(cluster) %>% 
   tally()
 
+## Data Output
 data <- data %>%
   mutate(category = case_when(cluster == 1 ~ "TBD",
                               cluster %in% c(2,4) ~ "GC",

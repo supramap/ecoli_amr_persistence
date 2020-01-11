@@ -1,10 +1,10 @@
 # Supplemental Materials for Antimicrobial Resistance Research
 
-## 1. Genetic Capitalism and Stabilizing Selection of Antimicrobial Resistance Genes in _Escherichia coli_
+## 1. Genetic Capitalism and Stabilizing Selection of Antimicrobial Resistance Genotypes in _Escherichia coli_
 
 |                                              Authors                                              |    Paper    |   Citation  | Figures |
 |-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|:--------:|
-| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>John Williams<br>Daniel Janies, Ph.D. | [Coming Soon - Submitted to Scientific Reports](#) | ```Coming Soon``` | [Tableau Viz](https://public.tableau.com/profile/cford38#!/vizhome/E_coliGenotypeSetsViz/GeneticCapitalism) |
+| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>John Williams<br>Daniel Janies, Ph.D. | [Coming Soon - Submitted to Cladistics](#) | ```Coming Soon``` | [Tableau Viz](https://public.tableau.com/profile/cford38#!/vizhome/E_coliGenotypeSetsViz/GeneticCapitalism) |
 
 -------------------------------------
 

@@ -1,9 +1,9 @@
-# Genetic Capitalism and Stabilizing Selection of Antimicrobial Resistance Genes in _Escherichia coli_
+# Genetic Capitalism and Stabilizing Selection of Antimicrobial Resistance Genotypes in _Escherichia coli_
 ## Supplemental Materials
 
 |                                              Authors                                              |    Paper    |   Citation  | Figures |
 |-------------------------------------------------------------------------------------------------|:-----------:|:-----------:|:--------:|
-| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>David Brown<br>John Williams<br>Daniel Janies, Ph.D. | [Coming Soon - mBio](#) | ```Coming Soon``` | [Tableau Viz](https://public.tableau.com/profile/cford38#!/vizhome/E_coliGenotypeSetsViz/GeneticCapitalism) |
+| Colby T. Ford, Ph.D.<br>Kevin Smith<br>Gabriel Lopez Zenarosa, Ph.D.<br>David Brown<br>John Williams<br>Daniel Janies, Ph.D. | [Coming Soon - Cladistics](#) | ```Coming Soon``` | [Tableau Viz](https://public.tableau.com/profile/cford38#!/vizhome/E_coliGenotypeSetsViz/GeneticCapitalism) |
 
 -------------------------------------
 

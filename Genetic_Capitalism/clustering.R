@@ -84,6 +84,26 @@ data <- data %>%
 write.csv(data, "clusters.csv")
 
 ###############
+## SS-Specific Cluster Statistics
+
+##...without blaEC and blaEC-5
+data %>% filter(category == "SS", !Genotype %in% c("blaEC","blaEC-5")) %>% 
+  select(net_loss) %>% c() %>% unlist() %>% mean()
+
+data %>% filter(category == "SS", !Genotype %in% c("blaEC","blaEC-5")) %>% 
+  select(net_gain) %>% c() %>% unlist() %>% mean()
+
+data %>% filter(category == "SS", !Genotype %in% c("blaEC","blaEC-5")) %>% 
+  select(net_gain) %>% c() %>% unlist() %>% var()
+
+## with blaEC and blaEC-5, but median
+data %>% filter(category == "SS") %>% 
+  select(net_loss) %>% c() %>% unlist() %>% median()
+
+data %>% filter(category == "SS") %>% 
+  select(net_gain) %>% c() %>% unlist() %>% median()
+
+###############
 ## Plot Genotype Clusters
 library(ggplot2)
 library(plotly)
